@@ -615,8 +615,86 @@
 	left: (242px/1920px)*100%
 	font-size: 22px
 
+// slider
+.slider
+	position: relative
+	margin-bottom: 200px
+	+clr
+	&__item
+		min-height: 904px
+		float: left
+		width: 33.33%
+		position: relative
+		+cover
+		color: white
+		padding: 80px 0
+		p
+			margin-bottom: 18px
+			font-size: 25px
+			font-weight: 300
+			line-height: 1
+		h1
+			margin-bottom: 100px
+			text-align: center
+			font-size: 70px
+			line-height: 1
+			font-weight: 700
+.js-slider
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.15s ease, visibility 0.15s ease
+	&.is-ready
+		opacity: 1
+		visibility: visible
+.plus
+	font-size: 0
+	list-style-type: disc
+	&__item
+		font-size: 25px
+		font-weight: 300
+		line-height: 1
+		margin-bottom: 15px
+		p
+			margin-bottom: 0
 
+.slick-arrow
+	position: absolute
+	top: 0
+	bottom: 0
+	cursor: pointer
+	// background: transparent
+	visibility: visible
+	-webkit-transition: opacity 0.2s
+	transition: opacity 0.2s
+	background-color: #ffffff
+	opacity: 0.2
+	width: 140px
+.arrow-prev
+	right: 0
+	z-index: 11
+.arrow-next
+	left: 0
+	z-index: 11
 
+button.arrow-next.js-prev.slick-arrow.slick-disabled,
+button.arrow-prev.js-next.slick-arrow.slick-disabled
+	opacity: 0
+	visibility: hidden
+
+.slick-dots
+	bottom: -50px
+.slick-dots li
+	&:not(:first-child)
+		margin-left: 3%
+.slick-dots button
+	width: 223px
+	height: 24px
+	border-radius: 0
+	border: 1px solid #f2f2f2
+	outline: 0
+	box-shadow: none
+.slick-dots li.slick-active button
+	background-color: #7b42c7
 // .bouncing-boat 
 // 	left: 0
 // 	top: 0

@@ -1,13 +1,14 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 
-var client = document.querySelector('.menu').clientHeight;
-var scroll = document.querySelector('.menu').scrollHeight;
-var scrollW = getScrollbarWidth();
-	if (scroll > client) {
-		$('.menu').css({
-			marginRight: - scrollW + "px"
-		});
-	}
+// var client = document.querySelector('.menu').clientHeight;
+// var scroll = document.querySelector('.menu').scrollHeight;
+// var scrollW = getScrollbarWidth();
+// 	if (scroll > client) {
+// 		console.log()
+// 		$('.menu').css({
+// 			paddingRight: scrollW + "px"
+// 		});
+// 	}
 
 
 // function getScrollbarWidth() {
@@ -26,31 +27,31 @@ var scrollW = getScrollbarWidth();
 
 // 	return scrollWidth;
 // 	}
-	function getScrollbarWidth() {
-	    var outer = document.createElement("div");
-	    outer.style.visibility = "hidden";
-	    outer.style.width = "100px";
-	    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+// 	// function getScrollbarWidth() {
+// 	//     var outer = document.createElement("div");
+// 	//     outer.style.visibility = "hidden";
+// 	//     outer.style.width = "100px";
+// 	//     outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
 
-	    document.body.appendChild(outer);
+// 	//     document.body.appendChild(outer);
 
-	    var widthNoScroll = outer.offsetWidth;
-	    // force scrollbars
-	    outer.style.overflow = "scroll";
+// 	//     var widthNoScroll = outer.offsetWidth;
+// 	//     // force scrollbars
+// 	//     outer.style.overflow = "scroll";
 
-	    // add innerdiv
-	    var inner = document.createElement("div");
-	    inner.style.width = "100%";
-	    outer.appendChild(inner);        
+// 	//     // add innerdiv
+// 	//     var inner = document.createElement("div");
+// 	//     inner.style.width = "100%";
+// 	//     outer.appendChild(inner);        
 
-	    var widthWithScroll = inner.offsetWidth;
+// 	//     var widthWithScroll = inner.offsetWidth;
 
-	    // remove divs
-	    outer.parentNode.removeChild(outer);
+// 	//     // remove divs
+// 	//     outer.parentNode.removeChild(outer);
 
-	    return widthNoScroll - widthWithScroll;
-	}
-});
+// 	//     return widthNoScroll - widthWithScroll;
+// 	// }
+// });
 
 
 
@@ -113,6 +114,30 @@ $(window).scroll(function() {
 });
 
 
+// slider
+
+	var newSlider = $('.js-slider');
+
+	initSlider(newSlider, {
+	infinite: false,
+	 speed: 1000,
+	 dots: true,
+	 // autoplay: true,
+   	 adaptiveHeight: true,
+	 // autoplaySpeed: 5000,
+	 arrows: true,
+ 	 prevArrow: '.js-prev',
+	 nextArrow: '.js-next'
+});
+
+	function initSlider(slider, options) {
+	 slider.on('init', function() {
+	  setTimeout(function() {
+	   slider.addClass('is-ready');
+	  }, 100);
+	 });
+	 slider.not('.slick-initialized').slick(options);
+	}
 
 // Show-Hide More text
 // $(function() {
@@ -128,15 +153,6 @@ $(window).scroll(function() {
 // 	});
 //  });    
 
-
-
-
-	//     $('body').click(function(e) { 
-	//     var el = e.target || e.srcElement; 
-	//     if (!$(el).closest('.js-open-popup').length && !$(el).closest('.popup__window').length) { 
-	//      $('.js-popup').add('.js-overlay').removeClass('is-active');
-	//     } 
-	// }); 
 
 
 
@@ -245,55 +261,3 @@ function getScrollWidth() {
 
 	return scrollWidth;
 };
-
-
-
-
-
-// $(function () {	
-// 	(function() {
-// 		var popup = $('.js-popup'),
-// 			overlay = $('.js-overlay'),
-// 			open    =$('.js-open-popup'),
-// 			close   = $('.js-close-popup');
-	
-// 		function addClasses(el1, el2) {
-// 			el1.add(el2).addClass('is-active');
-// 		}
-	
-// 		function removeClasses(el1, el2) {
-// 			el1.add(el2).removeClass('is-active');
-// 		}
-	
-// 		open.click(function() {
-// 			addClasses(popup, overlay);
-	
-// 		});
-	
-// 		close.click(function() {
-// 			removeClasses(popup, overlay);
-// 		});
-		
-// 	})();
-
-
-// });
-
-
-// function getScrollWidth() {
-
-// 		var div = document.createElement('div');
-
-// 		div.style.overflowY = 'scroll';
-// 		div.style.width = '50px';
-// 		div.style.height = '50px';
-
-// 		div.style.visibility = 'hidden';
-
-// 		document.body.appendChild(div);
-// 		var scrollWidth = div.offsetWidth - div.clientWidth;
-// 		document.body.removeChild(div);
-
-// 	return scrollWidth;
-// 	}
-// });
