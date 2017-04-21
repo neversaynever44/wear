@@ -122,9 +122,9 @@ $(window).scroll(function() {
 	infinite: false,
 	 speed: 1000,
 	 dots: true,
-	 // autoplay: true,
+	 autoplay: true,
    	 adaptiveHeight: true,
-	 // autoplaySpeed: 5000,
+	 autoplaySpeed: 6000,
 	 arrows: true,
  	 prevArrow: '.js-prev',
 	 nextArrow: '.js-next'
