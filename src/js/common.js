@@ -87,7 +87,7 @@ $('.form-label').on("click",function(){
        $('#form-submit').removeClass('is-hidden'); 
       	   $('#form-submit').removeAttr('disabled');
   	      	document.getElementById('form').submit();
-   		},1500);
+   		},1300);
  	 }
 })
 
