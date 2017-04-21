@@ -1,0 +1,634 @@
+// Normally mainpage styles
+// main
+.main
+	height: 100vh
+	background-color: white
+	padding-left: 5.209%
+	padding-right: 5.209%
+	font-size: 0
+	position: relative
+	padding-top: 80px
+	&__content
+		width: 100%
+		padding-top: 51.163%
+		position: relative
+		top: 50%
+		transform: translateY(-50%)
+.ar, 
+.vr, 
+.mr 
+	position: absolute
+	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	display: inline-block
+	will-change: transform
+	perspective: 1000px
+.ar
+	width: 31.34%
+	padding-top: 27.09%
+	left: 31.98%
+	bottom: 45%
+	z-index: 1
+.vr
+	width: 26.74%
+	padding-top: 23.2%
+	top: 55%
+	left: 17.38%
+.mr
+	width: 26.74%
+	padding-top: 23.2%
+	top: 32.95%
+	right: 15.17%
+
+.triangle__scale 
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	-webkit-transition: transform .2s ease-in-out
+	transition: transform .2s ease-in-out
+	-webkit-transition-delay: .2s
+	transition-delay: .2s
+	will-change: transform
+	cursor: pointer
+	&:hover
+		-webkit-transform: translateZ(110px)
+		transform: translateZ(110px)
+		-webkit-transition-delay: 0s
+		transition-delay: 0s
+
+.triangle-text 
+	display: block
+	width: 100%
+	text-align: center
+	+exo
+	font-weight: 400
+	font-size: 20px
+	position: absolute
+.triangle__title 
+	transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	position: absolute
+	will-change: transform
+.ar .triangle__title 
+	width: 75.32%
+	padding-top: 38.96%
+	left: -10.02%
+	bottom: 22.75%
+.mr .triangle__title 
+	width: 85.65%
+	padding-top: 38.04%
+	right: -26.74%
+	top: 20.6%
+.vr .triangle__title 
+	width: 72.83%
+	padding-top: 38.04%
+	left: -16.74%
+	top: 24.81%   
+.ar .triangle-text 
+	color: #fff
+	bottom: 5.58%
+.mr .triangle-text 
+	color: #1e1e1e
+	top: 4.28%
+.vr .triangle-text 
+	color: #1e1e1e
+	top: 4.79%
+
+.triangle__title>svg 
+	position: absolute
+	top: 0
+	left: 0
+
+.about-price
+	padding: 60px 0
+	text-align: center
+	background-color: #8c40cc
+	color: white
+	position: relative
+	p
+		font-size: 20px
+		font-weight: 300
+		line-height: 1
+		&:not(:last-child)
+			margin-bottom: 13px
+	.subtitle
+		font-weight: 400
+		font-size: 24px
+	.icon-bg2
+		top: (243px*100%)/370px
+		right: (159px*100%)/1920px
+	.icon-bg5
+		top: (240px*100%)/370px
+		right: (414px*100%)/1920px
+	.icon-bg6
+		top: (255px*100%)/370px
+		left: (242px*100%)/1920px
+.start-price
+	color: #ffb500
+	font-size: 40px
+	font-weight: 500
+
+.contact
+	padding: 44px 0 26px 0
+	background-color: #5d3a7b
+	color: white
+	text-align: center
+	position: relative
+	.icon-bg1
+		top: (30px*100%)/378px
+		left: (131px/1920px)*100%
+	.icon-bg3
+		top: (48px*100%)/378px
+		right: (173px/1920px)*100%
+
+// job
+.job
+	padding: 119px 0 300px 0
+	.h1
+		margin-bottom: 75px
+	.inner
+		max-width: 1120px
+.list
+	&__item
+		border-bottom: 1px solid #b1b1b1
+		padding: 15px 0
+		+clr
+	&__title
+		font-size: 20px
+		font-weight: 400
+		float: left
+		padding: 10px 0
+	&__description
+		float: right
+		p
+			line-height: 1
+			font-size: 15px
+			font-weight: 300
+			display: inline-block
+// portfolio
+.container
+	padding-top: 100px
+.portfolio
+	padding: 70px 0
+	+clr
+	.inner
+		display: table
+.portfolio_item
+	background-color: #8c40cc
+	color: white
+	.h2
+		color: white
+.portfolio_item
+	.links__link
+		&:hover
+			.stroked
+				stroke: black
+			.filled
+				fill: black
+		.stroked
+			stroke: white
+		.filled
+			fill: white
+.portfolio
+	&:nth-of-type(2)
+		.portfolio__content
+			padding: 0 10% 0 0
+.portfolio__content,
+.portfolio__pic
+	display: table-cell
+	vertical-align: top
+.portfolio__pic
+	width: 35%
+.portfolio__content
+	width: 60%
+	padding-left: 10%
+.portfolio__content-platform
+	font-size: 20px
+	font-weight: 300
+	margin-bottom: 40px
+	.ios,
+	.android
+		color: white
+		padding: 8px 16px
+		border-radius: 4px
+		background-color: #afafaf
+		margin-left: 10px
+.portfolio__content-desc
+	font-size: 25px
+	font-weight: 300
+	margin-bottom: 55px
+.portfolio__content
+	&:nth-of-type(1)
+		.portfolio__content-platform
+			span
+				background-color: #a266d4
+				color: white
+.portfolio__in
+	.portfolio__content-desc
+		margin-bottom: 0
+		p
+			&:not(:last-child)
+				margin-bottom: 30px
+
+
+// links
+.links
+	font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: middle
+		&:not(:first-child)
+			margin-left: 3%
+	&__link
+		display: block
+		width: 170px
+		height: 70px
+		&:hover
+			.stroked
+				stroke: #8c40cc
+			.filled
+				fill: #8c40cc
+		.stroked
+			stroke: gray
+		.filled
+			fill: gray
+
+
+// product
+.product
+	padding: 70px 0 88px 0
+	&__list
+		font-size: 0
+		margin: 0 0 0 -2%
+.product__list-item
+	display: inline-block
+	vertical-align: top
+	width: 31.33%
+	margin-left: 2%
+
+// section blog
+.blog
+	padding-top: 160px
+	&__list
+		font-size: 0
+		text-align: center
+		margin: 0 0 0 -2%
+.blog__list-item
+	display: inline-block
+	vertical-align: top
+	width: 31.33%
+	margin-left: 2%
+	margin-bottom: 88px
+.blog__list-pic
+	height: 266px
+	overflow: hidden
+	position: relative
+	margin-bottom: 20px
+	img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		height: 100%
+		width: 100%
+.blog__list-date
+	color: #8c40cc
+	font-size: 17px
+	font-weight: 500
+	margin-bottom: 22px
+.blog__list-title
+	font-size: 20px
+	font-weight: 500
+	text-transform: uppercase
+	margin-bottom: 26px
+.blog__list-text
+	font-size: 20px
+	font-weight: 300
+
+// blog_in
+.blog-in
+	background: url(../img/blog-bg.png)
+	+cover
+	height: 100vh
+	position: relative
+	color: white
+	max-height: 400px
+.blog-in__title
+	+vcenter
+	text-align: center
+	text-transform: uppercase
+	width: 100%
+	line-height: 1
+	h1
+		font-weight: 700
+		font-size: 34px
+		padding-right: (300px/1400px)*100%
+		color: #eeae21
+		margin-bottom: 26px
+	h2
+		font-weight: 400
+		font-size: 34px
+
+
+// section VR-reality
+.VR-reality
+	background: url(../img/vrreality/VRreality-bg.jpg) center no-repeat
+	background-size: cover
+	position: relative
+	background-position: 50% 0
+	color: white
+	padding-top: 80px
+.content
+	width: 100%
+	padding: 150px 0
+.title
+	margin-bottom: 100px
+	text-align: center
+.half-bg
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		opacity: 0.55
+		height: 100%
+		background-color: #563d78
+		// background-color: #7b42c7
+
+// advantages
+.advantages
+	font-size: 0
+	text-align: center
+	&__item
+		position: relative
+		&:first-child
+			margin-bottom: 70px
+// .advantages__item-pic
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	text-align: center
+// 	width: 15%
+.advantages__item-pic
+	width: 7%
+	text-align: center
+	.icon-hololens
+		margin-right: 0
+		font-size: 33px
+.advantages__item-pic,
+.advantages__item-text
+	display: inline-block
+	vertical-align: top
+.advantages__item-text
+	margin-left: 3%
+	width: 90%
+	text-align: left
+	max-width: 700px
+	font-size: 18px
+	font-weight: 300
+	line-height: 1.4
+.advantages__item-pic .icon-Cardboard
+	font-size: 45px
+
+// Section AU-reality
+.AU-Reality
+	background: url(../img/aureality/AUreality-bg.jpg)center no-repeat
+	+cover
+	position: relative
+	color: white
+	padding-top: 80px
+// .sticky-out .half-bg
+// 	&:before
+// 		background-color: #7b42c7
+
+
+
+// how-it-works
+.how-it-works
+	text-align: center
+	padding: 70px 0
+	position: relative
+	.h1
+		margin-bottom: 19px
+	.inner
+		max-width: 600px
+.infographic
+	position: relative
+	font-size: 0
+	font-family: "Open Sans"
+	font-weight: 300
+	margin: 130px auto
+	img
+		width: 100%
+		position: relative
+	&__note
+		position: absolute
+		max-width: 240px
+		margin-top: 18px
+	&__num
+		color: #8c40cc
+		border-radius: 50%
+		width: 36px
+		height: 36px
+		line-height: 34px
+		border: 1px solid #8c40cc
+		display: inline-block
+		font-size: 23px
+	&__text
+		color: #000
+		font-size: 15px
+		padding: 0 12px
+		margin-bottom: 15px
+		line-height: 1.2
+
+.infographic__note-third
+	right: 36px
+.infographic__note-second
+	top: -64%
+	left: 50%
+	-webkit-transform: translateX(-50%)
+	-ms-transform: translateX(-50%)
+	transform: translateX(-64%)
+	.infographic__num
+		margin-bottom: 12px
+// Working-out
+// .working-out
+// 	background-color: #f2f2f2
+// 	padding: 68px 0 115px 0
+// 	position: relative
+// 	p
+// 		font-size: 25px
+// 		font-weight: 300
+// 		line-height: 1.3
+// 		&:not(:last-child)
+// 			margin-bottom: 25px
+// 	.icon-bg1
+// 		right: (309px*100%)/1920px
+// 		left: auto
+// 		top: (289px*100%)/499px
+// 	.icon-bg2
+// 		top: (48px*100%)/499px
+// 		left: (119px*100%)/1920px
+// 		right: auto
+// 	.icon-bg3
+// 		top: (239px*100%)/499px
+// 		left: (172px*100%)/1920px
+// 		right: auto
+// 		color: #00afce
+// 	.icon-bg5
+// 		bottom: (99px*100%)/499px
+// 		top: auto
+// 		left: (55px*100%)/1920px
+// 		right: auto
+// 	.icon-bg6
+// 		top: (55px*100%)/499px
+// 		right: (57px*100%)/1920px
+// 		left: auto
+// 	.icon-bg2_pos
+// 		top: auto
+// 		left: auto
+// 		color: #ddac35
+// 		right: (58px*100%)/1920px
+// 		bottom: (50px*100%)/499px
+// 	.icon-bg3_pos
+// 		left: auto
+// 		top: (48px*100%)/499px
+// 		right: (400px*100%)/1920px
+// 	.icon-bg6_pos
+// 		top: auto
+// 		bottom: (54px*100%)/499px
+// 		top: auto
+// 		left: (439px*100%)/1920px
+
+// development
+.caption
+	padding: 70px 0
+	color: #000000
+	font-size: 25px
+	font-weight: 300
+	text-align: center
+	b
+		font-weight: 400
+.development
+	padding: 40px 0
+	background-color: #f2f2f2
+	margin-bottom: 110px
+	.inner
+		display: table
+		max-width: 1750px
+	&__pic,
+	&__content
+		display: table-cell
+		vertical-align: middle
+	&__content
+		width: 62%
+		padding: 0 2% 0 2%
+		color: #000000
+		font-size: 25px
+		font-weight: 300
+		line-height: 1.2
+		b
+			font-weight: 400
+.text-r
+	text-align: right
+// SECTION MXreality
+.MX-reality
+	background: url(../img/mxreality/MXreality-bg.jpg)
+	+cover
+	color: white
+	position: relative
+	padding-top: 80px
+// about
+.about
+	padding-top: 119px
+	padding-bottom: 40px
+	position: relative
+	&__pic
+		text-align: center
+		margin: 50px 0
+		.icon-smartphone
+			color: #a13ed1
+			font-size: 90px
+	&__text
+		color: #000000
+		font-size: 20px
+		font-weight: 300
+		line-height: 1
+		p
+			margin-bottom: 25px
+		b
+			font-weight: 400
+.icon-ar
+	font-size: 65px
+	color: #686868
+	margin-right: 12px
+.icon-education,
+.icon-iphone,
+.icon-droid,
+.icon-medical,
+.icon-advertising,
+.icon-property
+	font-size: 90px
+	color: #a13ed1
+.icon-game
+	font-size: 70px
+	color: #a13ed1
+
+.icon-bg2
+	top: (1070px*100%)/3220px
+// icons out section 
+.icon-bg1,
+.icon-bg2,
+.icon-bg3,
+.icon-bg5,
+.icon-bg6
+	font-size: 33px
+	color: #f5bb45
+	position: absolute
+.icon-bg1
+	top: (382px*100%)/697px
+	left: (131px/1920px)*100%
+.icon-bg2,
+.icon-bg1
+	color: #00b1d0
+
+.icon-bg2
+	top: (226px*100%)/697px
+	right: (159px/1920px)*100%
+.icon-bg3
+	top: (400px*100%)/697px
+	right: (173px/1920px)*100%
+	font-size: 20px
+
+.icon-bg5
+	top: (226px*100%)/697px
+	right: (414px/1920px)*100%
+.icon-bg6
+	top: (238px*100%)/697px
+	left: (242px/1920px)*100%
+	font-size: 22px
+
+
+
+// .bouncing-boat 
+// 	left: 0
+// 	top: 0
+// 	cursor: pointer
+// 	position: absolute
+// 	-webkit-transition: left 5s, top 5s
+// 	-moz-transition: left 5s, top 5s
+// 	-o-transition: left 5s, top 5s
+// 	-ms-transition: left 5s, top 5s
+// .flip-horizontal 
+// 	-webkit-transform: scale(-1, -1)
+// 	-moz-transform: scale(-1, -1)
+// 	-o-transform: scale(-1, -1)
+// 	-ms-transform: scale(-1, -1)
+// 	filter: fliph

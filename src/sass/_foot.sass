@@ -1,0 +1,55 @@
+// Start footer
+.footer
+	padding: 29px 0 20px 0
+	background-color: #382e45
+	text-align: center
+	.inner
+		max-width: 1720px
+	&__logo
+		float: left
+		max-width: 105px
+	&__contact
+		float: left
+		width: 80%
+		text-align: center
+	&__social
+		overflow: hidden
+.footer__contact-item
+	display: inline-block
+	vertical-align: middle
+	line-height: 20px
+	&:not(:first-child)
+		margin-left: 4%
+.footer__contact-link
+	display: block
+	color: white
+	text-decoration: none
+	font-size: 15px
+	font-weight: 300
+	cursor: pointer
+	&:active,
+	&:focus,
+	&:hover
+		color: #fcb200
+	i
+		vertical-align: middle
+		display: inline-block
+		margin-right: 12px
+	i
+		&:active,
+		&:focus,
+		&:hover
+			color: #fcb200
+.footer__social-item
+	display: inline-block
+	vertical-align: top
+	&:not(:first-child)
+		margin-left: 6%
+.footer__social-link
+	display: block
+	&:hover
+		+scale(0.8)
+.icon-facebook,
+.icon-linkedin
+	font-size: 30px
+

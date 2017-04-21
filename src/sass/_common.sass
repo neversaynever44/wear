@@ -1,0 +1,436 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+// 			+s(codedby) 
+// ## gradient example
+//     	+g(#232323, #5c5c5c);
+//	   horizontal
+//     	+gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +r(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts
+// Save fonts to /src/fonts
+// +font(book, cytiapro-black-webfont)
+// and create mixin
+// =book
+// 	font-family: "book", Arial, sans-serif
+
+body
+	font-family: 'Roboto', sans-serif, Arial
+	font-weight: 400
+	font-size: 14px
+	line-height: 1.4
+	color: #000000
+	&.is-hidden
+		overflow: hidden
+	
+// common blocks
+html,
+body
+	min-height: 100%
+
+img
+	max-width: 100%
+	display: block
+	margin: 0 auto
+a
+	+tr(all .3s ease)
+
+%inner
+	width: 100%
+	max-width: 1400px
+	margin: 0 auto
+	position: relative
+	height: 100%
+	+clr
+	+r(1440)
+		width: 90%
+.inner
+	@extend %inner
+
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	vertical-align: middle
+	color: white
+	font-size: 50px
+.out
+	position: relative
+.pages-list
+	text-align: center
+	margin-top: 300px
+.pages__list-item
+	padding: 15px 0
+	a
+		text-decoration: none
+		color: black
+		font-size: 22px
+		display: inline-block
+		text-transform: uppercase
+		+tr(all .3s ease)
+
+// TITLEs
+.title-primary
+	font-family: Roboto
+	font-size: 35px
+	font-weight: 500
+	text-transform: uppercase
+	position: relative
+	margin-bottom: 35px
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		bottom: -10px
+		width: 217px
+		height: 3px
+		background-color: #ddac35
+		left: 0
+		right: 0
+		margin: auto
+.subtitle
+	font-size: 25px
+	font-weight: 400
+
+.h1
+	font: 500 28px/1 'Roboto', sans-serif, Arial
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 28px
+.h2
+	font: 500 28px/1 'Roboto', sans-serif, Arial
+	color: #8c40cc
+	text-transform: uppercase
+	margin-bottom: 30px
+	text-align: left
+.h3
+	font-size: 16px
+	font-weight: 400
+	margin-bottom: 30px
+
+
+// col
+.col
+	margin-bottom: 12px
+	&:nth-of-type(3)
+		margin-bottom: 0
+.text-r
+	text-align: right
+
+// input
+.input
+	background-color: #6c428f
+	width: 100%
+	max-width: 343px
+	display: block
+	margin: auto
+	outline: 0
+	padding: 13px
+	color: #ffffff
+	font-family: Roboto
+	font-size: 12px
+	opacity: 0.48
+	font-weight: 100
+#form-submit
+	background-color: transparent
+	color: white
+	display: inline-block
+	vertical-align: middle
+	color: #ffffff
+	font-family: Roboto
+	font-size: 16px
+	font-weight: 400
+	opacity: 1
+	visibility: visible
+	cursor: pointer
+	transition: opacity 0.15s ease, visibility 0.15s ease
+	&.is-hidden
+		opacity: 0
+		visibility: hidden
+.form-label
+	display: inline-block
+	cursor: pointer
+	font-size: 0
+	position: absolute
+	left: 52%
+	margin-top: 28px
+	transform: translateX(-52%)
+#form
+	padding-bottom: 70px
+
+.input-contact
+	color: #9b9a9a
+	font-size: 25px
+	font-weight: 300
+	padding: 18px
+	width: 100%
+	display: block
+	outline: 0
+	margin-bottom: 17px
+	background-color: #e0e0e0
+	color: black
+	+skoda
+	&:focus
+		box-shadow: 0 0 7px rgba(0, 0, 0, 0.41)
+textarea
+	resize: none
+	width: 100%
+	min-height: 175px
+	background-color: #e0e0e0
+	padding: 16px 20px 20px
+	color: #9b9a9a
+	font-size: 25px
+	font-weight: 300
+	margin-bottom: 66px
+	+skoda
+
+
+// buttons
+.arrow
+	position: fixed
+	bottom: 60px
+	right: 5.21%
+	padding: 8px
+	background-color: #8c40cc
+	border-radius: 50%
+	-moz-border-radius: 50%
+	-ms-border-radius: 50%
+	-o-border-radius: 50%
+	-webkit-border-radius: 50%
+	z-index: 1
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.26), 0 0 16px rgba(0, 0, 0, 0.25)
+	+tr(background-color .2s ease)
+	+rotate(180)
+	transition: opacity 0.25s ease, visibility 0.25s ease
+		
+.arrow-up
+	opacity: 0
+	visibility: hidden
+	&.is-show
+		opacity: 1
+		visibility: visible
+	&:active
+		bottom: 58px
+	&:hover
+		background-color: white
+	&:hover
+		.icon-arrow-down
+			color: #563d78
+.icon-arrow-down
+	font-size: 30px
+	color: white
+
+.input::-webkit-input-placeholder
+	color: #ffffff
+
+
+// ICONS
+.icon-open
+	color: black
+	font-size: 22px
+	margin-right: 12px
+.js-show
+	&.is-active 
+		.icon-open
+			+rotate(180)
+.icon-Oculus
+	font-size: 25px			
+.icon-triangle,
+.icon-triangle2
+	color: #a479dd
+	position: absolute
+.icon-triangle
+	top: (145px*100%)/300px
+	left: (250px*100%)/1400px
+.icon-triangle2
+	top: (62px*100%)/300px
+	right: (309px*100%)/1400px
+	font-size: 30px
+.icon-send
+	margin-right: 11px
+	font-size: 41px
+
+.icon-hololens
+	margin-right: 16px
+	font-size: 19px
+.icon-send
+	color: #ddac35
+.icon-logo
+	color: #eeae21
+	font-size: 40px
+.icon-footer-logo
+	font-size: 29px
+
+.icon-mail
+	font-size: 60px
+	padding: 18px
+
+.icon-arrow-r
+	font-size: 25px
+	margin-left: 10px
+
+// overlay
+.overlay
+	opacity: 0
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	visibility: hidden
+	z-index: 11
+	background: rgba(53,18,83,.3)
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	&.is-active
+		opacity: 1
+		visibility: visible
+
+// social
+.wrapper
+	padding: 50px 0
+	position: relative
+.social
+	float: right
+	font-size: 0
+	padding: 40px 0
+	&__item
+		display: inline-block
+		vertical-align: middle
+		border: 1px solid #8b8b8b
+		position: relative
+		+tr(background-color .2s ease)
+		&:not(:first-child)
+			margin-left: 12px
+		&:hover
+			border: 1px solid white
+	&__link
+		display: block
+		padding: 10px
+		position: relative
+	.social_fb
+		&:hover
+			background-color: #3b5998
+			.icon-fb
+				color: white
+	.social_tw
+		&:hover
+			background-color: #4099ff
+			.icon-tw
+				color: white
+	.social_go
+		border: 1px solid #ffffff
+		background-color: #fb4840
+		&:hover
+			background-color: #d34836
+			.icon-go
+				color: white
+	.social_vk
+		&:hover
+			background-color: #3b5998
+			.icon-vk
+				color: white
+.icon-fb
+	color: #2167c6
+.icon-tw
+	color: #00aef0
+.icon-go
+	color: #fff
+.icon-vk
+	color: #507299
+.icon-fb,
+.icon-tw,
+.icon-go,
+.icon-vk
+	font-size: 40px
+
+
+
+#flyPlane
+	&.is-active
+		animation: flyPlane 0.8s linear both, animePlane 0.5s linear 0.8s forwards
+
+@keyframes flyPlane
+	0%
+		transform: translate(0,0) rotate(0)
+	100%
+		transform: translate(250px,-100px) rotate(50deg) 
+
+@keyframes animePlane
+	0%
+		transform: translate(250px,-100px) rotate(50deg) scale(1)
+	50%
+		transform: translate(375px, -50px) rotate(60deg) scale(1)
+	100%
+		transform: translate(500px,0) rotate(60deg) scale(0)
+		opacity: 0
+
+
+
+.hide-text
+	// overflow: hidden
+	// -webkit-transition: max-height 0.2s ease-out
+	// transition: max-height 0.2s ease-out
+	// max-height: 0
+	display: none
+	
+
+// googleMap
+// .popup__map
+// 	position: fixed
+// 	top: 0
+// 	left: 0
+// 	right: 0
+// 	bottom: 0
+// 	z-index: 111
+// 	opacity: 0
+// 	visibility: hidden
+// 	transition: opacity .25s ease, visibility .25s ease
+// 	margin: auto
+// 	max-width: 1000px
+// 	height: 400px
+// 	width: 100%
+// 	&.is-active
+// 		opacity: 1
+// 		visibility: visible
+// 	.popup__close .icon-close
+// 		color: black
+
+.contacts-map 
+	width: 100%
+	margin: auto
+	height: 400px
+
+
+
+// @keyframes rotatePlane
+// 	0%
+// 		transform: rotate(0)
+// 	50%
+// 		transform: rotate(45deg)
+// 	75%
+// 		transform: rotate(60deg)
+// 	100%
+// 		transform: rotate(60deg)
+
+// @keyframes fade
+// 	0%   
+// 		opacity: 1
+// 	80%
+// 		opacity: 1
+// 	100%
+// 		opacity: 0
+
