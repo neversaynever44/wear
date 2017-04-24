@@ -472,11 +472,15 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .icon-bg2 { top: 33.22981%; }
 
-.icon-bg1, .icon-bg2, .icon-bg3, .icon-bg5, .icon-bg6 { font-size: 33px; color: #f5bb45; position: absolute; }
+.icon-bg1, .icon-bg2, .icon-bg3, .icon-bg5, .icon-bg6 { font-size: 33px; color: #f5bb45; position: absolute; z-index: 11; }
 
 .icon-bg1 { top: 54.80631%; left: 6.82292%; }
 
 .icon-bg2, .icon-bg1 { color: #00b1d0; }
+
+.icon-bg2 { top: 48.88889%; right: 13.28125%; }
+
+.icon-bg_turquoise { color: #6dadda; }
 
 .icon-bg2 { top: 32.42468%; right: 8.28125%; }
 
@@ -485,6 +489,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .icon-bg5 { top: 32.42468%; right: 21.5625%; }
 
 .icon-bg6 { top: 34.14634%; left: 12.60417%; font-size: 22px; }
+
+.icon-bg_orange { color: #ddac35; }
 
 .slider { position: relative; margin-bottom: 200px; *zoom: 1; }
 .slider:after { content: " "; display: table; clear: both; }
@@ -537,7 +543,7 @@ button.arrow-next.js-prev.slick-arrow.slick-disabled, button.arrow-prev.js-next.
 
 .icon-facebook, .icon-linkedin { font-size: 30px; }
 
-.header { position: fixed; padding: 40px 0; z-index: 111; width: 100%; background-color: white; }
+.header { position: fixed; top: 0; left: 0; right: 0; padding: 40px 0; z-index: 111; width: 100%; background-color: white; }
 
 .menu-btn { width: 74px; height: 64px; position: absolute; cursor: pointer; top: 20px; right: 5.21%; margin-top: -15px; margin-right: -15px; padding: 15px; z-index: 111; }
 .menu-btn span { -webkit-transition: background 0s 0.3s; transition: background 0s 0.3s; width: 100%; height: 6px; background-color: #8c40cc; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; position: relative; display: inline-block; margin-top: 14px; }
