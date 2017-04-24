@@ -170,7 +170,9 @@
 // portfolio
 .container
 	padding-top: 100px
+	position: relative
 .portfolio
+	position: relative
 	padding: 70px 0
 	+clr
 	.inner
@@ -194,31 +196,26 @@
 .portfolio
 	&:nth-of-type(2)
 		.portfolio__content
-			padding: 0 10% 0 0
+			padding: 0 3% 0 0
 .portfolio__content,
 .portfolio__pic
 	display: table-cell
 	vertical-align: top
 .portfolio__pic
-	width: 35%
+	width: 50%
 .portfolio__content
-	width: 60%
-	padding-left: 10%
-.portfolio__content-platform
-	font-size: 20px
-	font-weight: 300
-	margin-bottom: 40px
-	.ios,
-	.android
-		color: white
-		padding: 8px 16px
-		border-radius: 4px
-		background-color: #afafaf
-		margin-left: 10px
+	width: 50%
+	padding-left: 3%
 .portfolio__content-desc
-	font-size: 25px
+	font-size: 24px
 	font-weight: 300
-	margin-bottom: 55px
+	line-height: 1.2
+	padding: 60px 0
+	border-top: 2px solid black
+	border-bottom: 2px solid black
+	margin-bottom: 60px
+.portfolio__content-button
+	margin-bottom: 60px
 .portfolio__content
 	&:nth-of-type(1)
 		.portfolio__content-platform
@@ -233,6 +230,11 @@
 				margin-bottom: 30px
 
 
+.icon-bg6
+	top: (228px*100%)/2750px
+	right: (122px/1920px)*100%
+
+
 // links
 .links
 	font-size: 0
@@ -240,21 +242,14 @@
 		display: inline-block
 		vertical-align: middle
 		&:not(:first-child)
-			margin-left: 3%
+			margin-left: 14%
 	&__link
 		display: block
-		width: 170px
-		height: 70px
-		&:hover
-			.stroked
-				stroke: #8c40cc
-			.filled
-				fill: #8c40cc
-		.stroked
-			stroke: gray
-		.filled
-			fill: gray
-
+		background-color: white
+.icon-googleDown,
+.icon-appleDown
+	color: #8c40cc
+	font-size: 70px
 
 // product
 .product
@@ -581,8 +576,6 @@
 	font-size: 70px
 	color: #a13ed1
 
-.icon-bg2
-	top: (1070px*100%)/3220px
 // icons out section 
 .icon-bg1,
 .icon-bg2,
@@ -607,9 +600,6 @@
 .icon-bg_turquoise
 	color: #6dadda
 
-.icon-bg2
-	top: (226px*100%)/697px
-	right: (159px/1920px)*100%
 .icon-bg3
 	top: (400px*100%)/697px
 	right: (173px/1920px)*100%
@@ -633,7 +623,7 @@
 	margin-bottom: 200px
 	+clr
 	&__item
-		min-height: 904px
+		min-height: 900px
 		float: left
 		width: 33.33%
 		position: relative
@@ -641,7 +631,8 @@
 		color: white
 		padding: 80px 0
 		p
-			margin-bottom: 18px
+			&:not(:last-child)
+				margin-bottom: 16px
 			font-size: 25px
 			font-weight: 300
 			line-height: 1

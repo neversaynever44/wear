@@ -6,7 +6,7 @@
 // 	if (scroll > client) {
 // 		console.log()
 // 		$('.menu').css({
-// 			paddingRight: scrollW + "px"
+// 			marginRight: - scrollW + "px"
 // 		});
 // 	}
 
