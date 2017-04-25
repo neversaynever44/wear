@@ -360,7 +360,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .portfolio__content, .portfolio__pic { display: table-cell; vertical-align: top; }
 
-.portfolio__pic { width: 50%; }
+.portfolio__pic { width: 46%; }
 
 .portfolio__content { width: 50%; padding-left: 3%; }
 
