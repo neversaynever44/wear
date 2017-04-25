@@ -485,7 +485,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .icon-bg_orange { color: #ddac35; }
 
-.slider { position: relative; margin-bottom: 200px; *zoom: 1; }
+.slider { position: relative; margin-bottom: 260px; *zoom: 1; }
 .slider:after { content: " "; display: table; clear: both; }
 .slider__item { min-height: 900px; float: left; width: 33.33%; position: relative; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; color: white; padding: 80px 0; }
 .slider__item p { font-size: 25px; font-weight: 300; line-height: 1; }
