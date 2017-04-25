@@ -449,7 +449,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .development__pic, .development__content { display: table-cell; vertical-align: middle; }
 .development__content { width: 62%; padding: 0 2% 0 2%; color: #000000; font-size: 25px; font-weight: 300; line-height: 1.2; }
 .development__content b { font-weight: 400; }
-.development__pic img { width: 100%; }
 
 .text-r { text-align: right; }
 
