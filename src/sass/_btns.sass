@@ -40,8 +40,6 @@
 	font-size: 20px
 	font-weight: 400
 	text-transform: uppercase
-	text-decoration: none
-	// +tr(margin .3s ease)
 	&:hover
 		i
 			margin-left: 12px
@@ -62,3 +60,38 @@
 	z-index: 11
 .about-contact
 	text-decoration: underline
+
+
+.arrow
+	position: fixed
+	bottom: 60px
+	right: 5.21%
+	padding: 8px
+	background-color: #8c40cc
+	border-radius: 50%
+	-moz-border-radius: 50%
+	-ms-border-radius: 50%
+	-o-border-radius: 50%
+	-webkit-border-radius: 50%
+	z-index: 1
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.26), 0 0 16px rgba(0, 0, 0, 0.25)
+	+tr(background-color .2s ease)
+	+rotate(180)
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	
+.arrow-up
+	opacity: 0
+	visibility: hidden
+	&.is-show
+		opacity: 1
+		visibility: visible
+	&:active
+		bottom: 58px
+	&:hover
+		background-color: white
+	&:hover
+		.icon-arrow-down
+			color: #563d78
+.icon-arrow-down
+	font-size: 30px
+	color: white

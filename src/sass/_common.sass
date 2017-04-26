@@ -48,6 +48,7 @@ img
 	margin: 0 auto
 a
 	+tr(all .3s ease)
+	text-decoration: none
 
 %inner
 	width: 100%
@@ -66,6 +67,7 @@ a
 	vertical-align: middle
 	color: white
 	font-size: 50px
+	+tr(color .3s ease)
 .out
 	position: relative
 .pages-list
@@ -195,42 +197,6 @@ textarea
 	margin-bottom: 66px
 	+skoda
 
-
-// buttons
-.arrow
-	position: fixed
-	bottom: 60px
-	right: 5.21%
-	padding: 8px
-	background-color: #8c40cc
-	border-radius: 50%
-	-moz-border-radius: 50%
-	-ms-border-radius: 50%
-	-o-border-radius: 50%
-	-webkit-border-radius: 50%
-	z-index: 1
-	box-shadow: 0 0 4px rgba(0, 0, 0, 0.26), 0 0 16px rgba(0, 0, 0, 0.25)
-	+tr(background-color .2s ease)
-	+rotate(180)
-	transition: opacity 0.25s ease, visibility 0.25s ease
-		
-.arrow-up
-	opacity: 0
-	visibility: hidden
-	&.is-show
-		opacity: 1
-		visibility: visible
-	&:active
-		bottom: 58px
-	&:hover
-		background-color: white
-	&:hover
-		.icon-arrow-down
-			color: #563d78
-.icon-arrow-down
-	font-size: 30px
-	color: white
-
 .input::-webkit-input-placeholder
 	color: #ffffff
 
@@ -246,21 +212,9 @@ textarea
 			+rotate(180)
 .icon-Oculus
 	font-size: 25px			
-.icon-triangle,
-.icon-triangle2
-	color: #a479dd
-	position: absolute
-.icon-triangle
-	top: (145px*100%)/300px
-	left: (250px*100%)/1400px
-.icon-triangle2
-	top: (62px*100%)/300px
-	right: (309px*100%)/1400px
-	font-size: 30px
 .icon-send
 	margin-right: 11px
 	font-size: 41px
-
 .icon-hololens
 	margin-right: 16px
 	font-size: 19px
@@ -272,33 +226,32 @@ textarea
 .icon-footer-logo
 	font-size: 29px
 
-.icon-mail
-	font-size: 60px
-	padding: 18px
-
 .icon-arrow-r
 	font-size: 25px
 	margin-left: 10px
 	position: relative
 	top: -1px
-
-// overlay
-.overlay
-	opacity: 0
-	position: fixed
-	top: 0
-	right: 0
-	left: 0
-	bottom: 0
-	width: 100%
-	height: 100%
-	visibility: hidden
+// icons out section 
+.icon-bg1,
+.icon-bg2,
+.icon-bg3,
+.icon-bg5,
+.icon-bg6
+	font-size: 33px
+	color: #f5bb45
+	position: absolute
 	z-index: 11
-	background: rgba(53,18,83,.3)
-	transition: opacity 0.25s ease, visibility 0.25s ease
-	&.is-active
-		opacity: 1
-		visibility: visible
+.icon-bg2,
+.icon-bg1
+	color: #00b1d0
+.icon-bg_turquoise
+	color: #6dadda
+.icon-bg3
+	font-size: 20px
+.icon-bg6
+	font-size: 22px
+.icon-bg_orange
+	color: #ddac35
 
 // social
 .wrapper
@@ -359,7 +312,7 @@ textarea
 	font-size: 40px
 
 
-
+// fly-plane
 #flyPlane
 	&.is-active
 		animation: flyPlane 0.8s linear both, animePlane 0.5s linear 0.8s forwards
@@ -380,58 +333,126 @@ textarea
 		opacity: 0
 
 
-
-.hide-text
-	// overflow: hidden
-	// -webkit-transition: max-height 0.2s ease-out
-	// transition: max-height 0.2s ease-out
-	// max-height: 0
-	// display: none
-	
-
-// googleMap
-// .popup__map
-// 	position: fixed
-// 	top: 0
-// 	left: 0
-// 	right: 0
-// 	bottom: 0
-// 	z-index: 111
-// 	opacity: 0
-// 	visibility: hidden
-// 	transition: opacity .25s ease, visibility .25s ease
-// 	margin: auto
-// 	max-width: 1000px
-// 	height: 400px
-// 	width: 100%
-// 	&.is-active
-// 		opacity: 1
-// 		visibility: visible
-// 	.popup__close .icon-close
-// 		color: black
-
+// contacts-map
 .contacts-map 
 	width: 100%
 	margin: auto
 	height: 400px
 
 
+// overlay
+.overlay
+	opacity: 0
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	visibility: hidden
+	z-index: 11
+	background: rgba(53,18,83,.3)
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	&.is-active
+		opacity: 1
+		visibility: visible
 
-// @keyframes rotatePlane
-// 	0%
-// 		transform: rotate(0)
-// 	50%
-// 		transform: rotate(45deg)
-// 	75%
-// 		transform: rotate(60deg)
-// 	100%
-// 		transform: rotate(60deg)
 
-// @keyframes fade
-// 	0%   
-// 		opacity: 1
-// 	80%
-// 		opacity: 1
-// 	100%
-// 		opacity: 0
+// JS-slider
+.slider
+	position: relative
+	margin-bottom: 260px
+	+clr
+	&__item
+		min-height: 900px
+		float: left
+		width: 33.33%
+		position: relative
+		+cover
+		color: white
+		padding: 80px 0
+		p
+			&:not(:last-child)
+				margin-bottom: 16px
+			font-size: 25px
+			font-weight: 300
+			line-height: 1
+		h1
+			margin-bottom: 100px
+			text-align: center
+			font-size: 70px
+			line-height: 1
+			font-weight: 700
+.js-slider
+	opacity: 0
+	visibility: hidden
+	transition: opacity 0.15s ease, visibility 0.15s ease
+	&.is-ready
+		opacity: 1
+		visibility: visible
+.slider-wrp
+	position: relative
+	&__inner
+		max-width: 1920px
+		margin: -30px auto 0
+		top: 0
+		bottom: 0
+.plus
+	font-size: 0
+	list-style-type: disc
+	&__item
+		font-size: 25px
+		font-weight: 300
+		line-height: 1
+		margin-bottom: 15px
+		p
+			margin-bottom: 0
+.slick-arrow
+	position: absolute
+	top: 0
+	bottom: 0
+	background-color: rgba(255,255,255, 0.2)
+	height: 100%
+	width: 140px
+	span
+		position: relative
+		top: 50%
+		&:before
+			z-index: 11
+			display: block
+			content: ''
+			position: absolute
+			border: 50px solid transparent
+			border-right: 50px solid white
+			right: 25%
+.arrow-next
+	right: 0
+	span
+		&:before
+			border-left: 50px solid white
+			border-right: none
+			left: 25%
+.arrow-prev
+	left: 0
 
+.js-prev.slick-disabled,
+.js-next.slick-disabled
+	opacity: 0
+	visibility: hidden
+
+.slick-dots
+	bottom: -50px
+.slick-dots li
+	&:not(:first-child)
+		margin-left: 3%
+.slick-dots button
+	background-color: #f2f2f2
+	width: 223px
+	height: 24px
+	border-radius: 0
+	border: 1px solid #f2f2f2
+	outline: 0
+	box-shadow: none
+.slick-dots li.slick-active button
+	background-color: #7b42c7

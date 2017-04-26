@@ -125,6 +125,18 @@
 	.icon-bg6
 		top: (255px*100%)/370px
 		left: (242px*100%)/1920px
+.icon-triangle,
+.icon-triangle2
+	color: #a479dd
+	position: absolute
+.icon-triangle
+	top: (145px*100%)/300px
+	left: (250px*100%)/1400px
+.icon-triangle2
+	top: (62px*100%)/300px
+	right: (309px*100%)/1400px
+	font-size: 30px
+
 .start-price
 	color: #ffb500
 	font-size: 40px
@@ -220,10 +232,6 @@
 		p
 			&:not(:last-child)
 				margin-bottom: 30px
-
-
-
-
 
 // links
 .links
@@ -518,8 +526,7 @@
 		line-height: 1.2
 		b
 			font-weight: 400
-.text-r
-	text-align: right
+
 // SECTION MXreality
 .MX-reality
 	background: url(../img/mxreality/MXreality-bg.jpg)
@@ -573,164 +580,22 @@
 	color: #f5bb45
 	position: absolute
 	z-index: 11
-// .icon-bg1
-// 	top: (382px*100%)/697px
-// 	left: (131px/1920px)*100%
+
 .icon-bg2,
 .icon-bg1
 	color: #00b1d0
 
-// .icon-bg2
-// 	top: (440px*100%)/900px
-// 	right: (255px*100%)/1920px
 
 .icon-bg_turquoise
 	color: #6dadda
 
 .icon-bg3
 	font-size: 20px
-// 	top: (400px*100%)/697px
-// 	right: (173px/1920px)*100%
 
-// .icon-bg5
-// 	top: (226px*100%)/697px
-// 	right: (414px/1920px)*100%
 .icon-bg6
 	font-size: 22px
-// 	top: (238px*100%)/697px
-// 	left: (242px/1920px)*100%
 
 .icon-bg_orange
 	color: #ddac35
 
 
-// .icon-bg1
-// 	right: (55px*100%)/1920px
-// 	top: (1788px*100%)/3704px
-// .icon-bg2
-// 	left: (123px*100%)/1920px
-// 	top: (1323px*100%)/3704px
-// .icon-bg3
-// 	right: (173px*100%)/1920px
-// 	bottom: (1325px*100%)/3800px
-// .icon-bg5
-// 	left: (262px*100%)/1920px
-// 	top: (1577px*100%)/3704px
-// .icon-bg6
-// 	right: (122px*100%)/1920px
-// 	top: (1294px*100%)/3704px
-
-// slider
-.slider
-	position: relative
-	margin-bottom: 260px
-	+clr
-	&__item
-		min-height: 900px
-		float: left
-		width: 33.33%
-		position: relative
-		+cover
-		color: white
-		padding: 80px 0
-		p
-			&:not(:last-child)
-				margin-bottom: 16px
-			font-size: 25px
-			font-weight: 300
-			line-height: 1
-		h1
-			margin-bottom: 100px
-			text-align: center
-			font-size: 70px
-			line-height: 1
-			font-weight: 700
-.js-slider
-	opacity: 0
-	visibility: hidden
-	transition: opacity 0.15s ease, visibility 0.15s ease
-	&.is-ready
-		opacity: 1
-		visibility: visible
-.slider-wrp
-	position: relative
-.slider-wrp__inner
-	max-width: 1920px
-	margin: -30px auto 0
-	top: 0
-	bottom: 0
-.plus
-	font-size: 0
-	list-style-type: disc
-	&__item
-		font-size: 25px
-		font-weight: 300
-		line-height: 1
-		margin-bottom: 15px
-		p
-			margin-bottom: 0
-.slick-arrow
-	position: absolute
-	top: 0
-	bottom: 0
-	background-color: rgba(255,255,255, 0.2)
-	// opacity: 0.2
-	// background-color: #fff
-	height: 100%
-	width: 140px
-	span
-		position: relative
-		top: 50%
-		&:before
-			z-index: 11
-			display: block
-			content: ''
-			position: absolute
-			border: 50px solid transparent
-			border-right: 50px solid white
-			right: 25%
-.arrow-next
-	right: 0
-	span
-		&:before
-			border-left: 50px solid white
-			border-right: none
-			left: 25%
-.arrow-prev
-	left: 0
-
-.js-prev.slick-disabled,
-.js-next.slick-disabled
-	opacity: 0
-	visibility: hidden
-
-.slick-dots
-	bottom: -50px
-.slick-dots li
-	&:not(:first-child)
-		margin-left: 3%
-.slick-dots button
-	background-color: #f2f2f2
-	width: 223px
-	height: 24px
-	border-radius: 0
-	border: 1px solid #f2f2f2
-	outline: 0
-	box-shadow: none
-.slick-dots li.slick-active button
-	background-color: #7b42c7
-// .bouncing-boat 
-// 	left: 0
-// 	top: 0
-// 	cursor: pointer
-// 	position: absolute
-// 	-webkit-transition: left 5s, top 5s
-// 	-moz-transition: left 5s, top 5s
-// 	-o-transition: left 5s, top 5s
-// 	-ms-transition: left 5s, top 5s
-// .flip-horizontal 
-// 	-webkit-transform: scale(-1, -1)
-// 	-moz-transform: scale(-1, -1)
-// 	-o-transform: scale(-1, -1)
-// 	-ms-transform: scale(-1, -1)
-// 	filter: fliph
