@@ -184,8 +184,8 @@ a { -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
 .h3 { font-size: 16px; font-weight: 400; margin-bottom: 30px; }
 
-.col { margin-bottom: 12px; }
-.col:nth-of-type(3) { margin-bottom: 0; }
+.row { margin-bottom: 12px; }
+.row:nth-of-type(3) { margin-bottom: 0; }
 
 .text-r { text-align: right; }
 
@@ -239,7 +239,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .icon-mail { font-size: 60px; padding: 18px; }
 
-.icon-arrow-r { font-size: 25px; margin-left: 10px; }
+.icon-arrow-r { font-size: 25px; margin-left: 10px; position: relative; top: -1px; }
 
 .overlay { opacity: 0; position: fixed; top: 0; right: 0; left: 0; bottom: 0; width: 100%; height: 100%; visibility: hidden; z-index: 11; background: rgba(53, 18, 83, 0.3); -webkit-transition: opacity 0.25s ease, visibility 0.25s ease; transition: opacity 0.25s ease, visibility 0.25s ease; }
 .overlay.is-active { opacity: 1; visibility: visible; }
@@ -284,8 +284,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 @keyframes animePlane { 0% { -webkit-transform: translate(250px, -100px) rotate(50deg) scale(1); transform: translate(250px, -100px) rotate(50deg) scale(1); }
   50% { -webkit-transform: translate(375px, -50px) rotate(60deg) scale(1); transform: translate(375px, -50px) rotate(60deg) scale(1); }
   100% { -webkit-transform: translate(500px, 0) rotate(60deg) scale(0); transform: translate(500px, 0) rotate(60deg) scale(0); opacity: 0; } }
-.hide-text { display: none; }
-
 .contacts-map { width: 100%; margin: auto; height: 400px; }
 
 .main { height: 100vh; background-color: white; padding-left: 5.209%; padding-right: 5.209%; font-size: 0; position: relative; padding-top: 80px; }
@@ -558,7 +556,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .menu { position: fixed; width: 400px; background-color: #fff; top: 0; bottom: 0; right: 0; z-index: 12; -webkit-transition: -webkit-transform 0.25s ease-in-out; transition: -webkit-transform 0.25s ease-in-out; transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out; -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); will-change: transform; overflow-x: hidden; overflow-y: auto; }
 .menu.is-open { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.menu__in { position: absolute; top: 208px; left: 0; }
+.menu__in { position: absolute; top: 208px; left: 50px; }
 
 .nav { font-size: 0; text-align: right; margin-bottom: 30px; }
 .nav__item { text-align: right; }
@@ -588,6 +586,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .learn-more:hover { color: white; background-color: #8c40cc; }
 
 .btn-next { display: block; max-width: 216px; width: 100%; color: white; border-radius: 5px; background-color: #8c40cc; padding: 16px 21px 12px 28px; font-size: 20px; font-weight: 400; text-transform: uppercase; text-decoration: none; }
+.btn-next:hover i { margin-left: 12px; }
 
 .btn-next_bg { background-color: #ffffff; color: #8c40cc; }
 .btn-next_bg .icon-arrow-r { color: #8c40cc; }
