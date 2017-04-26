@@ -3,23 +3,48 @@
 	padding: 29px 0 20px 0
 	background-color: #382e45
 	text-align: center
+	+r(767)
+		padding: 0
 	.inner
 		max-width: 1720px
+		+r(767)
+			width: 100%
 	&__logo
 		float: left
 		max-width: 105px
+		+r(767)
+			display: none
 	&__contact
 		float: left
 		width: 80%
 		text-align: center
+		+r(767)
+			padding: 25px 0
 	&__social
 		overflow: hidden
+		font-size: 0
+	&__logo,
+	&__contact
+		+r(767)
+			float: none
+			width: 100%
+			max-width: 290px
+			margin: auto
+			text-align: left
+
 .footer__contact-item
 	display: inline-block
 	vertical-align: middle
 	line-height: 20px
 	&:not(:first-child)
 		margin-left: 4%
+		+r(767)
+			margin-left: 0
+	+r(767)
+		display: block
+		&:not(:last-child)
+			margin-bottom: 20px
+		
 .footer__contact-link
 	display: block
 	color: white
@@ -36,23 +61,32 @@
 	&:active
 		i
 			color: #fcb200
-	i
-		vertical-align: middle
-		display: inline-block
-		margin-right: 12px
-			
 .footer__social-item
 	display: inline-block
 	vertical-align: top
+	+r(767)
+		width: 50%
+		height: 130px
+		&:hover,
+		&:active,
+		&:focus
+			background: rgba(255,255,255,0.3)
 	&:not(:first-child)
 		margin-left: 6%
+		+r(767)
+			margin-left: 0
 .footer__social-link
 	display: block
+	height: 100%
 	&:hover
 		+scale(0.8)
+	+r(767)
+		+vertical
 .icon-facebook,
 .icon-linkedin
 	font-size: 30px
+	+r(767)
+		font-size: 45px
 
 .icon-mail,
 .icon-phone,
@@ -60,6 +94,11 @@
 	font-size: 25px
 	position: relative
 	top: -2px
+	margin-right: 12px
+	+r(767)
+		margin-right: 30px
 
 .icon-mail
 	font-size: 20px
+	+r(767)
+		margin-right: 22px

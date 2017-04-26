@@ -515,7 +515,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .footer .inner { max-width: 1720px; }
 .footer__logo { float: left; max-width: 105px; }
 .footer__contact { float: left; width: 80%; text-align: center; }
-.footer__social { overflow: hidden; }
+.footer__social { overflow: hidden; font-size: 0; }
 
 .footer__contact-item { display: inline-block; vertical-align: middle; line-height: 20px; }
 .footer__contact-item:not(:first-child) { margin-left: 4%; }
@@ -523,17 +523,16 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .footer__contact-link { display: block; color: white; text-decoration: none; font-size: 15px; font-weight: 300; cursor: pointer; }
 .footer__contact-link:active, .footer__contact-link:focus, .footer__contact-link:hover { color: #fcb200; }
 .footer__contact-link:hover i, .footer__contact-link:focus i, .footer__contact-link:active i { color: #fcb200; }
-.footer__contact-link i { vertical-align: middle; display: inline-block; margin-right: 12px; }
 
 .footer__social-item { display: inline-block; vertical-align: top; }
 .footer__social-item:not(:first-child) { margin-left: 6%; }
 
-.footer__social-link { display: block; }
+.footer__social-link { display: block; height: 100%; }
 .footer__social-link:hover { -webkit-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8); }
 
 .icon-facebook, .icon-linkedin { font-size: 30px; }
 
-.icon-mail, .icon-phone, .icon-geo { font-size: 25px; position: relative; top: -2px; }
+.icon-mail, .icon-phone, .icon-geo { font-size: 25px; position: relative; top: -2px; margin-right: 12px; }
 
 .icon-mail { font-size: 20px; }
 
@@ -565,6 +564,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .nav__link, .nav .dropdown__link { color: #000; display: block; padding: 4px 0; cursor: pointer; -webkit-transition: padding 0.2s ease-in-out; transition: padding 0.2s ease-in-out; font-size: 16px; line-height: 1; text-decoration: none; }
 .nav__link .icon-hololens, .nav .dropdown__link .icon-hololens { color: #8c40cc; opacity: 0; -webkit-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out; margin-right: 20px; font-size: 16px; }
 .nav__link .icon-hololens_orange, .nav .dropdown__link .icon-hololens_orange { color: #fcb200; }
+.nav__link:hover, .nav .dropdown__link:hover { padding-right: 1px; }
 .nav__link:hover .icon-hololens, .nav .dropdown__link:hover .icon-hololens { opacity: 1; }
 
 .switcher { text-align: right; font-size: 0; }
@@ -624,6 +624,23 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1440px){
  .inner{ width: 90%; } }
+@media only screen and (max-width: 767px){
+ .footer{ padding: 0; }
+ .footer .inner{ width: 100%; }
+ .footer__logo{ display: none; }
+ .footer__contact{ padding: 25px 0; }
+ .footer__logo, .footer__contact{ float: none; width: 100%; max-width: 290px; margin: auto; text-align: left; }
+ .footer__contact-item:not(:first-child){ margin-left: 0; }
+ .footer__contact-item{ display: block; }
+ .footer__contact-item:not(:last-child){ margin-bottom: 20px; }
+ .footer__social-item{ width: 50%; height: 130px; }
+ .footer__social-item:hover, .footer__social-item:active, .footer__social-item:focus{ background: rgba(255, 255, 255, 0.3); }
+ .footer__social-item:not(:first-child){ margin-left: 0; }
+ .footer__social-link{ text-align: center; font-size: 0; }
+ .footer__social-link:before{ content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+ .icon-facebook, .icon-linkedin{ font-size: 45px; }
+ .icon-mail, .icon-phone, .icon-geo{ margin-right: 30px; }
+ .icon-mail{ margin-right: 22px; } }
 
 
 
