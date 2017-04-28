@@ -43,6 +43,8 @@
 	&:hover
 		i
 			margin-left: 12px
+	+r(768)
+		margin: auto
 .btn-next_bg
 	background-color: #ffffff
 	color: #8c40cc
@@ -55,12 +57,27 @@
 	border-radius: 50%
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
 	background-color: #eeae21
-	padding: 0
+	padding: 4px
 	cursor: pointer
 	z-index: 11
+.icon-mailsend
+	font-size: 70px 
 .about-contact
 	text-decoration: underline
 
+.brief-send
+	color: #ffffff
+	font-size: 15px
+	font-weight: 300
+	display: block
+	outline: 0
+	padding: 14px
+	max-width: 184px
+	width: 100%
+	background-color: #8c40cc
+	&:active
+		position: relative
+		top: 2px
 
 .arrow
 	position: fixed
@@ -73,7 +90,7 @@
 	-ms-border-radius: 50%
 	-o-border-radius: 50%
 	-webkit-border-radius: 50%
-	z-index: 1
+	z-index: 11
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.26), 0 0 16px rgba(0, 0, 0, 0.25)
 	+tr(background-color .2s ease)
 	+rotate(180)

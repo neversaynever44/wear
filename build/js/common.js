@@ -128,6 +128,27 @@ $('.js-close-popup').click(function (e) {
 //  	}
 // })
 
+
+// Show-Hide More text
+$(function() {
+	$('.learn-more').on('click',function(){
+		event.preventDefault()
+	    var $showText = $('.job__content');
+	    if ($showText.is(':visible')) {
+	        $showText.slideUp("200");
+	    } else {
+	    	$showText.slideDown("200");
+	    }
+	        
+	});
+ });  
+  
+
+
+
+
+
+
 // anchor
 $('.arrow-up').on('click', function() {
 		if(event.preventDefault){
@@ -158,9 +179,9 @@ $(document).scroll(function() {
 	infinite: false,
 	 speed: 1000,
 	 dots: true,
-	 autoplay: true,
+	 autoplay: false,
    	 adaptiveHeight: true,
-	 autoplaySpeed: 6000,
+	 // autoplaySpeed: 6000,
 	 arrows: true,
  	 prevArrow: '.js-prev',
 	 nextArrow: '.js-next',
