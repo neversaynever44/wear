@@ -200,8 +200,8 @@
 		p
 			font-size: 14px
 
-.job__content
-	display: none
+// .job__content
+// 	display: none
 
 	// z-index: 200
 	// -webkit-transition: opacity 0.25s ease, visibility 0.25s ease
@@ -287,8 +287,9 @@
 
 .portfolio__in
 	.portfolio__content-desc
-		margin-bottom: 0
-		margin-top: 60px
+		border: 0
+		margin: 0
+		padding: 0 0 30px 0
 		p
 			&:not(:last-child)
 				margin-bottom: 30px
@@ -310,6 +311,8 @@
 .icon-appleDown
 	color: #8c40cc
 	font-size: 70px
+	+r(768)
+		font-size: 50px
 
 // product
 .product
@@ -605,3 +608,29 @@
 
 
 
+
+.accordeon
+	list-style-type: none
+	margin: 0
+	padding: 0
+	&__wrapper
+		width: 40%
+	&__item
+		display: block
+	&:hover .accordeon__trigger
+		color: salmon
+	&__trigger
+		display: block
+		text-decoration: none
+		transition: all .2s
+	&__inner
+		list-style-type: none
+		margin: 0
+		padding: 0 0 0 20px
+		display: none
+	&__link
+		display: block
+		text-decoration: none
+		transition: all .2s
+		&:hover
+			color salmon

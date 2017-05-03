@@ -166,10 +166,16 @@ $(function() {
 	        
 	});
  });  
-  
 
 
 
+
+
+// $(function(){
+//   $('.job__list').find('.learn-more').on('click',function(){
+//     $(this).siblings('.job__content').stop(true,true).slideToggle()
+//     .parents('.accordeon__item').siblings().children('.accordeon__inner').stop(true,true).slideUp();
+//   });
 
 
 
@@ -274,27 +280,39 @@ var supportedPrefix,
     console.log("supports3d: " + supports3d + "; browser prefix: " + supportedPrefix);
 
 // accordion menu
-	var acc = document.getElementsByClassName("js-show");
-	var i;
 
-	for (i = 0; i < acc.length; i++) {
-	  acc[i].onclick = function() {
-	    this.classList.toggle("is-active");
-	    var panel = this.nextElementSibling;
-	    if (panel.style.maxHeight){
-	      panel.style.maxHeight = null;
-	    } else {
-	      panel.style.maxHeight = panel.scrollHeight + "px";
-	    } 
-	      $('body').click(function(e) { 
-		    var el = e.target || e.srcElement; 
-		    if (!$(el).closest('.js-show').length && !$(el).closest('.js-show').length) { 
-		     panel.style.maxHeight = null;
-		     $('.js-show').removeClass('is-active');
-		    } 
-		}); 
-	  }
-	}
+      var acc = document.querySelectorAll(".js-show");
+      var i,
+          _prevClick;
+
+      for (i = 0; i < acc.length; i++) {
+
+        acc[i].addEventListener('click', function() {
+          
+          if(_prevClick && _prevClick !== this) {
+            _prevClick.classList.remove("is-active");
+            _prevClick.nextElementSibling.style.maxHeight = '';
+          }
+          this.classList.toggle("is-active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = '';
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+  //         $('body').click(function(e) { 
+		//     var el = e.target || e.srcElement; 
+		//     if (!$(el).closest('.js-show').length && !$(el).closest('.js-show').length) { 
+		//      panel.style.maxHeight = null;
+		//      $('.js-show').removeClass('is-active');
+		//     } 
+		// }); 
+          _prevClick = this;
+
+        });
+
+      }
+
 
 });
 

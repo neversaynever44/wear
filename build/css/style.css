@@ -223,7 +223,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .icon-footer-logo { font-size: 29px; }
 
-.icon-arrow-r { font-size: 25px; margin-left: 10px; position: relative; top: -1px; }
+.icon-arrow-r { font-size: 25px; padding-left: 10px; position: relative; top: -1px; }
 
 .icon-bg1, .icon-bg2, .icon-bg3, .icon-bg5, .icon-bg6 { font-size: 33px; color: #f5bb45; position: absolute; z-index: 11; }
 
@@ -389,8 +389,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .list__item:not(:last-child) { margin-bottom: 20px; }
 .list__item p { font-size: 14px; }
 
-.job__content { display: none; }
-
 .container { padding-top: 100px; position: relative; }
 
 .portfolio { position: relative; padding: 70px 0; *zoom: 1; }
@@ -415,7 +413,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .portfolio__content-button { margin-bottom: 60px; }
 
-.portfolio__in .portfolio__content-desc { margin-bottom: 0; margin-top: 60px; }
+.portfolio__in .portfolio__content-desc { border: 0; margin: 0; padding: 0 0 30px 0; }
 .portfolio__in .portfolio__content-desc p:not(:last-child) { margin-bottom: 30px; }
 
 .links { font-size: 0; }
@@ -512,6 +510,14 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .icon-game { font-size: 70px; color: #a13ed1; }
 
+.accordeon { list-style-type: none; margin: 0; padding: 0; }
+.accordeon__wrapper { width: 40%; }
+.accordeon__item { display: block; }
+.accordeon:hover .accordeon__trigger { color: salmon; }
+.accordeon__trigger { display: block; text-decoration: none; -webkit-transition: all 0.2s; transition: all 0.2s; }
+.accordeon__inner { list-style-type: none; margin: 0; padding: 0 0 0 20px; display: none; }
+.accordeon__link { display: block; text-decoration: none; -webkit-transition: all 0.2s; transition: all 0.2s; }
+
 .footer { padding: 29px 0 20px 0; background-color: #382e45; text-align: center; }
 .footer .inner { max-width: 1720px; }
 .footer__logo { float: left; max-width: 105px; }
@@ -587,8 +593,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .learn-more { color: #000000; font-family: "Roboto"; font-size: 15px; font-weight: 300; padding: 14px 18px; border: 1px solid #8c40cc; display: inline-block; outline: 0; text-transform: uppercase; -webkit-transition: background-color 0.3s ease; transition: background-color 0.3s ease; text-decoration: none; margin-left: 50px; }
 .learn-more:hover { color: white; background-color: #8c40cc; }
 
-.btn-next { display: block; max-width: 216px; width: 100%; color: white; border-radius: 5px; background-color: #8c40cc; padding: 16px 21px 12px 28px; font-size: 20px; font-weight: 400; text-transform: uppercase; }
-.btn-next:hover i { margin-left: 12px; }
+.btn-next { display: block; max-width: 216px; width: 100%; color: white; border-radius: 5px; background-color: #8c40cc; padding: 16px 21px 12px 24px; font-size: 20px; font-weight: 400; text-align: center; text-transform: uppercase; -webkit-transition: padding 0.25s ease; transition: padding 0.25s ease; position: relative; }
+.btn-next:hover i { padding-left: 12px; }
 
 .btn-next_bg { background-color: #ffffff; color: #8c40cc; }
 .btn-next_bg .icon-arrow-r { color: #8c40cc; }
@@ -640,6 +646,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .portfolio__content{ -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; padding-left: 0; }
  .portfolio__content-desc{ font-size: 18px; padding: 30px 0; }
  .links{ text-align: center; }
+ .icon-googleDown, .icon-appleDown{ font-size: 50px; }
  .btn-next{ margin: auto; } }
 @media only screen and (max-width: 767px){
  .footer{ padding: 0; }
