@@ -130,18 +130,18 @@ $('.js-close-popup').click(function (e) {
 
 
 // Show-Hide More text
-$(function() {
-	$('.learn-more').on('click',function(){
-		event.preventDefault()
-	    var $showText = $('.job__content');
-	    if ($showText.is(':visible')) {
-	        $showText.slideUp("200");
-	    } else {
-	    	$showText.slideDown("200");
-	    }
+// $(function() {
+// 	$('.learn-more').on('click',function(){
+// 		event.preventDefault()
+// 	    var $showText = $('.job__content');
+// 	    if ($showText.is(':visible')) {
+// 	        $showText.slideUp("200");
+// 	    } else {
+// 	    	$showText.slideDown("200");
+// 	    }
 	        
-	});
- });  
+// 	});
+//  });  
 
 
 
@@ -288,6 +288,11 @@ var supportedPrefix,
         });
 
       }
+
+
+
+
+
 
 
 });

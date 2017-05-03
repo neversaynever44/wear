@@ -200,16 +200,14 @@
 		p
 			font-size: 14px
 
-// .job__content
-// 	display: none
-
-	// z-index: 200
-	// -webkit-transition: opacity 0.25s ease, visibility 0.25s ease
-	// transition: opacity 0.25s ease, visibility 0.25s ease
-	// overflow: hidden
-	// -webkit-transition: max-height 0.2s ease-out
-	// transition: max-height 0.2s ease-out
-	// max-height: 0
+.job__content
+	z-index: 200
+	-webkit-transition: opacity 0.25s ease, visibility 0.25s ease
+	transition: opacity 0.25s ease, visibility 0.25s ease
+	overflow: hidden
+	-webkit-transition: max-height 0.2s ease-out
+	transition: max-height 0.2s ease-out
+	max-height: 0
 
 // portfolio
 .container
@@ -328,44 +326,66 @@
 
 // section blog
 .blog
-	padding-top: 160px
 	&__list
 		font-size: 0
 		text-align: center
-		margin: 0 0 0 -2%
+		margin: 0 0 0 -4%
+		+r(768)
+			margin: 0 0 0 -15%
+		+r(480)
+			margin: 0
 .blog__list-item
 	display: inline-block
 	vertical-align: top
-	width: 31.33%
-	margin-left: 2%
+	width: 29.33%
+	margin-left: 4%
 	margin-bottom: 88px
+	+r(768)
+		width: 35%
+		margin-left: 15%
+		margin-bottom: 50px
+	+r(480)
+		width: 100%
+		margin-left: 0
+		max-width: 300px
 .blog__list-pic
-	height: 266px
-	overflow: hidden
+	// height: 266px
+	// overflow: hidden
 	position: relative
-	margin-bottom: 20px
+	+r(480)
+		max-width: 225px
+		margin: auto
 	img
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		height: 100%
+		// position: absolute
+		// top: 0
+		// left: 0
+		// right: 0
+		// bottom: 0
+		// height: 100%
 		width: 100%
 .blog__list-date
 	color: #8c40cc
 	font-size: 17px
 	font-weight: 500
-	margin-bottom: 22px
+	margin: 20px 0
+	+r(768)
+		margin: 10px 0
 .blog__list-title
 	font-size: 20px
 	font-weight: 500
 	text-transform: uppercase
 	margin-bottom: 26px
+	+r(768)
+		margin-bottom: 13px
 .blog__list-text
 	font-size: 20px
 	font-weight: 300
 
+.blog__list-date,
+.blog__list-title,
+.blog__list-text
+	+r(768)
+		font-size: 14px
 // blog_in
 .blog-in
 	background: url(../img/blog-bg.png)
@@ -608,29 +628,3 @@
 
 
 
-
-.accordeon
-	list-style-type: none
-	margin: 0
-	padding: 0
-	&__wrapper
-		width: 40%
-	&__item
-		display: block
-	&:hover .accordeon__trigger
-		color: salmon
-	&__trigger
-		display: block
-		text-decoration: none
-		transition: all .2s
-	&__inner
-		list-style-type: none
-		margin: 0
-		padding: 0 0 0 20px
-		display: none
-	&__link
-		display: block
-		text-decoration: none
-		transition: all .2s
-		&:hover
-			color salmon
