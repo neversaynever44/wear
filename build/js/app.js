@@ -211,19 +211,17 @@ $(document).scroll(function() {
 	var item = $(this).closest('.job__list-item'),
 		contentItem = $('.job__content'),
 		itemPosition = item.index();
-
-		console.log(item);
-	console.log(contentItem);
-	console.log(itemPosition);
+		
+	// 	console.log(item);
+	// console.log(contentItem);
+	// console.log(itemPosition);
 
 	contentItem.eq(itemPosition)
 		.add(item)
 		.addClass('is-active')
 		.siblings()
 		.removeClass('is-active');
-
-
-});
+	});
 
 
 

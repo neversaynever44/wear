@@ -127,6 +127,12 @@ a
 	margin-bottom: 30px
 
 
+time
+	color: #8c40cc
+	font-weight: bold
+	display: block
+	font-size: 16px
+
 // row
 .row
 	margin-bottom: 12px
@@ -262,10 +268,16 @@ textarea
 .wrapper
 	padding: 50px 0
 	position: relative
+	p
+		margin-bottom: 15px
+		font-size: 16px
 .social
 	float: right
 	font-size: 0
 	padding: 40px 0
+	+r(480)
+		float: none
+		text-align: center
 	&__item
 		display: inline-block
 		vertical-align: middle
@@ -281,6 +293,8 @@ textarea
 		padding: 10px
 		position: relative
 		+tr(transform .3s ease)
+		+r(768)
+			padding: 3px
 		&:hover
 			+rotate(360)
 	.social_fb
@@ -297,9 +311,9 @@ textarea
 		border: 1px solid #ffffff
 		background-color: #fb4840
 		&:hover
-			background-color: #d34836
-			.icon-go
-				color: white
+			background-color: #3b5998
+			// .icon-go
+			// 	color: white
 	.social_vk
 		&:hover
 			background-color: #3b5998

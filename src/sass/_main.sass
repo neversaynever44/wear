@@ -400,6 +400,8 @@
 	position: relative
 	color: white
 	max-height: 400px
+	+r(768)
+		max-height: 288px
 .blog-in__title
 	+vcenter
 	text-align: center
@@ -408,13 +410,19 @@
 	line-height: 1
 	h1
 		font-weight: 700
-		font-size: 34px
+		font-size: 33px
 		padding-right: (300px/1400px)*100%
 		color: #eeae21
 		margin-bottom: 26px
+		+r(768)
+			margin-bottom: 15px
 	h2
 		font-weight: 400
 		font-size: 34px
+	h1,
+	h2
+		+r(768)
+			font-size: 22px
 
 
 // section VR-reality

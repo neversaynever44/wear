@@ -186,6 +186,8 @@ a { -webkit-transition: all 0.3s ease; transition: all 0.3s ease; text-decoratio
 
 .h3 { font-size: 16px; font-weight: 400; margin-bottom: 30px; }
 
+time { color: #8c40cc; font-weight: bold; display: block; font-size: 16px; }
+
 .row { margin-bottom: 12px; }
 .row:nth-of-type(3) { margin-bottom: 0; }
 
@@ -238,6 +240,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .icon-bg_orange { color: #ddac35; }
 
 .wrapper { padding: 50px 0; position: relative; }
+.wrapper p { margin-bottom: 15px; font-size: 16px; }
 
 .social { float: right; font-size: 0; padding: 40px 0; }
 .social__item { display: inline-block; vertical-align: middle; border: 1px solid #8b8b8b; position: relative; -webkit-transition: background-color 0.2s ease; transition: background-color 0.2s ease; }
@@ -250,8 +253,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .social .social_tw:hover { background-color: #4099ff; }
 .social .social_tw:hover .icon-tw { color: white; }
 .social .social_go { border: 1px solid #ffffff; background-color: #fb4840; }
-.social .social_go:hover { background-color: #d34836; }
-.social .social_go:hover .icon-go { color: white; }
+.social .social_go:hover { background-color: #3b5998; }
 .social .social_vk:hover { background-color: #3b5998; }
 .social .social_vk:hover .icon-vk { color: white; }
 
@@ -449,7 +451,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .blog-in { background: url(../img/blog-bg.png); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 100vh; position: relative; color: white; max-height: 400px; }
 
 .blog-in__title { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; text-transform: uppercase; width: 100%; line-height: 1; }
-.blog-in__title h1 { font-weight: 700; font-size: 34px; padding-right: 21.42857%; color: #eeae21; margin-bottom: 26px; }
+.blog-in__title h1 { font-weight: 700; font-size: 33px; padding-right: 21.42857%; color: #eeae21; margin-bottom: 26px; }
 .blog-in__title h2 { font-weight: 400; font-size: 34px; }
 
 .VR-reality { background: url(../img/vrreality/VRreality-bg.jpg) center no-repeat; background-size: cover; position: relative; background-position: 50% 0; color: white; padding-top: 80px; }
@@ -636,6 +638,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .inner{ width: 90%; } }
 @media only screen and (max-width: 768px){
  .h2{ margin: 25px 0; text-align: center; }
+ .social__link{ padding: 3px; }
  .portfolio{ padding: 35px 0; }
  .portfolio .inner{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
  .portfolio__content, .portfolio__pic{ display: block; width: 100%; }
@@ -649,6 +652,9 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .blog__list-date{ margin: 10px 0; }
  .blog__list-title{ margin-bottom: 13px; }
  .blog__list-date, .blog__list-title, .blog__list-text{ font-size: 14px; }
+ .blog-in{ max-height: 288px; }
+ .blog-in__title h1{ margin-bottom: 15px; }
+ .blog-in__title h1, .blog-in__title h2{ font-size: 22px; }
  .btn-next{ margin: auto; } }
 @media only screen and (max-width: 767px){
  .footer{ padding: 0; }
@@ -669,6 +675,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .icon-mail{ margin-right: 22px; } }
 @media only screen and (max-width: 480px){
  .h1{ margin-bottom: 25px; }
+ .social{ float: none; text-align: center; }
  .blog__list{ margin: 0; }
  .blog__list-item{ width: 100%; margin-left: 0; max-width: 300px; }
  .blog__list-pic{ max-width: 225px; margin: auto; } }
