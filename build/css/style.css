@@ -543,7 +543,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .header { position: fixed; top: 0; left: 0; right: 0; padding: 40px 0; z-index: 111; width: 100%; background-color: white; }
 
-.menu-btn { width: 74px; height: 64px; position: absolute; cursor: pointer; top: 20px; right: 5.21%; margin-top: -15px; margin-right: -15px; padding: 15px; z-index: 111; }
+.menu-btn { width: 44px; height: 34px; position: absolute; cursor: pointer; top: 20px; right: 5.21%; z-index: 111; }
 .menu-btn span { -webkit-transition: background 0s 0.3s; transition: background 0s 0.3s; width: 100%; height: 5px; background-color: #8c40cc; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; position: relative; display: inline-block; margin-top: 14px; }
 .menu-btn span:before, .menu-btn span:after { content: ""; position: absolute; left: 0; width: 100%; height: 5px; background-color: #8c40cc; -webkit-transition-duration: 0.3s, 0.3s; transition-duration: 0.3s, 0.3s; -webkit-transition-delay: 0.3s, 0s; transition-delay: 0.3s, 0s; }
 .menu-btn span:before { top: 14px; -webkit-transition-property: top, -webkit-transform; transition-property: top, transform; }
@@ -552,7 +552,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .menu-btn_orange span { background-color: #fcb200; }
 .menu-btn_orange span:after, .menu-btn_orange span:before { background-color: #fcb200; }
 
-.logo { position: absolute; left: 5%; top: 20px; z-index: 1; width: 144px; height: 42px; }
+.logo { position: absolute; left: 5%; top: 20px; z-index: 1; }
 
 .menu-btn.is-active span { background: 0 0; }
 .menu-btn.is-active span:before, .menu-btn.is-active span:after { -webkit-transition-delay: 0s, 0.3s; transition-delay: 0s, 0.3s; }
@@ -638,6 +638,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .inner{ width: 90%; } }
 @media only screen and (max-width: 768px){
  .h2{ margin: 25px 0; text-align: center; }
+ .icon-logo{ font-size: 30px; }
  .social__link{ padding: 3px; }
  .portfolio{ padding: 35px 0; }
  .portfolio .inner{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
@@ -655,6 +656,12 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .blog-in{ max-height: 288px; }
  .blog-in__title h1{ margin-bottom: 15px; }
  .blog-in__title h1, .blog-in__title h2{ font-size: 22px; }
+ .menu-btn{ width: 35px; }
+ .menu-btn span{ height: 3px; }
+ .menu-btn span:before, .menu-btn span:after{ height: 3px; }
+ .menu-btn span:before{ top: 10px; }
+ .menu-btn span:after{ top: -10px; }
+ .logo, .menu-btn{ top: 25px; }
  .btn-next{ margin: auto; } }
 @media only screen and (max-width: 767px){
  .footer{ padding: 0; }
