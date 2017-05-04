@@ -153,29 +153,6 @@ $('.js-close-popup').click(function (e) {
 // })
 
 
-// Show-Hide More text
-// $(function() {
-// 	$('.learn-more').on('click',function(){
-// 		event.preventDefault()
-// 	    var $showText = $('.job__content');
-// 	    if ($showText.is(':visible')) {
-// 	        $showText.slideUp("200");
-// 	    } else {
-// 	    	$showText.slideDown("200");
-// 	    }
-	        
-// 	});
-//  });  
-
-
-
-
-
-// $(function(){
-//   $('.job__list').find('.learn-more').on('click',function(){
-//     $(this).siblings('.job__content').stop(true,true).slideToggle()
-//     .parents('.accordeon__item').siblings().children('.accordeon__inner').stop(true,true).slideUp();
-//   });
 
 
 
@@ -226,19 +203,28 @@ $(document).scroll(function() {
 	 slider.not('.slick-initialized').slick(options);
 	}
 
-// Show-Hide More text
-// $(function() {
-// 	$('.read-more').on('click',function(){
-// 		event.preventDefault()
-// 	    var $showText = $('.hide-text');
-// 	    if ($showText.is(':visible')) {
-// 	        $showText.fadeOut("200");
-// 	    } else {
-// 	    	$showText.fadeIn("200");
-// 	    }
-	        
-// 	});
-//  });    
+
+// tabs
+	$('.learn-more').on('click', function(e){
+		e.preventDefault();
+	
+	var item = $(this).closest('.job__list-item'),
+		contentItem = $('.job__content'),
+		itemPosition = item.index();
+
+		console.log(item);
+	console.log(contentItem);
+	console.log(itemPosition);
+
+	contentItem.eq(itemPosition)
+		.add(item)
+		.addClass('is-active')
+		.siblings()
+		.removeClass('is-active');
+
+
+});
+
 
 
 
@@ -279,7 +265,7 @@ var supportedPrefix,
     }
     console.log("supports3d: " + supports3d + "; browser prefix: " + supportedPrefix);
 
-// accordion menu
+	// accordion menu
 
       var acc = document.querySelectorAll(".js-show");
       var i,
@@ -312,9 +298,6 @@ var supportedPrefix,
         });
 
       }
-
-
-
 
 
 
