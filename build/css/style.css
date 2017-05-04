@@ -563,7 +563,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .menu.is-open { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .menu__in { position: absolute; top: 208px; left: 50px; }
 
-.nav { font-size: 0; text-align: right; margin-bottom: 30px; }
+.nav { font-size: 0; text-align: right; margin-bottom: 30px; list-style-type: none; }
 .nav__item { text-align: right; }
 .nav__item:not(:last-child) { margin-bottom: 10px; }
 .nav__link, .nav .dropdown__link { color: #000; display: block; padding: 4px 0; cursor: pointer; -webkit-transition: padding 0.2s ease-in-out; transition: padding 0.2s ease-in-out; font-size: 16px; line-height: 1; text-decoration: none; }
