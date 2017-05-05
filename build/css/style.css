@@ -27,15 +27,15 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
-.icon-advertising:before { content: ""; }
-
 .icon-Oculus:before { content: ""; }
+
+.icon-advertising:before { content: ""; }
 
 .icon-Cardboard:before { content: ""; }
 
-.icon-appleDown:before { content: ""; }
-
 .icon-ar:before { content: ""; }
+
+.icon-appleDown:before { content: ""; }
 
 .icon-arrow-r:before { content: ""; }
 
@@ -47,9 +47,9 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-bg3:before { content: ""; }
 
-.icon-bg6:before { content: ""; }
-
 .icon-bg5:before { content: ""; }
+
+.icon-bg6:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
@@ -57,67 +57,69 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-education:before { content: ""; }
 
+.icon-facebook:before { content: ""; }
+
 .icon-envelope:before { content: ""; }
 
 .icon-fb:before { content: ""; }
 
-.icon-facebook:before { content: ""; }
-
 .icon-footer-logo:before { content: ""; }
 
-.icon-game:before { content: ""; }
-
 .icon-gear:before { content: ""; }
+
+.icon-game:before { content: ""; }
 
 .icon-geo:before { content: ""; }
 
 .icon-glasses:before { content: ""; }
 
-.icon-go:before { content: ""; }
-
 .icon-goggles:before { content: ""; }
+
+.icon-go:before { content: ""; }
 
 .icon-googleDown:before { content: ""; }
 
 .icon-hololens:before { content: ""; }
 
-.icon-how-it-work:before { content: ""; }
-
 .icon-icon-open:before { content: ""; }
 
-.icon-iphone:before { content: ""; }
+.icon-instagram:before { content: ""; }
 
-.icon-linkedin:before { content: ""; }
+.icon-iphone:before { content: ""; }
 
-.icon-location:before { content: ""; }
+.icon-linkedin:before { content: ""; }
 
-.icon-logo:before { content: ""; }
+.icon-how-it-work:before { content: ""; }
 
-.icon-mail:before { content: ""; }
+.icon-location:before { content: ""; }
 
-.icon-mailsend:before { content: ""; }
+.icon-logo:before { content: ""; }
 
-.icon-medical:before { content: ""; }
+.icon-mail:before { content: ""; }
 
-.icon-phone:before { content: ""; }
+.icon-mailsend:before { content: ""; }
 
-.icon-open:before { content: ""; }
+.icon-open:before { content: ""; }
 
-.icon-property:before { content: ""; }
+.icon-medical:before { content: ""; }
 
-.icon-send:before { content: ""; }
+.icon-property:before { content: ""; }
 
-.icon-smart:before { content: ""; }
+.icon-phone:before { content: ""; }
 
-.icon-triangle:before { content: ""; }
+.icon-send:before { content: ""; }
 
-.icon-smartphone:before { content: ""; }
+.icon-smart:before { content: ""; }
 
-.icon-triangle2:before { content: ""; }
+.icon-smartphone:before { content: ""; }
 
-.icon-tw:before { content: ""; }
+.icon-triangle:before { content: ""; }
 
-.icon-vk:before { content: ""; }
+.icon-vk:before { content: ""; }
+
+.icon-triangle2:before { content: ""; }
+
+.icon-tw:before { content: ""; }
 
 @font-face { font-family: skoda; src: url("fonts/SkodaPro-Light.eot"); src: url("fonts/SkodaPro-Light.eot?#iefix") format("embedded-opentype"), url("fonts/SkodaPro-Light.woff2") format("woff2"), url("fonts/SkodaPro-Light.woff") format("woff"), url("fonts/SkodaPro-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: exo; src: url("fonts/Exo2-Light.eot"); src: url("fonts/Exo2-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Exo2-Light.woff2") format("woff2"), url("fonts/Exo2-Light.woff") format("woff"), url("fonts/Exo2-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -541,7 +543,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .footer__social-link { display: block; height: 100%; }
 .footer__social-link:hover { -webkit-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8); }
 
-.icon-facebook, .icon-linkedin { font-size: 30px; }
+.icon-facebook, .icon-linkedin, .icon-instagram { font-size: 30px; }
 
 .icon-mail, .icon-phone, .icon-geo { font-size: 25px; position: relative; top: -2px; margin-right: 12px; }
 
@@ -674,7 +676,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .menu-btn span:before{ top: 10px; }
  .menu-btn span:after{ top: -10px; }
  .logo, .menu-btn{ top: 25px; }
- .menu__in{ top: 100px; left: 116px; }
+ .menu__in{ top: 150px; left: 60px; }
  .btn-next{ margin: auto; padding: 10px; } }
 @media only screen and (max-width: 767px){
  .footer{ padding: 0; }
@@ -690,7 +692,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .footer__social-item:not(:first-child){ margin-left: 0; }
  .footer__social-link{ text-align: center; font-size: 0; }
  .footer__social-link:before{ content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
- .icon-facebook, .icon-linkedin{ font-size: 45px; }
+ .icon-facebook, .icon-linkedin, .icon-instagram{ font-size: 45px; }
  .icon-mail, .icon-phone, .icon-geo{ margin-right: 30px; }
  .icon-mail{ margin-right: 22px; } }
 @media only screen and (max-width: 480px){
