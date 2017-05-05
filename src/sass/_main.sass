@@ -64,7 +64,7 @@
 	text-align: center
 	+exo
 	font-weight: 400
-	font-size: 20px
+	font-size: 24px
 	position: absolute
 .triangle__title 
 	transition: transform 2s cubic-bezier(0, 0, 0, 1)
@@ -171,6 +171,8 @@
 			margin: 25px 0
 			font-size: 24px
 			font-weight: 500
+.job__list-content
+	+clr
 .job__list-item
 	border-bottom: 1px solid #b1b1b1
 	padding: 15px 0
@@ -201,9 +203,6 @@
 			font-size: 14px
 
 .job__content
-	display: none
-	&.is-active
-		display: block
 	// z-index: 200
 	// -webkit-transition: opacity 0.25s ease, visibility 0.25s ease
 	// transition: opacity 0.25s ease, visibility 0.25s ease
@@ -211,6 +210,9 @@
 	// -webkit-transition: max-height 0.2s ease-out
 	// transition: max-height 0.2s ease-out
 	// max-height: 0
+	display: none
+	&.is-active
+		display: block
 
 // portfolio
 .container
@@ -427,7 +429,7 @@
 
 // section VR-reality
 .VR-reality
-	background: url(../img/vrreality/VRreality-bg.jpg) center no-repeat
+	background: url(../img/vrreality/VRreality-bg.png) center no-repeat
 	background-size: cover
 	position: relative
 	background-position: 50% 0
@@ -449,10 +451,10 @@
 		bottom: 0
 		left: 0
 		width: 100%
-		opacity: 0.55
+		opacity: 0.78
 		height: 100%
-		// background-color: #563d78
-		background-color: #7b42c7
+		background-color: #563d78
+		// background-color: #7b42c7
 
 // advantages
 .advantages
@@ -484,7 +486,7 @@
 	text-align: left
 	max-width: 700px
 	font-size: 18px
-	font-weight: 300
+	font-weight: 400
 	line-height: 1.4
 .advantages__item-pic .icon-Cardboard
 	font-size: 45px
@@ -541,7 +543,7 @@
 		line-height: 1.2
 
 .infographic__note-third
-	right: 36px
+	right: (36px*100%)/600px
 .infographic__note-second
 	top: -64%
 	left: 50%
@@ -573,19 +575,38 @@
 	font-size: 25px
 	font-weight: 300
 	text-align: center
+	+r(768)
+		padding: 35px 0
 	b
 		font-weight: 400
 .development
 	padding: 40px 0
 	background-color: #f2f2f2
 	margin-bottom: 110px
+	+r(768)
+		margin-bottom: 60px
 	.inner
 		display: table
 		max-width: 1750px
+		+r(768)
+			display: -webkit-box
+			display: -webkit-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-orient: vertical
+			-webkit-box-direction: normal
+			-webkit-flex-direction: column
+			-ms-flex-direction: column
+			flex-direction: column
 	&__pic,
 	&__content
 		display: table-cell
 		vertical-align: middle
+	&__pic
+		+r(768)
+			max-width: 350px
+			margin: 0 auto 25px
+			order: 1
 	&__content
 		width: 62%
 		padding: 0 2% 0 2%
@@ -593,6 +614,12 @@
 		font-size: 25px
 		font-weight: 300
 		line-height: 1.2
+		+r(768)
+			width: 100%
+			padding: 0
+			font-size: 16px
+			order: 2
+			text-align: justify
 		b
 			font-weight: 400
 

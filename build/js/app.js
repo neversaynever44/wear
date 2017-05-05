@@ -207,20 +207,18 @@ $(document).scroll(function() {
 // tabs
 	$('.learn-more').on('click', function(e){
 		e.preventDefault();
-	
 	var item = $(this).closest('.job__list-item'),
 		contentItem = $('.job__content'),
-		itemPosition = item.index();
+		itemPosition = item.index(),
+		clickBtn        = $('.learn-more');
 		
 	// 	console.log(item);
 	// console.log(contentItem);
 	// console.log(itemPosition);
-
 	contentItem.eq(itemPosition)
 		.add(item)
-		.addClass('is-active')
+		.toggleClass('is-active')
 		.siblings()
-		.removeClass('is-active');
 	});
 
 
@@ -243,25 +241,25 @@ $(document).scroll(function() {
 
 });
 
-var supportedPrefix,
-      supports3d = false,
-      prefixes = [ "Webkit", "Moz", "ms", "O" ],
-      div = document.createElement("div");
+// var supportedPrefix,
+//       supports3d = false,
+//       prefixes = [ "Webkit", "Moz", "ms", "O" ],
+//       div = document.createElement("div");
 
-    if ( div.style.perspective !== undefined ) {
-        /*Browser supports CSS transform 3d without prefix*/
-        supportedPrefix = "";
-        supports3d = true;
-    }else {
-        for ( var i = 0; i < prefixes.length; ++i ) {
-            if((prefixes[i] + "Perspective") in div.style) {
-                supports3d = true;
-                supportedPrefix = prefixes[i];
-                break;
-            }
-        }
-    }
-    console.log("supports3d: " + supports3d + "; browser prefix: " + supportedPrefix);
+//     if ( div.style.perspective !== undefined ) {
+//         /*Browser supports CSS transform 3d without prefix*/
+//         supportedPrefix = "";
+//         supports3d = true;
+//     }else {
+//         for ( var i = 0; i < prefixes.length; ++i ) {
+//             if((prefixes[i] + "Perspective") in div.style) {
+//                 supports3d = true;
+//                 supportedPrefix = prefixes[i];
+//                 break;
+//             }
+//         }
+//     }
+//     console.log("supports3d: " + supports3d + "; browser prefix: " + supportedPrefix);
 
 	// accordion menu
 
@@ -296,6 +294,41 @@ var supportedPrefix,
         });
 
       }
+
+
+
+  //     var acc = document.querySelectorAll(".learn-more");
+  //     var i,
+  //         _prevClick;
+
+  //     for (i = 0; i < acc.length; i++) {
+
+  //       acc[i].addEventListener('click', function() {
+          
+  //         if(_prevClick && _prevClick !== this) {
+  //           _prevClick.classList.remove("is-active");
+  //           _prevClick.nextElementSibling.style.maxHeight = '';
+  //         }
+  //         this.classList.toggle("is-active");
+  //         var panel = this.nextElementSibling;
+  //         if (panel.style.maxHeight) {
+  //           panel.style.maxHeight = '';
+  //         } else {
+  //           panel.style.maxHeight = panel.scrollHeight + "px";
+  //         }
+  // //         $('body').click(function(e) { 
+		// //     var el = e.target || e.srcElement; 
+		// //     if (!$(el).closest('.js-show').length && !$(el).closest('.js-show').length) { 
+		// //      panel.style.maxHeight = null;
+		// //      $('.js-show').removeClass('is-active');
+		// //     } 
+		// // }); 
+  //         _prevClick = this;
+
+  //       });
+
+  //     }
+
 
 
 

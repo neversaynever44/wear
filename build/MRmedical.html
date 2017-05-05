@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+
+	    <i class="icon icon-bg1" style="top: 30.12618%;left: 6.82292%;"></i>
+		<i class="icon icon-bg2" style="top: 17.82334%;right: 8.28125%;"></i>
+		<i class="icon icon-bg3" style="top: 31.54574%;right: 9.01042%;"></i>
+		<i class="icon icon-bg5" style="top: 17.58675%;right: 21.5625%;"></i>
+		<i class="icon icon-bg6" style="top: 18.76972%;left: 12.60417%;"></i>
+
+	<header class="header">
+		<div class="logo">
+			<i class="icon icon-logo"></i>
+		</div>
+	</header>
+	
+	<section class="about">
+		<div class="inner">
+			<h1 class="h1">MR для медицины</h1>
+			<div class="about__pic">
+<!-- 				<i class="icon icon-ar"></i>
+				<i class="icon icon-game"></i> -->
+			</div>
+			<div class="about__text">
+				<p>
+					Смешанная реальность в медицине — настоящий прорыв. Она позволяет хирургам проводить имитированные операции любой сложности и под любым углом, получать ценные навыки и делать открытия в лечении трудных заболеваний. 
+				</p>
+				<p>
+					MR для медицины помогает восстанавливаться пациентам, страдающими психическими расстройствами. Воссоздавая ситуацию, которая послужила психической травмой, приложения MR предлагают пациенту разрешить ее иначе, или же справиться с наболевшими переживаниями, заменяя старые воспоминания новыми. 
+				</p>
+				<p>
+					Кроме того, вскоре смешанная реальность сможет помочь корректировать работу внутренних органов и заботиться о своем здоровье любому пользователю. 
+				</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="about-price">
+		<div class="inner">
+			<h1 class="h1">
+				Стоимость проекта
+			</h1>
+			<p class="subtitle">
+				Каждый проект уникален, у нас нет шаблонных решений и цен.
+			</p>
+			<p>Обычно мы стартуем от <span class="start-price">$3500</span></p>
+			<p><span class="about-contact">Свяжитесь с нами,</span> чтобы обсудить ваш проект и его стоимость.</p>
+			<i class="icon-triangle"></i>
+			<i class="icon-triangle2"></i>
+		</div>
+<!-- 		<i class="icon icon-bg2"></i>
+		<i class="icon icon-bg4"></i>
+		<i class="icon icon-bg5"></i>
+		<i class="icon icon-bg6"></i> -->
+	</section>
+	
+	<!-- BEGIN contact -->
+	<section class="contact" id="contact">
+		<div class="inner">
+			<h3 class="h3">Напишите нам и мы свяжемся с Вами</h3>
+			<form id="form" action="" method="get">
+				<div class="row">
+		        	<input class="input rfield" name="name"  placeholder="ваше имя" type="text">
+		        </div>
+		        <div class="row">
+		        	<input class="input rfield" name="email" placeholder="e-mail" type="email">
+		        </div>
+		        <div class="row">
+		        	<input class="input rfield" name="phone" placeholder="телефон" type="phone">
+		        </div>
+		        <!--  -->
+		       <label class="form-label">
+	              <i class="icon-send" id="flyPlane">
+	               </i>
+	          	<button type="submit" id="form-submit" value="Отправить">Отправить</button>
+	       	  </label>
+		    </form>
+		</div>
+	<!-- 	<i class="icon icon-bg1"></i>
+		<i class="icon icon-bg3"></i> -->
+	</section>
+	<!-- END contact -->
+
+	<!-- BEGIN footer -->
+	<div class="popup__map js-popup" data-popup="map">
+		<div class="popup__window">	
+			<div class="popup__close js-close-popup">
+				<i class="icon-close"></i>
+			</div>
+			<div class="contacts-map" id="object-map"></div>
+		</div>
+	</div>
+	
+	
+	<footer class="footer">
+		<div class="inner">
+			<div class="footer__logo">
+				<i class="icon-footer-logo"></i>
+			</div>
+			<ul class="footer__contact">
+				<li class="footer__contact-item">
+					<a class="footer__contact-link" href="mailto:info.wearstudio@wear-studio.com">
+						<i class="icon icon-mail"></i>
+						info.wearstudio@wear-studio.com
+					</a>
+				</li>
+				<li class="footer__contact-item">
+					<a class="footer__contact-link" href="tel:+380679000167">
+						<i class="icon icon-phone"></i>
+						+38 067 90 00 167
+					</a>
+				</li>
+				<li class="footer__contact-item">
+					<a class="footer__contact-link js-open-popup" data-link="map">
+						<i class="icon icon-geo"></i>
+						Киев, ул. Рижская 8а
+					</a>
+				</li>
+			</ul>
+			<ul class="footer__social">
+				<li class="footer__social-item">
+					<a class="footer__social-link" href="#"><i class="icon-facebook"></i>
+					</a>
+				</li>
+				<li class="footer__social-item">
+					<a class="footer__social-link" href="#"><i class="icon-linkedin"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	
+	<script defer="defer">
+	$(document).ready(function(){
+		$.getScript('//maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&amp;ver=1.0', function() {
+		// Google maps
+		// Create and Initialise the Map (required) our google map below
+		google.maps.event.addDomListener(window, 'load', init);
+		function init() {
+		// Basic options for a simple Google Map
+		var mapOptions = {
+		// How zoomed in you want the map to start at (always required)
+		zoom: 15,
+		scrollwheel: false,
+		// The latitude and longitude to center the map (always required)
+		center: new google.maps.LatLng(50.4724601,30.4408557,21),
+		disableDefaultUI: false,
+		draggable: true,
+		styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+	
+		// styles: [{"featureType":"all","elementType":"labels.text","stylers":[{"weight":"0.01"},{"visibility":"simplified"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"hue":"#ffde00"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]}]
+	};
+		var mapElement = document.getElementById("object-map");
+		// Create the Google Map using out element and options defined above
+		var map = new google.maps.Map(mapElement, mapOptions);
+		var image = "/img/marker.svg";
+		// Define the Lattitude and Longitude for the map location
+	
+		var myLatLng = new google.maps.LatLng(50.4724601,30.4408557,21);
+		// Define the map marker characteristics
+		var mapMarker = new
+		google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: '',
+			 icon: image
+		});
+	}	
+	
+	})
+	});
+	</script>
+	<!-- END footer -->
+
+</div>
+<div class="overlay js-overlay"></div>
+<!-- END out-->
+</body>
+</html>
