@@ -91,6 +91,8 @@ a
 	text-transform: uppercase
 	position: relative
 	margin-bottom: 35px
+	+r(768)
+		font-size: 24px
 	&:after
 		content: ''
 		display: block
@@ -105,6 +107,8 @@ a
 .subtitle
 	font-size: 25px
 	font-weight: 400
+	+r(768)
+		font-size: 18px
 
 .h1
 	font: 500 28px/1 'Roboto', sans-serif, Arial
@@ -112,7 +116,7 @@ a
 	text-align: center
 	margin-bottom: 50px
 	+r(768)
-		font-size: 20px
+		font-size: 22px
 	+r(480)
 		margin-bottom: 25px
 .h2
@@ -273,9 +277,14 @@ textarea
 .wrapper
 	padding: 50px 0
 	position: relative
+	+r(480)
+		padding: 25px 0
+		text-align: justify
 	p
 		margin-bottom: 15px
 		font-size: 16px
+		+r(480)
+			font-size: 14px
 .social
 	float: right
 	font-size: 0

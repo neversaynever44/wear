@@ -27,19 +27,19 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
+.icon-Cardboard:before { content: ""; }
+
 .icon-Oculus:before { content: ""; }
 
 .icon-advertising:before { content: ""; }
 
-.icon-Cardboard:before { content: ""; }
+.icon-appleDown:before { content: ""; }
 
 .icon-ar:before { content: ""; }
 
-.icon-appleDown:before { content: ""; }
+.icon-arrow-down:before { content: ""; }
 
 .icon-arrow-r:before { content: ""; }
-
-.icon-arrow-down:before { content: ""; }
 
 .icon-bg1:before { content: ""; }
 
@@ -57,29 +57,31 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-education:before { content: ""; }
 
-.icon-facebook:before { content: ""; }
-
 .icon-envelope:before { content: ""; }
 
-.icon-fb:before { content: ""; }
+.icon-facebook:before { content: ""; }
 
 .icon-footer-logo:before { content: ""; }
 
-.icon-gear:before { content: ""; }
+.icon-fb:before { content: ""; }
 
 .icon-game:before { content: ""; }
+
+.icon-gear:before { content: ""; }
 
 .icon-geo:before { content: ""; }
 
 .icon-glasses:before { content: ""; }
 
-.icon-goggles:before { content: ""; }
-
 .icon-go:before { content: ""; }
+
+.icon-goggles:before { content: ""; }
 
 .icon-googleDown:before { content: ""; }
 
 .icon-hololens:before { content: ""; }
+
+.icon-how-it-work:before { content: ""; }
 
 .icon-icon-open:before { content: ""; }
 
@@ -89,8 +91,6 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-linkedin:before { content: ""; }
 
-.icon-how-it-work:before { content: ""; }
-
 .icon-location:before { content: ""; }
 
 .icon-logo:before { content: ""; }
@@ -99,27 +99,27 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-mailsend:before { content: ""; }
 
-.icon-open:before { content: ""; }
-
 .icon-medical:before { content: ""; }
+
+.icon-open:before { content: ""; }
 
 .icon-property:before { content: ""; }
 
 .icon-phone:before { content: ""; }
 
-.icon-send:before { content: ""; }
-
 .icon-smart:before { content: ""; }
 
-.icon-smartphone:before { content: ""; }
+.icon-send:before { content: ""; }
 
 .icon-triangle:before { content: ""; }
 
-.icon-vk:before { content: ""; }
+.icon-smartphone:before { content: ""; }
 
 .icon-triangle2:before { content: ""; }
 
 .icon-tw:before { content: ""; }
+
+.icon-vk:before { content: ""; }
 
 @font-face { font-family: skoda; src: url("fonts/SkodaPro-Light.eot"); src: url("fonts/SkodaPro-Light.eot?#iefix") format("embedded-opentype"), url("fonts/SkodaPro-Light.woff2") format("woff2"), url("fonts/SkodaPro-Light.woff") format("woff"), url("fonts/SkodaPro-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: exo; src: url("fonts/Exo2-Light.eot"); src: url("fonts/Exo2-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Exo2-Light.woff2") format("woff2"), url("fonts/Exo2-Light.woff") format("woff"), url("fonts/Exo2-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -382,7 +382,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .job .h1 { margin-bottom: 75px; }
 .job .inner { max-width: 1120px; }
 .job__list { font-size: 0; }
-.job__content { border-top: 5px solid #8c40cc; padding-top: 25px; }
+.job__content { border-top: 5px solid #8c40cc; margin-top: 15px; }
 .job__content h2 { margin: 25px 0; font-size: 24px; font-weight: 500; }
 
 .job__list-content { *zoom: 1; }
@@ -395,6 +395,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .job__list-description { float: right; }
 .job__list-description p { line-height: 1; font-size: 15px; font-weight: 300; display: inline-block; }
+
+.job__list-item.is-active .learn-more { color: white; background-color: #8c40cc; }
 
 .list { border-bottom: 1px solid #b1b1b1; list-style-type: disc; margin: 0 0 23px 18px; padding-bottom: 23px; width: 100%; max-width: 560px; }
 .list__item:not(:last-child) { margin-bottom: 20px; }
@@ -471,15 +473,15 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .half-bg:before { content: ""; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; opacity: 0.78; height: 100%; background-color: #563d78; }
 
 .advantages { font-size: 0; text-align: center; }
-.advantages__item { position: relative; }
+.advantages__item { position: relative; width: 100%; max-width: 900px; display: table; margin: auto; }
 .advantages__item:first-child { margin-bottom: 70px; }
 
-.advantages__item-pic { width: 7%; text-align: center; }
+.advantages__item-pic { width: 12%; text-align: center; }
 .advantages__item-pic .icon-hololens { margin-right: 0; font-size: 33px; }
 
-.advantages__item-pic, .advantages__item-text { display: inline-block; vertical-align: top; }
+.advantages__item-pic, .advantages__item-text { display: table-cell; vertical-align: top; }
 
-.advantages__item-text { margin-left: 3%; width: 90%; text-align: left; max-width: 700px; font-size: 18px; font-weight: 400; line-height: 1.4; }
+.advantages__item-text { width: 90%; text-align: left; max-width: 700px; font-size: 18px; font-weight: 400; line-height: 1.4; padding-left: 4%; }
 
 .advantages__item-pic .icon-Cardboard { font-size: 45px; }
 
@@ -514,6 +516,9 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .about { padding-top: 119px; padding-bottom: 40px; position: relative; }
 .about__pic { text-align: center; margin: 50px 0; }
 .about__pic .icon-smartphone { color: #a13ed1; font-size: 90px; }
+.about__pic .icon-hololens { color: #494141; font-size: 50px; }
+.about__pic .icon-glasses { color: #a13ed1; font-size: 60px; }
+.about__pic .icon-Cardboard { color: black; margin-right: 15px; }
 .about__text { color: #000000; font-size: 20px; font-weight: 300; line-height: 1; }
 .about__text p { margin-bottom: 25px; }
 .about__text b { font-weight: 400; }
@@ -543,7 +548,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .footer__social-link { display: block; height: 100%; }
 .footer__social-link:hover { -webkit-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8); }
 
-.icon-facebook, .icon-linkedin, .icon-instagram { font-size: 30px; }
+.icon-facebook, .icon-linkedin, .icon-instagram { font-size: 27px; }
 
 .icon-mail, .icon-phone, .icon-geo { font-size: 25px; position: relative; top: -2px; margin-right: 12px; }
 
@@ -644,8 +649,14 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1440px){
  .inner{ width: 90%; } }
+@media only screen and (max-width: 900px){
+ .development .inner{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+ .development__pic{ max-width: 350px; margin: 0 auto 25px; -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
+ .development__content{ width: 100%; padding: 0; font-size: 16px; -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; text-align: justify; } }
 @media only screen and (max-width: 768px){
- .h1{ font-size: 20px; }
+ .title-primary{ font-size: 24px; }
+ .subtitle{ font-size: 18px; }
+ .h1{ font-size: 22px; }
  .h2{ margin: 25px 0; text-align: center; font-size: 20px; }
  .icon-logo{ font-size: 30px; }
  .social__link{ padding: 3px; }
@@ -661,15 +672,16 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .blog__list-item{ width: 35%; margin-left: 15%; margin-bottom: 50px; }
  .blog__list-date{ margin: 10px 0; }
  .blog__list-title{ margin-bottom: 13px; }
- .blog__list-date, .blog__list-title, .blog__list-text{ font-size: 14px; }
+ .blog__list-date, .blog__list-title, .blog__list-text{ font-size: 18px; }
  .blog-in{ max-height: 288px; }
  .blog-in__title h1{ margin-bottom: 15px; }
  .blog-in__title h1, .blog-in__title h2{ font-size: 22px; }
+ .content{ padding: 60px 0; }
+ .advantages__item-pic{ width: 100%; margin-bottom: 15px; }
+ .advantages__item-pic, .advantages__item-text{ display: block; }
+ .advantages__item-text{ width: 100%; text-align: justify; font-size: 16px; }
  .caption{ padding: 35px 0; }
  .development{ margin-bottom: 60px; }
- .development .inner{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
- .development__pic{ max-width: 350px; margin: 0 auto 25px; -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
- .development__content{ width: 100%; padding: 0; font-size: 16px; -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; text-align: justify; }
  .menu-btn{ width: 35px; }
  .menu-btn span{ height: 3px; }
  .menu-btn span:before, .menu-btn span:after{ height: 3px; }
@@ -687,7 +699,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .footer__contact-item:not(:first-child){ margin-left: 0; }
  .footer__contact-item{ display: block; }
  .footer__contact-item:not(:last-child){ margin-bottom: 20px; }
- .footer__social-item{ width: 50%; height: 130px; }
+ .footer__social-item{ width: 33.33%; height: 130px; }
  .footer__social-item:hover, .footer__social-item:active, .footer__social-item:focus{ background: rgba(255, 255, 255, 0.3); }
  .footer__social-item:not(:first-child){ margin-left: 0; }
  .footer__social-link{ text-align: center; font-size: 0; }
@@ -697,10 +709,17 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .icon-mail{ margin-right: 22px; } }
 @media only screen and (max-width: 480px){
  .h1{ margin-bottom: 25px; }
+ .wrapper{ padding: 25px 0; text-align: justify; }
+ .wrapper p{ font-size: 14px; }
  .social{ float: none; text-align: center; }
  .blog__list{ margin: 0; }
  .blog__list-item{ width: 100%; margin-left: 0; max-width: 300px; }
- .blog__list-pic{ max-width: 225px; margin: auto; } }
+ .blog__list-pic{ max-width: 225px; margin: auto; }
+ .blog__list-date, .blog__list-title, .blog__list-text{ font-size: 14px; }
+ .blog-in{ max-height: 150px; }
+ .blog-in__title h1, .blog-in__title h2{ font-size: 18px; }
+ .footer__social-item{ height: 100px; }
+ .icon-facebook, .icon-linkedin, .icon-instagram{ font-size: 33px; } }
 @media only screen and (max-width: 425px){
  .portfolio__pic{ max-width: 130px; } }
 

@@ -166,7 +166,7 @@
 		font-size: 0
 	&__content
 		border-top: 5px solid #8c40cc
-		padding-top: 25px
+		margin-top: 15px
 		h2
 			margin: 25px 0
 			font-size: 24px
@@ -189,6 +189,10 @@
 		font-size: 15px
 		font-weight: 300
 		display: inline-block
+.job__list-item.is-active 
+	.learn-more
+		color: white
+		background-color: #8c40cc
 .list
 	border-bottom: 1px solid #b1b1b1
 	list-style-type: disc
@@ -393,6 +397,8 @@
 .blog__list-title,
 .blog__list-text
 	+r(768)
+		font-size: 18px
+	+r(480)
 		font-size: 14px
 // blog_in
 .blog-in
@@ -404,6 +410,8 @@
 	max-height: 400px
 	+r(768)
 		max-height: 288px
+	+r(480)
+		max-height: 150px
 .blog-in__title
 	+vcenter
 	text-align: center
@@ -425,6 +433,8 @@
 	h2
 		+r(768)
 			font-size: 22px
+		+r(480)
+			font-size: 18px
 
 
 // section VR-reality
@@ -438,6 +448,8 @@
 .content
 	width: 100%
 	padding: 75px 0 125px 0
+	+r(768)
+		padding: 60px 0
 .title
 	margin-bottom: 100px
 	text-align: center
@@ -462,6 +474,10 @@
 	text-align: center
 	&__item
 		position: relative
+		width: 100%
+		max-width: 900px
+		display: table
+		margin: auto
 		&:first-child
 			margin-bottom: 70px
 // .advantages__item-pic
@@ -471,23 +487,33 @@
 // 	text-align: center
 // 	width: 15%
 .advantages__item-pic
-	width: 7%
+	width: 12%
 	text-align: center
+	+r(768)
+		width: 100%
+		margin-bottom: 15px
 	.icon-hololens
 		margin-right: 0
 		font-size: 33px
 .advantages__item-pic,
 .advantages__item-text
-	display: inline-block
+	display: table-cell
 	vertical-align: top
+	+r(768)
+		display: block
+		
 .advantages__item-text
-	margin-left: 3%
 	width: 90%
 	text-align: left
 	max-width: 700px
 	font-size: 18px
 	font-weight: 400
 	line-height: 1.4
+	padding-left: 4%
+	+r(768)
+		width: 100%
+		text-align: justify
+		font-size: 16px
 .advantages__item-pic .icon-Cardboard
 	font-size: 45px
 
@@ -588,7 +614,7 @@
 	.inner
 		display: table
 		max-width: 1750px
-		+r(768)
+		+r(900)
 			display: -webkit-box
 			display: -webkit-flex
 			display: -ms-flexbox
@@ -603,7 +629,7 @@
 		display: table-cell
 		vertical-align: middle
 	&__pic
-		+r(768)
+		+r(900)
 			max-width: 350px
 			margin: 0 auto 25px
 			order: 1
@@ -614,7 +640,7 @@
 		font-size: 25px
 		font-weight: 300
 		line-height: 1.2
-		+r(768)
+		+r(900)
 			width: 100%
 			padding: 0
 			font-size: 16px
@@ -641,6 +667,16 @@
 		.icon-smartphone
 			color: #a13ed1
 			font-size: 90px
+		.icon-hololens
+			// color: #686868
+			color: #494141
+			font-size: 50px
+		.icon-glasses
+			color: #a13ed1
+			font-size: 60px
+		.icon-Cardboard
+			color: black
+			margin-right: 15px
 	&__text
 		color: #000000
 		font-size: 20px
