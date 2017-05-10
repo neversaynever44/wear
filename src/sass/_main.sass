@@ -171,24 +171,39 @@
 			margin: 25px 0
 			font-size: 24px
 			font-weight: 500
+			+r(768)
+				font-size: 18px
+				text-align: center
 .job__list-content
 	+clr
+	+r(480)
+		text-align: center
 .job__list-item
 	border-bottom: 1px solid #b1b1b1
 	padding: 15px 0
 	+clr
+.job__list-title,
+.job__list-description
+	+r(768)
+		float: none
 .job__list-title
 	font-size: 20px
 	font-weight: 400
 	float: left
 	padding: 10px 0
+	+r(768)
+		padding: 0
+		font-size: 18px
 .job__list-description
+	+clr
 	float: right
 	p
 		line-height: 1
 		font-size: 15px
 		font-weight: 300
 		display: inline-block
+		+r(768)
+			padding: 15px 0
 .job__list-item.is-active 
 	.learn-more
 		color: white
@@ -343,7 +358,7 @@
 		text-align: center
 		margin: 0 0 0 -4%
 		+r(768)
-			margin: 0 0 0 -15%
+			margin: 0 0 0 -10%
 		+r(480)
 			margin: 0
 .blog__list-item
@@ -353,8 +368,8 @@
 	margin-left: 4%
 	margin-bottom: 88px
 	+r(768)
-		width: 35%
-		margin-left: 15%
+		width: 40%
+		margin-left: 10%
 		margin-bottom: 50px
 	+r(480)
 		width: 100%
@@ -453,6 +468,8 @@
 .title
 	margin-bottom: 100px
 	text-align: center
+	+r(480)
+		margin-bottom: 50px
 .half-bg
 	&:before
 		content: ''
@@ -515,7 +532,7 @@
 		text-align: justify
 		font-size: 16px
 .advantages__item-pic .icon-Cardboard
-	font-size: 45px
+	font-size: 42px
 
 // Section AU-reality
 .AU-Reality
@@ -595,16 +612,20 @@
 
 
 // development
-.caption
+.promo
 	padding: 70px 0
 	color: #000000
 	font-size: 25px
 	font-weight: 300
-	text-align: center
-	+r(768)
+	text-align: justify
+	+r(900)
 		padding: 35px 0
+		font-size: 18px
 	b
 		font-weight: 400
+.promo-title
+	margin-bottom: 15px
+	text-align: center
 .development
 	padding: 40px 0
 	background-color: #f2f2f2
@@ -633,17 +654,19 @@
 			max-width: 350px
 			margin: 0 auto 25px
 			order: 1
+		+r(480)
+			max-width: 250px
 	&__content
 		width: 62%
 		padding: 0 2% 0 2%
 		color: #000000
-		font-size: 25px
+		font-size: 23px
 		font-weight: 300
 		line-height: 1.2
 		+r(900)
 			width: 100%
 			padding: 0
-			font-size: 16px
+			font-size: 18px
 			order: 2
 			text-align: justify
 		b

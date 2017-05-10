@@ -213,6 +213,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .input::-webkit-input-placeholder { color: #ffffff; }
 
+.icon-gear, .icon-smartphone { font-size: 60px; }
+
 .icon-open { color: #8c40cc; font-size: 27px; margin-right: 12px; }
 
 .js-show.is-active .icon-open { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
@@ -393,7 +395,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .job__list-title { font-size: 20px; font-weight: 400; float: left; padding: 10px 0; }
 
-.job__list-description { float: right; }
+.job__list-description { *zoom: 1; float: right; }
+.job__list-description:after { content: " "; display: table; clear: both; }
 .job__list-description p { line-height: 1; font-size: 15px; font-weight: 300; display: inline-block; }
 
 .job__list-item.is-active .learn-more { color: white; background-color: #8c40cc; }
@@ -483,7 +486,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .advantages__item-text { width: 90%; text-align: left; max-width: 700px; font-size: 18px; font-weight: 400; line-height: 1.4; padding-left: 4%; }
 
-.advantages__item-pic .icon-Cardboard { font-size: 45px; }
+.advantages__item-pic .icon-Cardboard { font-size: 42px; }
 
 .AU-Reality { background: url(../img/aureality/AUreality-bg.jpg) center no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; position: relative; color: white; padding-top: 80px; }
 
@@ -502,13 +505,15 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .infographic__note-second { top: -64%; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-64%); }
 .infographic__note-second .infographic__num { margin-bottom: 12px; }
 
-.caption { padding: 70px 0; color: #000000; font-size: 25px; font-weight: 300; text-align: center; }
-.caption b { font-weight: 400; }
+.promo { padding: 70px 0; color: #000000; font-size: 25px; font-weight: 300; text-align: justify; }
+.promo b { font-weight: 400; }
+
+.promo-title { margin-bottom: 15px; text-align: center; }
 
 .development { padding: 40px 0; background-color: #f2f2f2; margin-bottom: 110px; }
 .development .inner { display: table; max-width: 1750px; }
 .development__pic, .development__content { display: table-cell; vertical-align: middle; }
-.development__content { width: 62%; padding: 0 2% 0 2%; color: #000000; font-size: 25px; font-weight: 300; line-height: 1.2; }
+.development__content { width: 62%; padding: 0 2% 0 2%; color: #000000; font-size: 23px; font-weight: 300; line-height: 1.2; }
 .development__content b { font-weight: 400; }
 
 .MX-reality { background: url(../img/mxreality/MXreality-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; color: white; position: relative; padding-top: 80px; }
@@ -605,6 +610,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .learn-more:hover { color: white; background-color: #8c40cc; }
 .learn-more.is-active { color: white; background-color: #8c40cc; }
 
+.blog-show { display: none; padding: 10px; text-align: center; margin: auto; text-decoration: uppercase; outline: 0; color: #8c40cc; font-size: 20px; background-color: #f2f2f2; }
+
 .btn-next { display: block; max-width: 216px; width: 100%; color: white; border-radius: 5px; background-color: #8c40cc; padding: 16px 21px 12px 24px; font-size: 20px; font-weight: 400; text-align: center; text-transform: uppercase; -webkit-transition: padding 0.25s ease; transition: padding 0.25s ease; position: relative; }
 .btn-next:hover { opacity: 0.9; }
 .btn-next:hover i { padding-left: 12px; }
@@ -650,9 +657,10 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 @media only screen and (max-width: 1440px){
  .inner{ width: 90%; } }
 @media only screen and (max-width: 900px){
+ .promo{ padding: 35px 0; font-size: 18px; }
  .development .inner{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
  .development__pic{ max-width: 350px; margin: 0 auto 25px; -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; }
- .development__content{ width: 100%; padding: 0; font-size: 16px; -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; text-align: justify; } }
+ .development__content{ width: 100%; padding: 0; font-size: 18px; -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; text-align: justify; } }
 @media only screen and (max-width: 768px){
  .title-primary{ font-size: 24px; }
  .subtitle{ font-size: 18px; }
@@ -660,6 +668,10 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .h2{ margin: 25px 0; text-align: center; font-size: 20px; }
  .icon-logo{ font-size: 30px; }
  .social__link{ padding: 3px; }
+ .job__content h2{ font-size: 18px; text-align: center; }
+ .job__list-title, .job__list-description{ float: none; }
+ .job__list-title{ padding: 0; font-size: 18px; }
+ .job__list-description p{ padding: 15px 0; }
  .portfolio{ padding: 35px 0; }
  .portfolio .inner{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
  .portfolio__content, .portfolio__pic{ display: block; width: 100%; }
@@ -668,8 +680,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .portfolio__content-desc{ font-size: 18px; padding: 30px 0; }
  .links{ text-align: center; }
  .icon-googleDown, .icon-appleDown{ font-size: 50px; }
- .blog__list{ margin: 0 0 0 -15%; }
- .blog__list-item{ width: 35%; margin-left: 15%; margin-bottom: 50px; }
+ .blog__list{ margin: 0 0 0 -10%; }
+ .blog__list-item{ width: 40%; margin-left: 10%; margin-bottom: 50px; }
  .blog__list-date{ margin: 10px 0; }
  .blog__list-title{ margin-bottom: 13px; }
  .blog__list-date, .blog__list-title, .blog__list-text{ font-size: 18px; }
@@ -680,7 +692,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .advantages__item-pic{ width: 100%; margin-bottom: 15px; }
  .advantages__item-pic, .advantages__item-text{ display: block; }
  .advantages__item-text{ width: 100%; text-align: justify; font-size: 16px; }
- .caption{ padding: 35px 0; }
  .development{ margin-bottom: 60px; }
  .menu-btn{ width: 35px; }
  .menu-btn span{ height: 3px; }
@@ -689,7 +700,9 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .menu-btn span:after{ top: -10px; }
  .logo, .menu-btn{ top: 25px; }
  .menu__in{ top: 150px; left: 60px; }
- .btn-next{ margin: auto; padding: 10px; } }
+ .learn-more{ margin-left: 0; float: right; }
+ .btn-next{ margin: auto; padding: 10px; }
+ .brief-send{ margin: auto; text-align: center; } }
 @media only screen and (max-width: 767px){
  .footer{ padding: 0; }
  .footer .inner{ width: 100%; }
@@ -712,14 +725,19 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .wrapper{ padding: 25px 0; text-align: justify; }
  .wrapper p{ font-size: 14px; }
  .social{ float: none; text-align: center; }
+ .job__list-content{ text-align: center; }
  .blog__list{ margin: 0; }
  .blog__list-item{ width: 100%; margin-left: 0; max-width: 300px; }
  .blog__list-pic{ max-width: 225px; margin: auto; }
  .blog__list-date, .blog__list-title, .blog__list-text{ font-size: 14px; }
  .blog-in{ max-height: 150px; }
  .blog-in__title h1, .blog-in__title h2{ font-size: 18px; }
+ .title{ margin-bottom: 50px; }
+ .development__pic{ max-width: 250px; }
  .footer__social-item{ height: 100px; }
- .icon-facebook, .icon-linkedin, .icon-instagram{ font-size: 33px; } }
+ .icon-facebook, .icon-linkedin, .icon-instagram{ font-size: 33px; }
+ .learn-more{ float: none; display: block; max-width: 160px; width: 100%; margin: auto; padding: 8px; }
+ .blog-show{ display: block; } }
 @media only screen and (max-width: 425px){
  .portfolio__pic{ max-width: 130px; } }
 

@@ -35,6 +35,31 @@
 	&.is-active
 		color: white
 		background-color: #8c40cc
+	+r(768)
+		margin-left: 0
+		float: right
+	+r(480)
+		float: none
+		display: block
+		max-width: 160px
+		width: 100%
+		margin: auto
+		padding: 8px
+.blog-show
+	display: none
+	padding: 10px
+	text-align: center
+	margin: auto
+	text-decoration: uppercase
+	outline: 0
+	color: #8c40cc
+	font-size: 20px
+	background-color: #f2f2f2
+	+r(480)
+		display: block
+		
+
+
 .btn-next
 	display: block
 	max-width: 216px
@@ -91,6 +116,9 @@
 	&:active
 		position: relative
 		top: 2px
+	+r(768)
+		margin: auto
+		text-align: center
 
 .arrow
 	position: fixed
