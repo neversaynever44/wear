@@ -135,6 +135,8 @@
 .icon-triangle2
 	color: #a479dd
 	position: absolute
+	+r(768)
+		opacity: 0.2
 .icon-triangle
 	top: (145px*100%)/300px
 	left: (250px*100%)/1400px
@@ -580,6 +582,7 @@
 	&__note
 		position: absolute
 		max-width: 240px
+		margin: auto
 		margin-top: 18px
 	&__num
 		color: #8c40cc
@@ -596,15 +599,22 @@
 		padding: 0 12px
 		margin-bottom: 15px
 		line-height: 1.2
+.infographic__note-first
+	left: 0
+	right: 61%
 
 .infographic__note-third
-	right: (36px*100%)/600px
+	left: 50%
+	right: 0
 .infographic__note-second
 	top: -64%
-	left: 50%
-	-webkit-transform: translateX(-50%)
-	-ms-transform: translateX(-50%)
-	transform: translateX(-64%)
+	left: 0
+	right: 10%
+	+r(600)
+		bottom: 0
+		margin: auto
+		top: -90px
+		transform: translateX(0)
 	.infographic__num
 		margin-bottom: 12px
 // Working-out

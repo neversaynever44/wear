@@ -527,13 +527,15 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .infographic { position: relative; font-size: 0; font-family: "Open Sans"; font-weight: 300; margin: 130px auto; }
 .infographic img { width: 100%; position: relative; }
-.infographic__note { position: absolute; max-width: 240px; margin-top: 18px; }
+.infographic__note { position: absolute; max-width: 240px; margin: auto; margin-top: 18px; }
 .infographic__num { color: #8c40cc; border-radius: 50%; width: 36px; height: 36px; line-height: 34px; border: 1px solid #8c40cc; display: inline-block; font-size: 23px; }
 .infographic__text { color: #000; font-size: 15px; padding: 0 12px; margin-bottom: 15px; line-height: 1.2; }
 
-.infographic__note-third { right: 6%; }
+.infographic__note-first { left: 0; right: 61%; }
 
-.infographic__note-second { top: -64%; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-64%); }
+.infographic__note-third { left: 50%; right: 0; }
+
+.infographic__note-second { top: -64%; left: 0; right: 10%; }
 .infographic__note-second .infographic__num { margin-bottom: 12px; }
 
 .promo { padding: 70px 0; color: #000000; font-size: 25px; font-weight: 300; text-align: justify; }
@@ -716,6 +718,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .icon-logo{ font-size: 30px; }
  .social{ float: none; text-align: center; }
  .social__link{ padding: 3px; }
+ .icon-triangle, .icon-triangle2{ opacity: 0.2; }
  .job__content h2{ font-size: 18px; text-align: center; }
  .job__list-title, .job__list-description{ float: none; }
  .job__list-title{ padding: 0; font-size: 18px; }
@@ -758,6 +761,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .popup__close .icon-close, .popup__map__close .icon-close{ font-size: 21px; }
  .btn-send{ font-size: 22px; padding: 15px; } }
 @media only screen and (max-width: 600px){
+ .infographic__note-second{ bottom: 0; margin: auto; top: -90px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
  .popup__close, .popup__map__close{ top: 0; right: 0; }
  .popup__window h3, .popup__map__window h3{ margin: 30px 0; } }
 @media only screen and (max-width: 480px){
