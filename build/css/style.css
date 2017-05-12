@@ -336,7 +336,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .slider-wrp__inner { max-width: 1920px; margin: -30px auto 0; top: 0; bottom: 0; }
 
 .plus { font-size: 0; margin: 0 0 0 -2%; text-align: center; }
-.plus__item { display: inline-block; vertical-align: middle; width: 31.33%; margin-left: 2%; margin-bottom: 40px; }
+.plus__item { display: inline-block; vertical-align: top; width: 31.33%; margin-left: 2%; margin-bottom: 40px; }
 .plus__img { margin-bottom: 25px; }
 .plus__text { font-size: 20px; font-weight: 300; line-height: 1; max-width: 300px; margin: auto; margin-bottom: 15px; }
 
@@ -693,7 +693,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .footer{ padding: 0; }
  .footer .inner{ width: 100%; }
  .footer__logo{ display: none; }
- .footer__contact{ padding: 40px 0; float: none; }
+ .footer__contact{ padding: 40px 13px; float: none; }
  .footer__logo, .footer__contact{ width: 100%; margin: auto; text-align: center; }
  .footer__contact-item{ text-align: center; }
  .footer__social-item{ width: 33.33%; height: 100px; }
@@ -762,6 +762,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .brief-send{ margin: auto; text-align: center; }
  .popup__close .icon-close, .popup__map__close .icon-close{ font-size: 21px; }
  .popup__window h3, .popup__map__window h3{ margin: 30px 0; }
+ .popup .popup__window{ max-height: 666px; }
  .btn-send{ font-size: 22px; padding: 15px; } }
 @media only screen and (max-width: 600px){
  .infographic__note-second{ bottom: 0; margin: auto; top: -90px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
@@ -782,7 +783,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .development__pic{ max-width: 250px; }
  .footer__social-item{ height: 100px; }
  .learn-more{ float: none; display: block; max-width: 160px; width: 100%; margin: auto; padding: 8px; }
- .blog-show{ display: block; } }
+ .blog-show{ display: block; }
+ .popup .popup__window{ max-height: 600px; } }
 @media only screen and (max-width: 425px){
  .portfolio__pic{ max-width: 130px; } }
 
