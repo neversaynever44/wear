@@ -14,31 +14,7 @@
 		position: relative
 		top: 50%
 		transform: translateY(-50%)
-.ar, 
-.vr, 
-.mr 
-	position: absolute
-	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
-	transition: transform 2s cubic-bezier(0, 0, 0, 1)
-	display: inline-block
-	will-change: transform
-	perspective: 1000px
-.ar
-	width: 31.34%
-	padding-top: 27.09%
-	left: 31.98%
-	bottom: 45%
-	z-index: 1
-.vr
-	width: 26.74%
-	padding-top: 23.2%
-	top: 55%
-	left: 17.38%
-.mr
-	width: 26.74%
-	padding-top: 23.2%
-	top: 32.95%
-	right: 15.17%
+
 
 .triangle__scale 
 	position: absolute
@@ -71,36 +47,66 @@
 	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
 	position: absolute
 	will-change: transform
-.ar .triangle__title 
-	width: 75.32%
-	padding-top: 38.96%
-	left: -10.02%
-	bottom: 22.75%
-.mr .triangle__title 
-	width: 85.65%
-	padding-top: 38.04%
-	right: -26.74%
-	top: 20.6%
-.vr .triangle__title 
-	width: 72.83%
-	padding-top: 38.04%
-	left: -16.74%
-	top: 24.81%   
-.ar .triangle-text 
-	color: #fff
-	bottom: 5.58%
-.mr .triangle-text 
-	color: #1e1e1e
-	top: 4.28%
-.vr .triangle-text 
-	color: #1e1e1e
-	top: 4.79%
-
 .triangle__title>svg 
 	position: absolute
 	top: 0
 	left: 0
 
+.ar, 
+.vr, 
+.mr 
+	position: absolute
+	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	display: inline-block
+	will-change: transform
+	perspective: 1000px
+// ar
+.ar
+	width: 31.34%
+	padding-top: 27.09%
+	left: 31.98%
+	bottom: 45%
+	z-index: 1
+.ar .triangle__title 
+	width: 75.32%
+	padding-top: 38.96%
+	left: -10.02%
+	bottom: 22.75%
+.ar .triangle-text 
+	color: #fff
+	bottom: 5.58%
+// mr
+.mr
+	width: 26.74%
+	padding-top: 23.2%
+	top: 32.95%
+	right: 15.17%
+.mr .triangle__title 
+	width: 85.65%
+	padding-top: 38.04%
+	right: -26.74%
+	top: 20.6%
+.mr .triangle-text 
+	color: #1e1e1e
+	top: 4.28%
+// vr
+.vr
+	width: 26.74%
+	padding-top: 23.2%
+	top: 55%
+	left: 17.38%
+.vr .triangle__title 
+	width: 72.83%
+	padding-top: 38.04%
+	left: -16.74%
+	top: 24.81%   
+.vr .triangle-text 
+	color: #1e1e1e
+	top: 4.79%
+
+
+// about-price
 .about-price
 	padding: 60px 0
 	text-align: center
@@ -220,6 +226,13 @@
 			margin-bottom: 	20px
 		p
 			font-size: 14px
+
+
+// .icon-bg3
+// 	top: (182px*100%)/2518px
+// 	right: (185px*100%)/1920px
+
+
 
 .job__content
 	// z-index: 200
@@ -376,19 +389,19 @@
 		margin-left: 0
 		max-width: 300px
 .blog__list-pic
-	// height: 266px
-	// overflow: hidden
+	height: 200px
+	overflow: hidden
 	position: relative
 	+r(480)
 		max-width: 225px
 		margin: auto
 	img
-		// position: absolute
-		// top: 0
-		// left: 0
-		// right: 0
-		// bottom: 0
-		// height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		height: 100%
 		width: 100%
 .blog__list-date
 	color: #8c40cc
@@ -522,8 +535,7 @@
 .advantages__item-text
 	width: 90%
 	text-align: left
-	max-width: 700px
-	font-size: 18px
+	font-size: 19px
 	font-weight: 400
 	line-height: 1.4
 	padding-left: 4%

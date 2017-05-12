@@ -18,15 +18,20 @@
 		position: absolute
 		top: -25px
 		right: -25px
-		padding: 15px
 		box-shadow: 0 0 7px rgba(0, 0, 0, 0.41)
 		border: 3px solid #ffffff
 		background-color: #ffffff
 		border-radius: 50%
 		z-index: 11
+		+r(600)
+			top: 0
+			right: 0
 		.icon-close
 			color: #686868
 			font-size: 28px
+			padding: 15px
+			+r(768)
+				font-size: 21px
 	&__window
 		position: absolute
 		top: 0
@@ -43,7 +48,10 @@
 			font-weight: 600
 			text-align: center
 			margin-bottom: 60px
+			color: black
 			+skoda
+			+r(600)
+				margin: 30px 0
 
 .popup 	
 	.popup__window
@@ -69,6 +77,9 @@
 	display: block
 	font-size: 30px
 	outline: 0
+	+r(768)
+		font-size: 22px
+		padding: 15px
 	+skoda
 	&:active
 		position: relative

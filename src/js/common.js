@@ -73,9 +73,6 @@ $(function() {
 
 		})
 
-
-
-
       }
     });
   });
@@ -87,7 +84,7 @@ $(function() {
 
 
 $(document).ready(function(){
-
+    
 //init menu trigger
 toggleMenu();
 // init animated-bg
@@ -157,11 +154,11 @@ $(document).scroll(function() {
  	var windowSize = $(document).width();
 	 if (windowSize <= 480) {
 		  $(".blog__list-item:not(:lt(3))").fadeOut(300);
-		 $('.blog-show').on('click', function(e){
-		  	e.preventDefault();
-  			  $(".blog__list-item:not(:lt(3))").fadeIn(300);
-  			  $(this).css('display', 'none');
-		  })
+			 $('.blog-show').on('click', function(e){
+			  	e.preventDefault();
+	  			  $(".blog__list-item:not(:lt(3))").fadeIn(300);
+	  			  $(this).hide();
+			  })
 	} else {
 		 $(".blog__list-item:not(:lt(3))").fadeIn(300);
 	}

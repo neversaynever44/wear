@@ -78,23 +78,46 @@
 	<section class="contact" id="contact">
 		<div class="inner">
 			<h3 class="h3">Напишите нам и мы свяжемся с Вами</h3>
-			<form id="form" action="" method="get">
-				<div class="row">
-		        	<input class="input rfield" name="name"  placeholder="ваше имя" type="text">
-		        </div>
-		        <div class="row">
-		        	<input class="input rfield" name="email" placeholder="e-mail" type="email">
-		        </div>
-		        <div class="row">
-		        	<input class="input rfield" name="phone" placeholder="телефон" type="phone">
-		        </div>
-		        <!--  -->
-		       <label class="form-label">
-	              <i class="icon-send" id="flyPlane">
-	               </i>
-	          	<button type="submit" id="form-submit" value="Отправить">Отправить</button>
-	       	  </label>
-		    </form>
+			<div class="contact-is-visible">
+				<form id="form" action="" method="get">
+					<div class="row">
+			        	<input class="input rfield" name="name"  placeholder="ваше имя" type="text">
+			        </div>
+			        <div class="row">
+			        	<input class="input" name="email" placeholder="e-mail" type="email">
+			        </div>
+			        <div class="row">
+			        	<input class="input rfield" name="phone" placeholder="телефон" type="phone">
+			        </div>
+			        <!--  -->
+			       <label class="form-label">
+		              <i class="icon-send" id="flyPlane">
+		               </i>
+		          	<button type="submit" id="form-submit" value="Отправить">Отправить</button>
+		       	  </label>
+		  	  </form>
+			</div>
+	
+		    <div class="contact-is-hidden">
+			    <a href="#" class="btn-mail js-open-popup" data-link="offers"><i class="icon icon-mailsend"></i></a>
+		    	<div class="popup js-popup" data-popup="offers">
+					<div class="popup__window">
+						<div class="popup__close js-close-popup">
+							<a>
+								<i class="icon-close"></i>
+							</a>
+						</div>
+						<h3>Контактная форма</h3>
+						<form action="#!">
+							<input type="name" name="name" placeholder="имя" class="input-tablet rfield">
+							<input type="e-mail" name="email" placeholder="e-mail" class="input-tablet rfield">
+							<input type="phone" name="phone" placeholder="телефон" class="input-tablet rfield">
+							<textarea name="textarea" id="" placeholder="текст сообщения"></textarea>
+							<button class="btn-send" type="submit">Отправить заявку</button>
+						</form>
+					</div>
+				</div>
+		    </div>
 		</div>
 	<!-- 	<i class="icon icon-bg1"></i>
 		<i class="icon icon-bg3"></i> -->
