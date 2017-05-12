@@ -91,7 +91,11 @@ toggleMenu();
 animatedBg();
 // open-popup
 $('.js-open-popup').click(function (e) {
-	e.preventDefault();
+		if(event.preventDefault){
+		   	event.preventDefault();
+		}else{
+		    event.returnValue = false; 
+		};
 
 	var link = $(this).data('link');
 	var popup = $('.js-popup[data-popup="' + link + '"]');
