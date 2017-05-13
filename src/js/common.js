@@ -4,7 +4,7 @@ $(function() {
   $('form').each(function(){
     // Объявляем переменные (форма и кнопка отправки)
   var form = $(this),
-        btn = form.find('#form-submit');
+        btn = form.find('#form-submit','btn-send');
 
     // Добавляем каждому проверяемому полю, указание что поле пустое
   form.find('.rfield').addClass('empty_field');
@@ -90,34 +90,43 @@ toggleMenu();
 // init animated-bg
 animatedBg();
 // open-popup
-		var link = $('.js-open-popup').data('link');
+if('ontouchstart' in window) {
+	$('.js-open-popup').on('touchstart', function (e) {
+			if(event.preventDefault){
+			   	event.preventDefault();
+			}else{
+			    event.returnValue = false; 
+			};
+
+		var link = $(this).data('link');
 		var popup = $('.js-popup[data-popup="' + link + '"]');
 
-		if('ontouchstart' in window) {
-			$('.js-open-popup').on("touchstart", function (e) {
-				popup.add('.js-overlay').addClass('is-active');
-				console.log('is-touch');
-			 });
-			 $('.js-close-popup').on("touchstart", function (e) {
-				$('.js-popup').add('.js-overlay').removeClass('is-active');
-			});
+		popup.add('.js-overlay').addClass('is-active');
+		// $("body").addClass("is-hidden");
+	});
+	$('.js-close-popup').click(function (e) {
+		$(this).parents('.js-popup').add('.js-overlay').removeClass('is-active');
 
-		} else {
-			$('.js-open-popup').on("click", function (e) {
-				popup.add('.js-overlay').addClass('is-active');
-				console.log('is-click');
-			  });
-			$('.js-close-popup').on("click", function (e) {
-				$('.js-popup').add('.js-overlay').removeClass('is-active');
-			});
-		}
-		if(event.preventDefault){ 
-		   	event.preventDefault();
-		}else{
-		    event.returnValue = false; 
-		};
+	})
+} else {
+		$('.js-open-popup').on('click', function (e) {
+			if(event.preventDefault){
+			   	event.preventDefault();
+			}else{
+			    event.returnValue = false; 
+			};
 
-	// $("body").addClass("is-hidden");
+		var link = $(this).data('link');
+		var popup = $('.js-popup[data-popup="' + link + '"]');
+
+		popup.add('.js-overlay').addClass('is-active');
+		// $("body").addClass("is-hidden");
+	});
+	$('.js-close-popup').click(function (e) {
+		$(this).parents('.js-popup').add('.js-overlay').removeClass('is-active');
+
+	})
+}
 
 
 
