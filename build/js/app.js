@@ -114,7 +114,7 @@ toggleMenu();
 // init animated-bg
 animatedBg();
 // open-popup
-$('.js-open-popup').on("click tap touch", function (e) {
+$('.js-open-popup').on("click touchstart", function (e) {
 		if(event.preventDefault){ 
 		   	event.preventDefault();
 		}else{
