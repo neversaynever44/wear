@@ -28,7 +28,7 @@ $(function() {
   $('form').each(function(){
     // Объявляем переменные (форма и кнопка отправки)
   var form = $(this),
-        btn = form.find('#form-submit','btn-send');
+        btn = form.find('#form-submit');
 
     // Добавляем каждому проверяемому полю, указание что поле пустое
   form.find('.rfield').addClass('empty_field');
