@@ -374,6 +374,7 @@ textarea,
 // fly-plane
 #flyPlane
 	&.is-active
+		opacity: 1
 		animation: flyPlane 0.8s linear both, animePlane 0.5s linear 0.8s forwards
 
 @keyframes flyPlane
@@ -391,10 +392,13 @@ textarea,
 		transform: translate(500px,0) rotate(60deg) scale(0)
 		opacity: 0
 
-
-
-
-
+@keyframes scalePlane
+	0%
+		transform: scale(0.8)
+	50%
+		transform: scale(0.4)
+	100%
+		transform: scale(0)
 
 // contacts-map
 .contacts-map 
@@ -402,6 +406,11 @@ textarea,
 	margin: auto
 	height: 400px
 
+.contact-is-hidden
+	.icon-send
+		position: absolute
+		bottom: 10%
+		opacity: 0
 
 // overlay
 .overlay

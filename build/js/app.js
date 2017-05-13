@@ -154,7 +154,17 @@ $('.js-close-popup').click(function (e) {
 // })
 
 
-
+$('.btn-send').on('click',function() {
+	$(this).prop('disabled', true);
+	$(this).addClass('is-scale');
+	$('.icon-send').addClass('is-active');
+      setTimeout(function(){
+   $('.icon-send').removeClass('is-active'); 
+  	   $('.btn-send').removeAttr('disabled');
+  	    $('.btn-send').removeClass('is-scale');
+	      	document.getElementById('form').submit();
+		},1000);
+})
 
 
 // anchor

@@ -26,6 +26,7 @@
 		+r(600)
 			top: 0
 			right: 0
+			border-radius: 0
 		.icon-close
 			color: #686868
 			font-size: 28px
@@ -52,6 +53,7 @@
 			+skoda
 			+r(768)
 				margin: 30px 0
+				font-size: 20px
 
 .popup 	
 	.popup__window
@@ -61,9 +63,10 @@
 		box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35)
 		padding: 39px 27px
 		+r(768)
-			max-height: 666px
+			max-height: 689px
+			padding-bottom: 10px
 		+r(480)
-			max-height: 600px
+			max-height: 633px
 
 .popup__map 
 	.popup__window	
@@ -81,6 +84,7 @@
 	display: block
 	font-size: 30px
 	outline: 0
+	+tr(scale .2s ease)
 	+r(768)
 		font-size: 22px
 		padding: 15px
@@ -88,3 +92,5 @@
 	&:active
 		position: relative
 		top: 2px
+	&.is-scale
+		animation: scalePlane 0.3s linear both
