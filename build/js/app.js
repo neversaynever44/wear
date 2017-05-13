@@ -114,7 +114,7 @@ toggleMenu();
 // init animated-bg
 animatedBg();
 // open-popup
-$('.js-open-popup').click(function (e) {
+$('.js-open-popup').on("click, tap", function (e) {
 		if(event.preventDefault){
 		   	event.preventDefault();
 		}else{
@@ -163,7 +163,7 @@ $('.btn-send').on('click',function() {
   	   $('.btn-send').removeAttr('disabled');
   	    $('.btn-send').removeClass('is-scale');
 	      	document.getElementById('form').submit();
-		},1000);
+		},1300);
 })
 
 
