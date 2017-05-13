@@ -90,8 +90,8 @@ toggleMenu();
 // init animated-bg
 animatedBg();
 // open-popup
-$('.js-open-popup').on("click, tap", function (e) {
-		if(event.preventDefault){
+$('.js-open-popup').on("click tap touch", function (e) {
+		if(event.preventDefault){ 
 		   	event.preventDefault();
 		}else{
 		    event.returnValue = false; 
