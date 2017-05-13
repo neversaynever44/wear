@@ -623,9 +623,11 @@
 	 }
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&callback=initMap" async></script> -->
+	    
 	
-	
+	 <script defer src="https://maps.googleapis.com/maps/api/js?keyAIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw"></script>
 	    <script>
+	    initMap()
 	      function initMap() {
 	        var mapDiv = document.getElementById('object-map');
 	        var map = new google.maps.Map(mapDiv, {
@@ -648,14 +650,10 @@
 	
 	        // We add a DOM event here to show an alert if the DIV containing the
 	        // map is clicked.
-	        google.maps.event.addDomListener(mapDiv, function() {
-	          window.alert('Map was clicked!');
-	        });
+		google.maps.event.addDomListener(window, "load", initMap);
 	      }
 	    </script>
-	    <script async defer
-	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&callback=initMap">
-	    </script>
+	
 	<!-- END footer -->
 </div>
 <!-- END out-->
