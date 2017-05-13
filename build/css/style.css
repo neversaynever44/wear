@@ -679,17 +679,13 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .icon-arrow-down { font-size: 30px; color: white; }
 
-.popup, .popup__map { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 111; text-align: center; font-size: 0; }
+.popup, .popup__map { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 111; text-align: center; font-size: 0; opacity: 0; visibility: hidden; -webkit-transition: opacity 0.25s ease, visibility 0.25s ease; transition: opacity 0.25s ease, visibility 0.25s ease; }
 .popup:before, .popup__map:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.popup.is-active, .popup__map.is-active { opacity: 1; visibility: visible; }
 .popup__close, .popup__map__close { cursor: pointer; position: absolute; top: -25px; right: -25px; -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.41); box-shadow: 0 0 7px rgba(0, 0, 0, 0.41); border: 3px solid #ffffff; background-color: #ffffff; border-radius: 50%; z-index: 11; }
 .popup__close .icon-close, .popup__map__close .icon-close { color: #686868; font-size: 28px; padding: 15px; }
 .popup__window, .popup__map__window { display: inline-block; vertical-align: middle; width: 100%; position: relative; }
 .popup__window h3, .popup__map__window h3 { font-size: 30px; font-weight: 600; text-align: center; margin-bottom: 60px; color: black; font-family: "Skoda", Arial, sans-serif; }
-
-.popup { opacity: 0; visibility: hidden; }
-
-.popup__map { display: none; }
-.popup__map.is-active { display: block; }
 
 .contacts-map { padding-bottom: 50%; height: 0; }
 
