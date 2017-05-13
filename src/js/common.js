@@ -93,35 +93,17 @@ animatedBg();
 
 if('ontouchstart' in window) {
 	$('.js-open-popup').on('touchstart', function (e) {
-			if(event.preventDefault){
-			   	event.preventDefault();
-			}else{
-			    event.returnValue = false; 
-			};
+			// if(event.preventDefault){
+			//    	event.preventDefault();
+			// }else{
+			//     event.returnValue = false; 
+			// };
 
 		var link = $(this).data('link');
 		var popup = $('.js-popup[data-popup="' + link + '"]');
 
 		popup.add('.js-overlay').addClass('is-active');
 		// $("body").addClass("is-hidden");
-
-	// tabs
-	$('.learn-more').on('touchstart', function (e) {
-		e.preventDefault();
-	var item = $(this).closest('.job__list-item'),
-		contentItem = $('.job__content'),
-		itemPosition = item.index(),
-		clickBtn        = $('.learn-more');
-		
-	// 	console.log(item);
-	// console.log(contentItem);
-	// console.log(itemPosition);
-	contentItem.eq(itemPosition)
-		.add(item)
-		.toggleClass('is-active')
-		.siblings()
-	});
-
 	});
 	$('.js-close-popup').click(function (e) {
 		$(this).parents('.js-popup').add('.js-overlay').removeClass('is-active');
@@ -143,27 +125,9 @@ if('ontouchstart' in window) {
 	});
 	$('.js-close-popup').click(function (e) {
 		$(this).parents('.js-popup').add('.js-overlay').removeClass('is-active');
+
 	})
-		// tabs
-	$('.learn-more').on('click', function (e) {
-		e.preventDefault();
-	var item = $(this).closest('.job__list-item'),
-		contentItem = $('.job__content'),
-		itemPosition = item.index(),
-		clickBtn        = $('.learn-more');
-		
-	// 	console.log(item);
-	// console.log(contentItem);
-	// console.log(itemPosition);
-	contentItem.eq(itemPosition)
-		.add(item)
-		.toggleClass('is-active')
-		.siblings()
-	});
 }
-
-
-
 
 
 
@@ -262,7 +226,22 @@ $(document).scroll(function() {
 	}
 
 
-
+// tabs
+	$('.learn-more').on('click', function(e){
+		e.preventDefault();
+	var item = $(this).closest('.job__list-item'),
+		contentItem = $('.job__content'),
+		itemPosition = item.index(),
+		clickBtn        = $('.learn-more');
+		
+	// 	console.log(item);
+	// console.log(contentItem);
+	// console.log(itemPosition);
+	contentItem.eq(itemPosition)
+		.add(item)
+		.toggleClass('is-active')
+		.siblings()
+	});
 
 
 
