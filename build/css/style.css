@@ -722,6 +722,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .subtitle{ font-size: 18px; }
  .h1{ font-size: 22px; }
  .h2{ margin: 25px 0; text-align: center; font-size: 20px; }
+ .contact-is-visible{ display: none; }
  .contact-is-hidden{ display: block; }
  textarea{ margin-bottom: 20px; }
  .icon-logo{ font-size: 30px; }
