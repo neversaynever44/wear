@@ -765,7 +765,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .menu-btn span:before{ top: 10px; }
  .menu-btn span:after{ top: -10px; }
  .logo, .menu-btn{ top: 25px; }
- .menu__in{ top: 150px; left: 77px; }
+ .menu__in{ top: 120px; left: 77px; }
  .learn-more{ margin-left: 0; float: right; }
  .btn-next{ margin: auto; padding: 10px; }
  .brief-send{ margin: auto; text-align: center; }
