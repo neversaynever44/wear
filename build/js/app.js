@@ -114,23 +114,39 @@ toggleMenu();
 // init animated-bg
 animatedBg();
 // open-popup
-$('.js-open-popup').on("click touchstart", function (e) {
+		var link = $('.js-open-popup').data('link');
+		var popup = $('.js-popup[data-popup="' + link + '"]');
+
+		if('ontouchstart' in window) {
+			$('.js-open-popup').on("touchstart", function (e) {
+				popup.add('.js-overlay').addClass('is-active');
+				console.log('is-touch');
+			 });
+			 $('.js-close-popup').on("touchstart", function (e) {
+				$('.js-popup').add('.js-overlay').removeClass('is-active');
+			});
+
+
+			
+
+		} else {
+			$('.js-open-popup').on("click", function (e) {
+				popup.add('.js-overlay').addClass('is-active');
+				console.log('is-click');
+			  });
+			$('.js-close-popup').on("click", function (e) {
+				$('.js-popup').add('.js-overlay').removeClass('is-active');
+			});
+		}
 		if(event.preventDefault){ 
 		   	event.preventDefault();
 		}else{
 		    event.returnValue = false; 
 		};
 
-	var link = $(this).data('link');
-	var popup = $('.js-popup[data-popup="' + link + '"]');
-
-	popup.add('.js-overlay').addClass('is-active');
 	// $("body").addClass("is-hidden");
 });
-$('.js-close-popup').click(function (e) {
-	$(this).parents('.js-popup').add('.js-overlay').removeClass('is-active');
 
-})
 
 
 
@@ -358,7 +374,6 @@ $(document).scroll(function() {
 
 
 
-});
 
 //menu trigger function
 function toggleMenu() {
