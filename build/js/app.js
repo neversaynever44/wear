@@ -126,9 +126,6 @@ animatedBg();
 				$('.js-popup').add('.js-overlay').removeClass('is-active');
 			});
 
-
-			
-
 		} else {
 			$('.js-open-popup').on("click", function (e) {
 				popup.add('.js-overlay').addClass('is-active');
@@ -145,8 +142,6 @@ animatedBg();
 		};
 
 	// $("body").addClass("is-hidden");
-});
-
 
 
 
@@ -374,6 +369,7 @@ $(document).scroll(function() {
 
 
 
+});
 
 //menu trigger function
 function toggleMenu() {
