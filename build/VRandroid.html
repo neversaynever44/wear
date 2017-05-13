@@ -186,109 +186,62 @@
 			</ul>
 		</div>
 	</footer>
-	   <script>
-	      var map;
+	<!--  <script>
+	  var map;
+	  function initMap() {
+	    map = new google.maps.Map(document.getElementById('object-map'), {
+	      zoom: 15,
+		  scrollwheel: false,
+		  center: new google.maps.LatLng(50.4724601,30.4408557,21),
+			disableDefaultUI: false,
+			draggable: true,
+			styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+	    });
+	    var image = "img/marker.svg";
+	    var myLatLng = new google.maps.LatLng(50.4724601,30.4408557,21);
+	    var mapMarker = new
+			google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: '',
+				icon: image
+			});
+	 }
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&callback=initMap" async></script> -->
+	
+	
+	    <script>
 	      function initMap() {
-	        map = new google.maps.Map(document.getElementById('object-map'), {
+	        var mapDiv = document.getElementById('object-map');
+	        var map = new google.maps.Map(mapDiv, {
+	          center: new google.maps.LatLng(50.4724601,30.4408557,21),
 	          zoom: 15,
-			  scrollwheel: false,
-			  center: new google.maps.LatLng(50.4724601,30.4408557,21),
-				disableDefaultUI: false,
-				draggable: true,
-				styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+		  scrollwheel: false,
+			disableDefaultUI: false,
+			draggable: true,
+			styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+	    });
+	    var image = "img/marker.svg";
+	    var myLatLng = new google.maps.LatLng(50.4724601,30.4408557,21);
+	    var mapMarker = new
+			google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: '',
+				icon: image
+			});
+	
+	        // We add a DOM event here to show an alert if the DIV containing the
+	        // map is clicked.
+	        google.maps.event.addDomListener(mapDiv, function() {
+	          window.alert('Map was clicked!');
 	        });
-	        var image = "img/marker.svg";
-	        var myLatLng = new google.maps.LatLng(50.4724601,30.4408557,21);
-	        var mapMarker = new
-				google.maps.Marker({
-					position: myLatLng,
-					map: map,
-					title: '',
-					icon: image
-				});
 	      }
 	    </script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&amp;&callback=initMap" async defer></script>
-	
-	<!-- <script defer="defer" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&amp;ver=1.0'"></script> -->
-	<script defer="defer">
-	// 	$(document).ready(function(){
-	// 	$.getScript('//maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&amp;ver=1.0', function() {
-	// 		// Google maps
-	// 		// Create and Initialise the Map (required) our google map below
-	// 		google.maps.event.addDomListener(window, 'load', init);
-	// 			function init() {
-	// 			// Basic options for a simple Google Map
-	// 			var mapOptions = {
-	// 			// How zoomed in you want the map to start at (always required)
-	// 			zoom: 15,
-	// 			scrollwheel: false,
-	// 			// The latitude and longitude to center the map (always required)
-	// 			center: new google.maps.LatLng(50.4724601,30.4408557,21),
-	// 			disableDefaultUI: false,
-	// 			draggable: true,
-	// 			styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
-	
-	
-	// 		};
-	// 		var mapElement = document.getElementById("object-map");
-	// 		// Create the Google Map using out element and options defined above
-	// 		var map = new google.maps.Map(mapElement, mapOptions);
-	// 		var image = "img/marker.svg";
-	// 		// Define the Lattitude and Longitude for the map location
-	
-	// 		var myLatLng = new google.maps.LatLng(50.4724601,30.4408557,21);
-	// 		// Define the map marker characteristics
-	// 		var mapMarker = new
-	// 		google.maps.Marker({
-	// 			position: myLatLng,
-	// 			map: map,
-	// 			title: '',
-	// 			 icon: image
-	// 		});
-	// 	}	
-	
-	// 	})
-	// });
-	// $(document).ready(function () {
-	//  initialize();
-	
-	// });
-	// //инициализация карты в div "map"
-	// function initialize() {
-	//     var haightAshbury = new google.maps.LatLng(50.4724601,30.4408557,21);//(долгота, широта)
-	//     var mapOptions = {
-	//         zoom: 15,//масштаб
-	//         center: haightAshbury,//позиционируем карту на заданые координаты
-	//         scrollwheel: false,
-	//         disableDefaultUI: false,
-	// 		draggable: true,
-	//         mapTypeId: google.maps.MapTypeId.TERRAIN,//задаем тип карты
-	// 		styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
-	//     };    
-	//     map = new google.maps.Map(document.getElementById("object-map"), mapOptions);//инициализация карты
-	 
-	//     google.maps.event.addListener(map, 'click', function (event) {
-	//         addMarker(event.latLng);
-	//     });//добавляем событие нажание мышки
-	// }
-	// //функция добавления маркера
-	// function addMarker(location) {
-	 
-	 
-	//     var image = "img/marker.svg";
-	 
-	//     marker = new google.maps.Marker({
-	//         position: location,
-	//         map: map,
-	//         icon: image,
-	//         title: "My title!)",
-	//         zIndex: 999
-	//     });
-	
-	
-	
-	</script>
+	    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw&callback=initMap">
+	    </script>
 	<!-- END footer -->
 
 </div>
