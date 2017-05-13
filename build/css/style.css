@@ -621,7 +621,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .menu { position: fixed; width: 400px; background-color: #fff; top: 0; bottom: 0; right: 0; z-index: 12; -webkit-transition: -webkit-transform 0.25s ease-in-out; transition: -webkit-transform 0.25s ease-in-out; transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out; -webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); will-change: transform; overflow-x: hidden; overflow-y: auto; }
 .menu.is-open { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.menu__in { position: absolute; top: 208px; left: 50px; }
+.menu__in { position: absolute; top: 108px; left: 50px; }
 
 .nav { font-size: 0; text-align: right; margin-bottom: 30px; list-style-type: none; }
 .nav__item { text-align: right; }
@@ -765,7 +765,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .menu-btn span:before{ top: 10px; }
  .menu-btn span:after{ top: -10px; }
  .logo, .menu-btn{ top: 25px; }
- .menu__in{ top: 150px; left: 60px; }
+ .menu__in{ top: 150px; left: 77px; }
  .learn-more{ margin-left: 0; float: right; }
  .btn-next{ margin: auto; padding: 10px; }
  .brief-send{ margin: auto; text-align: center; }
