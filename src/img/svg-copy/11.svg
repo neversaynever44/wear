@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 56.4 42.4" style="enable-background:new 0 0 56.4 42.4;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
-</style>
+	 viewBox="-19 28.3 59.7 45.7" style="enable-background:new -19 28.3 59.7 45.7;" xml:space="preserve">
 <g id="Layer_1">
-	<path id="XMLID_13_" d="M54.5,0H1.9C0.8,0,0,0.8,0,1.9v29.4c0,1,0.8,1.9,1.9,1.9H23v7.6h-4.9v1.7H23h10.4h4.9v-1.7h-4.9v-7.6h21.1
-		c1,0,1.9-0.8,1.9-1.9V1.9C56.4,0.8,55.6,0,54.5,0z M54.8,31.3H1.6V1.8h53.2V31.3z"/>
+	<g id="Layer_1_2_">
+		<g id="Layer_1_1_">
+		</g>
+		<g id="Layer_2">
+			<circle id="XMLID_1_" cx="10.8" cy="34.1" r="4.7"/>
+			<circle id="XMLID_5_" cx="-11.8" cy="60.9" r="4.7"/>
+			<path id="XMLID_4_" d="M-19.1,72.9c0-4,3.3-7.3,7.3-7.3s7.3,3.3,7.3,7.3"/>
+			<circle id="XMLID_8_" cx="10.7" cy="60.9" r="4.7"/>
+			<path id="XMLID_7_" d="M3.5,72.9c0-4,3.3-7.3,7.3-7.3s7.3,3.3,7.3,7.3"/>
+			<circle id="XMLID_3_" cx="33.2" cy="60.9" r="4.7"/>
+			<path id="XMLID_2_" d="M26,72.9c0-4,3.3-7.3,7.3-7.3s7.3,3.3,7.3,7.3"/>
+			<g>
+				<path d="M10.7,40.8l-2.1-1.7c-3,0.9-5.1,3.7-5.1,7h7.3l-1.5-1.4L10.7,40.8z"/>
+				<path d="M13,39.1l-2,1.7l1.4,3.9l-1.6,1.4H18C18.1,42.9,15.9,40.1,13,39.1z"/>
+			</g>
+		</g>
+		<g id="Layer_3">
+		</g>
+	</g>
 </g>
-<g id="Layer_2">
-	<rect id="XMLID_1_" x="24.1" y="5.7" class="st0" width="22.1" height="12"/>
-	<rect id="XMLID_2_" x="7.7" y="12.7" class="st0" width="9.5" height="14.7"/>
-	<rect id="XMLID_3_" x="33.6" y="6.9" width="10.5" height="0.7"/>
-	<rect id="XMLID_4_" x="33.6" y="9.6" width="10.5" height="2.1"/>
-	<rect id="XMLID_6_" x="9.1" y="13.8" width="6.7" height="3.1"/>
-	<rect id="XMLID_7_" x="9.1" y="17.7" width="6.7" height="0.4"/>
-	<rect id="XMLID_8_" x="9.1" y="20.9" width="6.7" height="0.4"/>
+<g id="Layer_2_2_">
+	<rect x="10" y="47.8" width="1.5" height="6.8"/>
+	<rect x="-4.5" y="60.1" width="6.8" height="1.5"/>
+	<rect x="19.2" y="60.1" width="6.8" height="1.5"/>
+</g>
+<g id="Layer_3_1_">
 </g>
 </svg>

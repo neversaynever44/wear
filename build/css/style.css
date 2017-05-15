@@ -27,17 +27,19 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
-.icon-1:before { content: ""; }
-
 .icon-10:before { content: ""; }
 
-.icon-12:before { content: ""; }
+.icon-1:before { content: ""; }
 
 .icon-11:before { content: ""; }
+
+.icon-12:before { content: ""; }
 
 .icon-2:before { content: ""; }
 
 .icon-3:before { content: ""; }
+
+.icon-4:before { content: ""; }
 
 .icon-5:before { content: ""; }
 
@@ -51,13 +53,11 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-Cardboard:before { content: ""; }
 
-.icon-advertising:before { content: ""; }
-
 .icon-Oculus:before { content: ""; }
 
-.icon-appleDown:before { content: ""; }
+.icon-advertising:before { content: ""; }
 
-.icon-4:before { content: ""; }
+.icon-appleDown:before { content: ""; }
 
 .icon-arrow-down:before { content: ""; }
 
@@ -69,17 +69,17 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-bg2:before { content: ""; }
 
-.icon-bg6:before { content: ""; }
+.icon-bg3:before { content: ""; }
 
 .icon-bg5:before { content: ""; }
 
-.icon-bg3:before { content: ""; }
+.icon-bg6:before { content: ""; }
 
 .icon-close:before { content: ""; }
 
-.icon-education:before { content: ""; }
-
 .icon-droid:before { content: ""; }
+
+.icon-education:before { content: ""; }
 
 .icon-envelope:before { content: ""; }
 
@@ -91,9 +91,9 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-game:before { content: ""; }
 
-.icon-gear:before { content: ""; }
-
 .icon-geo:before { content: ""; }
+
+.icon-gear:before { content: ""; }
 
 .icon-glasses:before { content: ""; }
 
@@ -101,17 +101,17 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-goggles:before { content: ""; }
 
-.icon-hololens:before { content: ""; }
-
 .icon-googleDown:before { content: ""; }
 
-.icon-icon-open:before { content: ""; }
+.icon-hololens:before { content: ""; }
 
 .icon-how-it-work:before { content: ""; }
 
-.icon-iphone:before { content: ""; }
+.icon-icon-open:before { content: ""; }
 
 .icon-instagram:before { content: ""; }
+
+.icon-iphone:before { content: ""; }
 
 .icon-linkedin:before { content: ""; }
 
@@ -119,31 +119,31 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-logo:before { content: ""; }
 
-.icon-medical:before { content: ""; }
+.icon-mail:before { content: ""; }
 
 .icon-mailsend:before { content: ""; }
+
+.icon-medical:before { content: ""; }
 
 .icon-open:before { content: ""; }
 
 .icon-phone:before { content: ""; }
 
-.icon-mail:before { content: ""; }
-
-.icon-send:before { content: ""; }
-
 .icon-property:before { content: ""; }
 
-.icon-smartphone:before { content: ""; }
+.icon-send:before { content: ""; }
 
 .icon-triangle:before { content: ""; }
 
 .icon-smart:before { content: ""; }
 
-.icon-vk:before { content: ""; }
-
 .icon-triangle2:before { content: ""; }
 
+.icon-smartphone:before { content: ""; }
+
 .icon-tw:before { content: ""; }
+
+.icon-vk:before { content: ""; }
 
 @font-face { font-family: skoda; src: url("fonts/SkodaPro-Light.eot"); src: url("fonts/SkodaPro-Light.eot?#iefix") format("embedded-opentype"), url("fonts/SkodaPro-Light.woff2") format("woff2"), url("fonts/SkodaPro-Light.woff") format("woff"), url("fonts/SkodaPro-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: exo; src: url("fonts/Exo2-Light.eot"); src: url("fonts/Exo2-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Exo2-Light.woff2") format("woff2"), url("fonts/Exo2-Light.woff") format("woff"), url("fonts/Exo2-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
