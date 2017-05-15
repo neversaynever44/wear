@@ -322,6 +322,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
   100% { -webkit-transform: scale(0); transform: scale(0); } }
 .contacts-map { width: 100%; margin: auto; height: 400px; }
 
+#object-map { display: none; }
+
 .contact-is-hidden .icon-send { position: absolute; bottom: 10%; opacity: 0; }
 
 .overlay { opacity: 0; position: fixed; top: 0; right: 0; left: 0; bottom: 0; width: 100%; height: 100%; visibility: hidden; z-index: 11; background: rgba(53, 18, 83, 0.3); -webkit-transition: opacity 0.25s ease, visibility 0.25s ease; transition: opacity 0.25s ease, visibility 0.25s ease; }
@@ -683,22 +685,18 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .popup, .popup__map { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 111; text-align: center; font-size: 0; -webkit-transition: opacity 0.25s ease, visibility 0.25s ease; transition: opacity 0.25s ease, visibility 0.25s ease; }
 .popup:before, .popup__map:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .popup__close, .popup__map__close { cursor: pointer; position: absolute; top: -25px; right: -25px; -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.41); box-shadow: 0 0 7px rgba(0, 0, 0, 0.41); border: 3px solid #ffffff; background-color: #ffffff; border-radius: 50%; z-index: 11; }
-.popup__close .icon-close, .popup__map__close .icon-close { color: #686868; font-size: 28px; padding: 15px; }
+.popup__close .icon-close, .popup__map__close .icon-close { color: #686868; font-size: 20px; padding: 13px; }
 .popup__window, .popup__map__window { display: inline-block; vertical-align: middle; width: 100%; position: relative; }
 .popup__window h3, .popup__map__window h3 { font-size: 30px; font-weight: 600; text-align: center; margin-bottom: 60px; color: black; font-family: "Skoda", Arial, sans-serif; }
 
 .popup { opacity: 0; visibility: hidden; }
 .popup.is-active { opacity: 1; visibility: visible; }
-
 .popup__map { display: none; }
 .popup__map.is-active { display: block; }
-
-#object-map { display: none; }
-
-.popup .popup__window { max-width: 2507px; max-height: 750px; background: #fff; -webkit-box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35); box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35); padding: 39px 27px; }
+.popup .popup__window { max-width: 507px; max-height: 750px; background: #fff; -webkit-box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35); box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35); padding: 39px 27px; }
 
 .popup__map .popup__window { max-width: 1200px; }
-.popup__map .popup__close .icon-close { color: black; font-size: 22px; }
+.popup__map .icon-close { color: #8c40cc; }
 
 .btn-send { background-color: #eeae21; color: white; text-align: center; padding: 20px; width: 100%; display: block; font-size: 30px; outline: 0; -webkit-transition: scale 0.2s ease; transition: scale 0.2s ease; font-family: "Skoda", Arial, sans-serif; }
 .btn-send:active { position: relative; top: 2px; }
@@ -707,6 +705,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1440px){
  .inner{ width: 90%; } }
+@media only screen and (max-width: 1260px){
+ .popup__map .popup__close{ top: 0; right: 0; border-radius: 0; } }
 @media only screen and (max-width: 950px){
  .footer{ padding: 0; }
  .footer .inner{ width: 100%; }
@@ -778,12 +778,11 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .learn-more{ margin-left: 0; float: right; }
  .btn-next{ margin: auto; padding: 10px; }
  .brief-send{ margin: auto; text-align: center; }
- .popup__close .icon-close, .popup__map__close .icon-close{ font-size: 21px; }
  .popup__window h3, .popup__map__window h3{ margin: 30px 0; font-size: 20px; }
  .btn-send{ font-size: 22px; padding: 15px; } }
 @media only screen and (max-width: 600px){
  .infographic__note-second{ bottom: 0; margin: auto; top: -90px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
- .popup__close, .popup__map__close{ top: 0; right: 0; border-radius: 0; } }
+ .popup .popup__close{ top: 0; right: 0; border-radius: 0; } }
 @media only screen and (max-width: 480px){
  .h1{ margin-bottom: 25px; }
  textarea, .input-tablet{ font-size: 19px; padding: 11px; }
