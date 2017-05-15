@@ -687,8 +687,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .popup__window, .popup__map__window { display: inline-block; vertical-align: middle; width: 100%; position: relative; }
 .popup__window h3, .popup__map__window h3 { font-size: 30px; font-weight: 600; text-align: center; margin-bottom: 60px; color: black; font-family: "Skoda", Arial, sans-serif; }
 
-.contacts-map { padding-bottom: 50%; height: 0; }
-
 .popup .popup__window { max-width: 507px; max-height: 750px; background: #fff; -webkit-box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35); box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35); padding: 39px 27px; }
 
 .popup__map .popup__window { max-width: 1200px; }
@@ -774,7 +772,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .brief-send{ margin: auto; text-align: center; }
  .popup__close .icon-close, .popup__map__close .icon-close{ font-size: 21px; }
  .popup__window h3, .popup__map__window h3{ margin: 30px 0; font-size: 20px; }
- .popup .popup__window{ max-height: 689px; padding-bottom: 10px; }
  .btn-send{ font-size: 22px; padding: 15px; } }
 @media only screen and (max-width: 600px){
  .infographic__note-second{ bottom: 0; margin: auto; top: -90px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
@@ -795,8 +792,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .development__pic{ max-width: 250px; }
  .footer__social-item{ height: 100px; }
  .learn-more{ float: none; display: block; max-width: 160px; width: 100%; margin: auto; padding: 8px; }
- .blog-show{ display: block; }
- .popup .popup__window{ max-height: 633px; } }
+ .blog-show{ display: block; } }
 @media only screen and (max-width: 425px){
  .portfolio__pic{ max-width: 130px; } }
 
