@@ -778,6 +778,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .learn-more{ margin-left: 0; float: right; }
  .btn-next{ margin: auto; padding: 10px; }
  .brief-send{ margin: auto; text-align: center; }
+ .popup__close .icon-close, .popup__map__close .icon-close{ padding: 8px; }
  .popup__window h3, .popup__map__window h3{ margin: 30px 0; font-size: 20px; }
  .btn-send{ font-size: 22px; padding: 15px; } }
 @media only screen and (max-width: 600px){
