@@ -584,6 +584,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .footer__contact-item { display: inline-block; vertical-align: middle; line-height: 20px; }
 .footer__contact-item:not(:first-child) { margin-left: 3%; }
+.footer__contact-item button { background: 0; }
 
 .footer__contact-link { display: block; color: white; text-decoration: none; font-size: 15px; font-weight: 300; cursor: pointer; }
 .footer__contact-link:active, .footer__contact-link:focus, .footer__contact-link:hover { color: #fcb200; }
