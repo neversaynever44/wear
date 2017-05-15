@@ -8,12 +8,7 @@
 	bottom: 0
 	z-index: 111
 	+vertical
-	opacity: 0
-	visibility: hidden
 	transition: opacity .25s ease, visibility .25s ease
-	&.is-active
-		opacity: 1
-		visibility: visible
 	&__close
 		cursor: pointer
 		position: absolute
@@ -59,7 +54,21 @@
 			+r(768)
 				margin: 30px 0
 				font-size: 20px
+.popup
+	opacity: 0
+	visibility: hidden
+	&.is-active
+		opacity: 1
+		visibility: visible
+.popup__map
+	display: none
+	&.is-active
+		display: block
 		
+
+#object-map
+	display: none
+
 // .contacts-map
 // 	padding-bottom: 50%
 // 	height: 0
@@ -85,7 +94,7 @@
 
 .popup 	
 	.popup__window
-		max-width: 507px
+		max-width: 2507px
 		max-height: 750px
 		background: #fff
 		box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35)
