@@ -529,12 +529,12 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .advantages__item { position: relative; width: 100%; max-width: 900px; display: table; margin: auto; }
 .advantages__item:first-child { margin-bottom: 70px; }
 
-.advantages__item-pic { width: 12%; text-align: center; vertical-align: top; }
+.advantages__item-pic { width: 12%; text-align: center; }
 .advantages__item-pic .icon-hololens { margin-right: 0; font-size: 55px; }
 
-.advantages__item-pic, .advantages__item-text { display: table-cell; }
+.advantages__item-pic, .advantages__item-text { display: table-cell; vertical-align: middle; }
 
-.advantages__item-text { width: 90%; text-align: left; font-size: 23px; font-weight: 400; line-height: 1.4; padding-left: 4%; vertical-align: middle; }
+.advantages__item-text { width: 90%; text-align: left; font-size: 23px; font-weight: 400; line-height: 1.4; padding-left: 4%; }
 
 .AU-Reality { background: url(../img/aureality/AUreality-bg.jpg) center no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; position: relative; color: white; padding-top: 80px; }
 
@@ -562,8 +562,9 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .development { padding: 40px 0; background-color: #f2f2f2; margin-bottom: 110px; }
 .development .inner { display: table; max-width: 1750px; }
-.development__pic, .development__content { display: table-cell; vertical-align: top; }
-.development__content { width: 62%; padding: 0 2% 0 2%; color: #000000; font-size: 23px; font-weight: 300; line-height: 1.2; }
+.development__pic, .development__content { display: table-cell; }
+.development__pic { vertical-align: top; }
+.development__content { width: 62%; padding: 0 2% 0 2%; color: #000000; font-size: 23px; font-weight: 300; line-height: 1.2; vertical-align: middle; }
 .development__content b { font-weight: 400; }
 
 .MX-reality { background: url(../img/mxreality/MXreality-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; color: white; position: relative; padding-top: 80px; }
