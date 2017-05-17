@@ -805,7 +805,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .infographic__note-second{ bottom: 0; margin: auto; top: -90px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
  .popup .popup__close{ top: 0; right: 0; border-radius: 0; } }
 @media only screen and (max-width: 480px){
- .subtitle{ font-size: 14px; }
+ .subtitle{ font-size: 16px; }
  .h1{ margin-bottom: 25px; font-size: 16px; }
  textarea, .input-tablet{ font-size: 19px; padding: 11px; }
  .wrapper{ padding: 25px 0; text-align: justify; }
@@ -823,6 +823,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .blog__list-date, .blog__list-title, .blog__list-text{ font-size: 14px; }
  .blog-in{ max-height: 150px; }
  .blog-in__title h1, .blog-in__title h2{ font-size: 18px; }
+ .content{ padding: 30px 0; }
  .title{ margin-bottom: 50px; }
  .advantages__item-pic .icon-hololens{ font-size: 30px; }
  .advantages__item-text{ font-size: 14px; }
