@@ -86,7 +86,7 @@ a
 // TITLEs
 .title-primary
 	font-family: Roboto
-	font-size: 35px
+	font-size: 40px
 	font-weight: 500
 	text-transform: uppercase
 	position: relative
@@ -109,6 +109,8 @@ a
 	font-weight: 400
 	+r(768)
 		font-size: 18px
+	+r(480)
+		font-size: 14px
 
 .h1
 	font: 500 28px/1 'Roboto', sans-serif, Arial
@@ -119,6 +121,7 @@ a
 		font-size: 22px
 	+r(480)
 		margin-bottom: 25px
+		font-size: 16px
 .h2
 	font: 500 28px/1 'Roboto', sans-serif, Arial
 	text-transform: uppercase
@@ -242,7 +245,9 @@ textarea,
 // ICONS
 .icon-gear,
 .icon-smartphone
-	font-size: 60px
+	font-size: 70px
+	+r(768)
+		font-size: 55px
 .icon-open
 	color: #8c40cc
 	font-size: 27px
@@ -252,7 +257,7 @@ textarea,
 		.icon-open
 			+rotate(180)
 .icon-Oculus
-	font-size: 25px			
+	font-size: 30px			
 .icon-send
 	margin-right: 11px
 	font-size: 41px
@@ -439,6 +444,8 @@ textarea,
 	margin-bottom: 260px
 	+clr
 	&__content
+		width: 80%
+		margin: auto
 		p
 			&:not(:last-child)
 				margin-bottom: 16px
@@ -454,6 +461,8 @@ textarea,
 			font-size: 22px
 			font-weight: 300
 			line-height: 1
+			+r(900)
+				font-size: 18px
 		h1
 			margin-bottom: 100px
 			text-align: center
@@ -461,6 +470,8 @@ textarea,
 			line-height: 1
 			font-weight: 700
 			position: relative
+			+r(900)
+				font-size: 45px
 			&:after
 				display: block
 				z-index: 1
@@ -479,6 +490,12 @@ textarea,
 		margin-bottom: 40px
 	&__subtitle
 		margin-bottom: 120px
+		+r(480)
+			margin-bottom: 50px
+
+.slider .inner
+	+r(900)
+		width: 80%
 
 .js-slider
 	opacity: 0
@@ -498,12 +515,19 @@ textarea,
 	font-size: 0
 	margin: 0 0 0 -2%
 	text-align: center
+	+r(480)
+		margin: 0
 	&__item
 		display: inline-block
 		vertical-align: top
 		width: 31.33%
 		margin-left: 2%
 		margin-bottom: 40px
+		+r(900)
+			width: 48%
+		+r(480)
+			width: 100%
+			margin-left: 0
 	&__img
 		margin-bottom: 25px
 	&__text
@@ -517,27 +541,30 @@ textarea,
 	position: absolute
 	top: 0
 	bottom: 0
-	background-color: rgba(255,255,255, 0.2)
 	height: 100%
-	width: 140px
-	span
-		position: relative
+	width: 110px
+	background-color: rgba(255,255,255, 0)
+	+tr(background-color .2s ease)
+	+r(900)
+		width: 80px
+	i
+		position: absolute
 		top: 50%
-		&:before
-			z-index: 11
-			display: block
-			content: ''
-			position: absolute
-			border: 50px solid transparent
-			border-right: 50px solid white
-			right: 25%
+		+tr(opacity .2s ease)
+		font-size: 60px
+		+r(900)
+			font-size: 45px
+	.icon-arrowLeft
+		left: 20%
+	.icon-arrowRight
+		right: 20%
+	// &:hover
+	// 	i
+	// 		opacity: 0.77
+	&:hover
+		background-color: rgba(255,255,255, 0.2)
 .arrow-next
 	right: 0
-	span
-		&:before
-			border-left: 50px solid white
-			border-right: none
-			left: 25%
 .arrow-prev
 	left: 0
 
@@ -559,5 +586,36 @@ textarea,
 	border: 1px solid #f2f2f2
 	outline: 0
 	box-shadow: none
+	position: relative
 .slick-dots li.slick-active button
 	background-color: #7b42c7
+
+.icon-1,
+.icon-2,
+.icon-3,
+.icon-4,
+.icon-5,
+.icon-6,
+.icon-7,
+.icon-8,
+.icon-9,
+.icon-10,
+.icon-11,
+.icon-12
+	font-size: 40px
+// .slick-dots li button
+// 	&:before
+// 		display: block
+// 		content: ''
+// 		z-index: 11
+// 		width: 100%
+// 		line-height: 1
+// 		font-size: 15px
+// 		font-family: sans-serif
+// 		color: black
+// 	&:nth-of-type(1)
+// 		&:before
+// 			content: 'privet andrey'
+// 	&:nth-of-type(2)
+// 		&:before
+// 			content: 'haha'

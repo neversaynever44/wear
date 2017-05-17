@@ -210,10 +210,9 @@ $(document).scroll(function() {
 	 dots: true,
 	 autoplay: false,
    	 adaptiveHeight: true,
-	 // autoplaySpeed: 6000,
 	 arrows: true,
  	 prevArrow: '.js-prev',
-	 nextArrow: '.js-next',
+	 nextArrow: '.js-next'
 });
 
 	function initSlider(slider, options) {

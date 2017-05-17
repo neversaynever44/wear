@@ -72,7 +72,7 @@
 	font-weight: 400
 	text-align: center
 	text-transform: uppercase
-	+tr(padding .25s ease)
+	+tr(padding .2s ease)
 	position: relative
 	&:hover
 		opacity: 0.9
@@ -96,8 +96,12 @@
 	cursor: pointer
 	z-index: 11
 	padding: 8px
-.icon-mailsend
-	
+	+tr(opacity .2s ease)
+	&:active,
+	&:focus,
+	&:hover
+		opacity: 0.88
+
 .about-contact
 	text-decoration: underline
 

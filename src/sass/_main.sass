@@ -113,17 +113,23 @@
 	background-color: #8c40cc
 	color: white
 	position: relative
+	+r(480)
+		padding: 30px 0
 	p
 		font-size: 20px
 		font-weight: 300
-		line-height: 1
+		line-height: 1.1	
 		&:not(:last-child)
 			margin-bottom: 13px
+		+r(480)
+			font-size: 14px
 	.subtitle
 		font-weight: 400
 		font-size: 24px
 		+r(768)
 			font-size: 18px
+		+r(480)
+			font-size: 14px
 	.icon-bg2
 		top: (243px*100%)/370px
 		right: (159px*100%)/1920px
@@ -133,6 +139,12 @@
 	.icon-bg6
 		top: (255px*100%)/370px
 		left: (242px*100%)/1920px
+	.icon-bg2,
+	.icon-bg5,
+	.icon-bg6
+		+r(900)
+			display: none
+			
 .icon-triangle,
 .icon-triangle2
 	color: #a479dd
@@ -393,9 +405,17 @@
 		margin-left: 0
 		max-width: 300px
 .blog__list-pic
-	height: 200px
-	overflow: hidden
+	// height: 200px
+	// overflow: hidden
 	position: relative
+	max-width: 300px
+	max-height: 200px
+	display: block
+	margin: auto
+	&:before
+		content: ''
+		display: block
+		padding-top: 200px
 	+r(480)
 		max-width: 225px
 		margin: auto
@@ -403,10 +423,15 @@
 		position: absolute
 		top: 0
 		left: 0
-		right: 0
-		bottom: 0
-		height: 100%
 		width: 100%
+		height: 100%
+		// position: absolute
+		// top: 0
+		// left: 0
+		// right: 0
+		// bottom: 0
+		// height: 100%
+		// object-fit: cover
 .blog__list-date
 	color: #8c40cc
 	font-size: 17px
@@ -514,41 +539,43 @@
 		margin: auto
 		&:first-child
 			margin-bottom: 70px
-// .advantages__item-pic
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	text-align: center
-// 	width: 15%
 .advantages__item-pic
 	width: 12%
 	text-align: center
+	vertical-align: top
 	+r(768)
 		width: 100%
 		margin-bottom: 15px
 	.icon-hololens
 		margin-right: 0
-		font-size: 33px
+		font-size: 55px
+		+r(900)
+			font-size: 40px
+		+r(480)
+			font-size: 30px
+	.icon-Cardboard
+		+r(768)
+			font-size: 40px
 .advantages__item-pic,
 .advantages__item-text
 	display: table-cell
-	vertical-align: top
 	+r(768)
 		display: block
 		
 .advantages__item-text
 	width: 90%
 	text-align: left
-	font-size: 19px
+	font-size: 23px
 	font-weight: 400
 	line-height: 1.4
 	padding-left: 4%
+	vertical-align: middle
 	+r(768)
 		width: 100%
 		text-align: justify
 		font-size: 16px
-.advantages__item-pic .icon-Cardboard
-	font-size: 42px
+	+r(480)
+		font-size: 14px
 
 // Section AU-reality
 .AU-Reality
@@ -568,6 +595,8 @@
 	text-align: center
 	padding: 70px 0
 	position: relative
+	+r(480)
+		padding: 35px 0
 	.h1
 		margin-bottom: 19px
 	.inner
@@ -597,7 +626,7 @@
 		font-size: 23px
 	&__text
 		color: #000
-		font-size: 15px
+		font-size: 14px
 		padding: 0 12px
 		margin-bottom: 15px
 		line-height: 1.2
@@ -647,9 +676,19 @@
 		font-size: 18px
 	b
 		font-weight: 400
+	+r(480)
+		font-size: 14px
 .promo-title
 	margin-bottom: 15px
 	text-align: center
+	font-weight: bold
+	text-transform: uppercase
+	font-size: 34px
+	line-height: 1.2
+	+r(768)
+		font-size: 18px
+	+r(480)
+		font-size: 14px
 .development
 	padding: 40px 0
 	background-color: #f2f2f2
@@ -672,7 +711,7 @@
 	&__pic,
 	&__content
 		display: table-cell
-		vertical-align: middle
+		vertical-align: top
 	&__pic
 		+r(900)
 			max-width: 350px
@@ -695,6 +734,8 @@
 			text-align: justify
 		b
 			font-weight: 400
+		+r(480)
+			font-size: 14px
 
 // SECTION MXreality
 .MX-reality
