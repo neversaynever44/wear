@@ -778,6 +778,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .blog-in__title h1{ margin-bottom: 15px; }
  .blog-in__title h1, .blog-in__title h2{ font-size: 22px; }
  .content{ padding: 60px 0; }
+ .advantages__item:first-child{ margin-bottom: 35px; }
  .advantages__item-pic{ width: 100%; margin-bottom: 15px; }
  .advantages__item-pic .icon-Cardboard{ font-size: 40px; }
  .advantages__item-pic, .advantages__item-text{ display: block; }
@@ -808,6 +809,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .subtitle{ font-size: 16px; }
  .h1{ margin-bottom: 25px; font-size: 16px; }
  textarea, .input-tablet{ font-size: 19px; padding: 11px; }
+ .icon-gear, .icon-smartphone{ font-size: 40px; }
+ .icon-Oculus{ font-size: 23px; }
  .wrapper{ padding: 25px 0; text-align: justify; }
  .wrapper p{ font-size: 14px; }
  .slider__subtitle{ margin-bottom: 50px; }
@@ -825,7 +828,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .blog-in__title h1, .blog-in__title h2{ font-size: 18px; }
  .content{ padding: 30px 0; }
  .title{ margin-bottom: 50px; }
- .advantages__item-pic .icon-hololens{ font-size: 30px; }
+ .advantages__item-pic .icon-hololens{ font-size: 25px; }
+ .advantages__item-pic .icon-Cardboard{ font-size: 30px; }
  .advantages__item-text{ font-size: 14px; }
  .how-it-works{ padding: 35px 0; }
  .promo{ font-size: 14px; }
