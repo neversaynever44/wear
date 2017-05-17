@@ -211,6 +211,7 @@ $(document).scroll(function() {
 	 autoplay: false,
    	 adaptiveHeight: true,
 	 arrows: true,
+	 // centerMode: true,
  	 prevArrow: '.js-prev',
 	 nextArrow: '.js-next'
 });

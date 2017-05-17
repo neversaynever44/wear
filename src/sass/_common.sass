@@ -70,6 +70,7 @@ a
 	+tr(color .3s ease)
 .out
 	position: relative
+	min-height: 100%
 .pages-list
 	text-align: center
 	margin-top: 300px
@@ -448,9 +449,11 @@ textarea,
 .slider
 	position: relative
 	margin-bottom: 260px
+	// +r(768)
+	// 	margin-right: -50px
 	+clr
 	&__content
-		width: 80%
+		width: 86%
 		margin: auto
 		p
 			&:not(:last-child)
@@ -463,12 +466,18 @@ textarea,
 		+cover
 		color: white
 		padding: 80px 0
+		+r(768)
+			padding: 30px 0
+		// +r(768)
+		// 	min-height: 1340px !important
 		p
 			font-size: 22px
 			font-weight: 300
 			line-height: 1
 			+r(900)
 				font-size: 18px
+			+r(480)
+				font-size: 16px
 		h1
 			margin-bottom: 100px
 			text-align: center
@@ -478,6 +487,9 @@ textarea,
 			position: relative
 			+r(900)
 				font-size: 45px
+			+r(480)
+				font-size: 30px
+				margin-bottom: 70px
 			&:after
 				display: block
 				z-index: 1
@@ -489,7 +501,7 @@ textarea,
 				margin: auto
 				height: 3px
 				background-color: white
-				bottom: -40px
+				bottom: -30px
 	&__heading,
 	&__subtitle
 		text-align: center
@@ -498,10 +510,16 @@ textarea,
 		margin-bottom: 120px
 		+r(480)
 			margin-bottom: 50px
+.slider__item-second
+	h1
+		margin-bottom: 250px
+		+r(480)
+			margin-bottom: 100px
+// .slick-list
+// 	+r(768)
+// 		&:not(:last-child)
+// 			padding: 0 50px 0 0 !important
 
-.slider .inner
-	+r(900)
-		width: 80%
 
 .js-slider
 	opacity: 0
@@ -540,30 +558,46 @@ textarea,
 		font-size: 20px
 		font-weight: 300
 		line-height: 1
-		max-width: 300px
+		max-width: 250px
 		margin: auto
 		margin-bottom: 15px
+		+r(480)
+			font-size: 14px
+			max-width: 180px
+
 .slick-arrow
 	position: absolute
 	top: 0
 	bottom: 0
 	height: 100%
-	width: 110px
+	width: 100px
 	background-color: rgba(255,255,255, 0)
 	+tr(background-color .2s ease)
-	+r(900)
-		width: 80px
+	+r(1000)
+		width: 70px
+	+r(480)
+		width: 45px
 	i
 		position: absolute
 		top: 50%
 		+tr(opacity .2s ease)
-		font-size: 60px
-		+r(900)
+		font-size: 50px
+		+r(1000)
 			font-size: 45px
+		+r(480)
+			font-size: 30px
 	.icon-arrowLeft
-		left: 20%
+		left: 25%
+		+r(900)
+			left: 20%
+		+r(480)
+			left: 15%
 	.icon-arrowRight
-		right: 20%
+		right: 25%
+		+r(900)
+			right: 20%
+		+r(480)
+			right: 15%
 	// &:hover
 	// 	i
 	// 		opacity: 0.77
@@ -614,6 +648,8 @@ textarea,
 .icon-11,
 .icon-12
 	font-size: 40px
+	+r(480)
+		font-size: 33px
 // .slick-dots li button
 // 	&:before
 // 		display: block
