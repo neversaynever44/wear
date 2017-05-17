@@ -823,7 +823,8 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .about-price p{ font-size: 14px; }
  .about-price .subtitle{ font-size: 14px; }
  .job__list-content{ text-align: center; }
- .portfolio{ padding: 15px 0; }
+ .portfolio{ padding: 20px 0; }
+ .portfolio__pic{ max-width: 100px; }
  .portfolio__content-desc{ font-size: 14px; }
  .portfolio__in .portfolio__content-desc p:not(:last-child){ margin-bottom: 10px; }
  .product{ padding: 35px 0; }
@@ -850,8 +851,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .learn-more{ float: none; display: block; max-width: 160px; width: 100%; margin: auto; padding: 8px; }
  .blog-show{ display: block; }
  .popup__window h3, .popup__map__window h3{ margin: 15px 0; } }
-@media only screen and (max-width: 425px){
- .portfolio__pic{ max-width: 130px; } }
 
 
 
