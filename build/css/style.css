@@ -840,6 +840,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .about-price{ padding: 30px 0; }
  .about-price p{ font-size: 14px; }
  .about-price .subtitle{ font-size: 14px; }
+ .start-price{ font-size: 25px; }
  .job__intro{ font-size: 14px; }
  .job__list-content{ text-align: center; }
  .portfolio{ padding: 20px 0; }
