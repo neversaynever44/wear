@@ -827,6 +827,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .portfolio__pic{ max-width: 100px; }
  .portfolio__content-desc{ font-size: 14px; }
  .portfolio__in .portfolio__content-desc p:not(:last-child){ margin-bottom: 10px; }
+ .icon-googleDown, .icon-appleDown{ font-size: 38px; }
  .product{ padding: 35px 0; }
  .product__list{ margin: 0; }
  .product__list-item{ width: 100%; margin-left: 0; }
@@ -850,7 +851,9 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .footer__social-item{ height: 100px; }
  .learn-more{ float: none; display: block; max-width: 160px; width: 100%; margin: auto; padding: 8px; }
  .blog-show{ display: block; }
- .popup__window h3, .popup__map__window h3{ margin: 15px 0; } }
+ .btn-next{ font-size: 16px; padding: 7px; }
+ .popup__window h3, .popup__map__window h3{ margin: 15px 0; }
+ .btn-send{ font-size: 18px; padding: 10px; } }
 
 
 
