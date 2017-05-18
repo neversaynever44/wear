@@ -102,3 +102,93 @@ function animateTriangles() {
 			return -num;
 	}
 }
+
+//animatedBg
+
+// function AnimatedBg(element, speed) {
+	
+// 	var _this = this;
+
+// 	if(element) this.target = $(element);
+// 	else throw new Error("set element in constructor");
+	
+// 	this.speedRate = speed || 1.5;
+	
+// 	this.setContainerParams();
+	
+// 	this.triangles = this.target.find(".triangle");
+
+// 	this.svgs = this.target.find("> svg");
+	
+// 	this.deviation = {
+// 		x0: 0.07,
+// 		y0: 0,
+// 		x1: (-0.10),
+// 		y1: 0,
+// 		x2: 0.15,
+// 		y2: 0.10
+// 	}
+	
+// 	this.events = (function(){
+		
+// 		return {
+// 			resize: $(window).resize(function(){
+// 				_this.setContainerParams();
+// 			}),
+			
+// 			mousemove: _this.target.on("mousemove", function(evt){
+				
+// 				_this.animateX(_this.triangles, _this.getMouseCoordinates(evt).x);
+// 				_this.animateXY(_this.svgs, _this.getMouseCoordinates(evt).x, _this.getMouseCoordinates(evt).y);
+// //				this.animateXY(this.getMouseCoordinates(evt).x,this.getMouseCoordinates(evt).y);
+// 			})
+// 		};
+// 	})();
+
+// }
+
+// AnimatedBg.prototype.setContainerParams = function() {
+// 	this.containerOffsetLeft = this.target.offset().left || 0;
+// 	this.containerOffsetTop = this.target.offset().top || 0;
+// 	this.containerWidth = this.target.innerWidth() || 0;
+// 	this.containerHeight = this.target.innerHeight() || 0;
+// }
+
+// AnimatedBg.prototype.animateX = function(element, x) {
+// 	var _this = this;
+// 	$(element).each(function(index){
+// 		var a = $(this).innerWidth() * _this.deviation['x' + index] * x / _this.containerWidth;
+// 		var b = $(this).innerHeight() * _this.deviation['y' + index] * x / _this.containerWidth;
+// //		$(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
+// 		$(this).css("transform", "translate(" + a + "px, " + b + "px)");
+// //		$(this).css("top", b);
+// //		$(this).css("left", a);
+// 	})
+// }
+
+// AnimatedBg.prototype.animateXY = function(element, x, y) {
+// 	var _this = this;
+// 	$(element).each(function(index){
+// 		var a = $(this).innerWidth() * x / _this.containerWidth * _this.speedRate,
+// 				b = $(this).innerHeight() * y / _this.containerHeight * _this.speedRate;
+		
+// 		if(index % 2 == 0) {
+// //			$(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
+// 			$(this).css("transform", "translate(" + a + "px, " + b + "px)");
+// 		} else {
+// //			$(this).css("transform", "matrix(1, 0, 0, 1, " + -a + ", " + -b + ")");
+// 			$(this).css("transform", "translate(" + -a + "px, " + -b + "px)");
+// 		}
+// 	});
+// }
+
+
+// AnimatedBg.prototype.getMouseCoordinates = function(evt) {
+// 	return {
+// 		x: (evt.pageX - this.containerOffsetLeft - this.containerWidth / 2) * 2,
+// 		y: (evt.pageY - this.containerOffsetTop - this.containerHeight / 2) * 2
+// 	}
+// }
+
+// var animbg = new AnimatedBg(".animated-bg", 1.5);
+// console.log(animbg);

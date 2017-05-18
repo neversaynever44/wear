@@ -368,6 +368,36 @@
 				+r(480)
 					margin-bottom: 10px
 
+.popup__list
+	margin: 30px 0 0 -4%
+	font-size: 0
+	text-align: center
+.popup__list-item
+	display: inline-block
+	vertical-align: top
+	height: 200px
+	width: 29.33%
+	margin-left: 4%
+	background: url(../img/portfolio_in/popup.jpg) center no-repeat
+	background-size: cover
+	position: relative
+	+r(768)
+		width: 47%
+		text-align: center
+		&:not(:last-child)
+			margin-bottom: 25px
+	+r(480)
+		width: 80%
+		margin-left: 0
+.popup__list-link
+	+vertical
+	display: block
+	height: 100%
+	i
+		color: #eeae21
+		font-size: 70px
+
+
 // links
 .links
 	font-size: 0
@@ -587,7 +617,7 @@
 		margin-bottom: 15px
 	.icon-hololens
 		margin-right: 0
-		font-size: 55px
+		font-size: 53px
 		+r(900)
 			font-size: 40px
 		+r(480)
@@ -719,7 +749,7 @@
 		font-weight: 400
 	+r(480)
 		font-size: 14px
-		padding: 20px 0
+		padding: 25px 0
 .promo-title
 	text-align: center
 	font-weight: bold
@@ -729,9 +759,9 @@
 	+r(768)
 		font-size: 18px
 	+r(480)
-		font-size: 14px
+		font-size: 16px
 .promo-desc
-	margin-top: 15px
+	margin-top: 20px
 .development
 	padding: 40px 0
 	background-color: #f2f2f2

@@ -88,7 +88,10 @@ $(document).ready(function(){
 //init menu trigger
 toggleMenu();
 // init animated-bg
-animatedBg();
+		if($(window).width() > 768) {
+			animatedBg();
+		}
+
 // open-popup
 
 // if('ontouchstart' in window) {
@@ -431,7 +434,7 @@ function animatedBg() {
 				containerHeight = $(this).innerHeight(),
 				$animatedItems = $(this).find("> #animated"),
 				// 2 = x2 speed of mouse
-				speedRate = 1.1;
+				speedRate = 1.4;
 
 		$(this).on("mousemove", function(e) {
 			var x = (e.pageX - containerOffsetLeft - containerWidth / 2) * 2,
@@ -442,11 +445,11 @@ function animatedBg() {
 					b = $(this).innerHeight() * y / containerHeight * speedRate;
 				
 				if(index % 2 == 0) {
-					// $(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
-					$(this).css("transform", "translate(" + a + "px, " + b + "px)");
+					$(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
+					// $(this).css("transform", "translate(" + a + "px, " + b + "px)");
 				} else {
-					// $(this).css("transform", "matrix(1, 0, 0, 1, " + -a + ", " + -b + ")");
-					$(this).css("transform", "translate(" + -a + "px, " + -b + "px)");
+					$(this).css("transform", "matrix(1, 0, 0, 1, " + -a + ", " + -b + ")");
+					// $(this).css("transform", "translate(" + -a + "px, " + -b + "px)");
 				}
 			});
 
