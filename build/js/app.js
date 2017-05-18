@@ -183,8 +183,8 @@ $('.btn-send').on('click',function() {
 	$(this).addClass('is-scale');
 	$('.icon-send').addClass('is-active');
       setTimeout(function(){
-   $('.icon-send').removeClass('is-active'); 
-  	   $('.btn-send').removeAttr('disabled');
+   		$('.icon-send').removeClass('is-active'); 
+  	   	$('.btn-send').removeAttr('disabled');
   	    $('.btn-send').removeClass('is-scale');
 	      	document.getElementById('form').submit();
 		},1300);
