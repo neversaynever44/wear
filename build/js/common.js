@@ -432,7 +432,7 @@ function animatedBg() {
 				containerOffsetTop = $(this).offset().top,
 				containerWidth = $(this).innerWidth(),
 				containerHeight = $(this).innerHeight(),
-				$animatedItems = $(this).find("> #animated"),
+				$animatedItems = $(this).find("> .animated"),
 				// 2 = x2 speed of mouse
 				speedRate = 1.4;
 
