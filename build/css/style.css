@@ -330,7 +330,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .contact-is-hidden .icon-send { position: absolute; bottom: 10%; opacity: 0; }
 
-.overlay { opacity: 0; position: fixed; top: 0; right: 0; left: 0; bottom: 0; width: 100%; height: 100%; visibility: hidden; z-index: 11; background: rgba(53, 18, 83, 0.3); -webkit-transition: opacity 0.25s ease, visibility 0.25s ease; transition: opacity 0.25s ease, visibility 0.25s ease; }
+.overlay { opacity: 0; position: fixed; top: 0; right: 0; left: 0; bottom: 0; width: 100%; height: 100%; visibility: hidden; z-index: 11; background: rgba(53, 18, 83, 0.4); -webkit-transition: opacity 0.25s ease, visibility 0.25s ease; transition: opacity 0.25s ease, visibility 0.25s ease; }
 .overlay.is-active { opacity: 1; visibility: visible; }
 
 .slider { position: relative; margin-bottom: 260px; *zoom: 1; }
@@ -488,11 +488,11 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .portfolio__in .portfolio__content-desc { border: 0; margin: 0; padding: 0 0 30px 0; }
 .portfolio__in .portfolio__content-desc p:not(:last-child) { margin-bottom: 30px; }
 
-.popup__list { margin: 30px 0 0 -4%; font-size: 0; text-align: center; }
+.popup__list { margin: 100px 0 0 -4%; font-size: 0; text-align: center; }
 
 .popup__list-item { display: inline-block; vertical-align: top; height: 200px; width: 29.33%; margin-left: 4%; background: url(../img/portfolio_in/popup.jpg) center no-repeat; background-size: cover; position: relative; }
 
-.popup__list-link { text-align: center; font-size: 0; display: block; height: 100%; }
+.popup__list-link { text-align: center; font-size: 0; display: block; height: 100%; width: 100%; background: none; }
 .popup__list-link:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .popup__list-link i { color: #eeae21; font-size: 70px; }
 
@@ -726,10 +726,10 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .btn-send:active { position: relative; top: 2px; }
 .btn-send.is-scale { -webkit-animation: scalePlane 0.3s linear both; animation: scalePlane 0.3s linear both; }
 
-.popup__video .popup__window { max-width: 900px; margin: auto; }
+.popup__video .popup__window { max-width: 900px; margin: auto; background: #403e40; }
 
-.popup__content { width: 100%; height: 500px; overflow: hidden; margin: auto; }
-.popup__content iframe { max-height: 500px; width: 100%; height: 100%; }
+.popup__content { width: 100%; overflow: hidden; margin: auto; }
+.popup__content video { max-height: 450px; width: 100%; height: 100%; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1440px){
@@ -894,8 +894,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .btn-next{ font-size: 16px; padding: 7px; }
  .popup__window h3, .popup__map__window h3, .popup__video__window h3{ margin: 15px 0; }
  .btn-send{ font-size: 18px; padding: 10px; }
- .popup__video .popup__close{ font-size: 10px; }
- .popup__content{ height: 300px; } }
+ .popup__video .popup__close{ font-size: 10px; } }
 
 
 
