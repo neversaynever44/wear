@@ -198,7 +198,7 @@ toggleMenu();
     span.innerHTML = errorMas;
     return span;
   }
-    $('#feedback-form').on('submit', function(event){
+    $('#form-submit').on('submit', function(event){
       var $form = $(this).parents('form');
       var valid = validate($form.attr('id'))
       if (valid) {
