@@ -134,7 +134,7 @@ $(document).ready(function() {
                 text:   '',
             }, _options);
 
-        return 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1'
+        return 'https://plus.google.com/share?url'
             + '&st.comments=' + encodeURIComponent(options.text)
             + '&st._surl='    + encodeURIComponent(options.url);
     },
