@@ -87,15 +87,18 @@
 		<div class="inner">
 			<h3 class="h3">Напишите нам и мы свяжемся с Вами</h3>
 			<div class="contact-is-visible">
-				<form id="form" method="get">
+				<form id="feedback-form" method="get">
 					<div class="row">
-			        	<input class="input rfield" name="name"  placeholder="ваше имя" type="text">
+			        	<input class="input rfield" name="Feedback[name]" id="Feedback_name"  placeholder="ваше имя" type="text">
+			        	<div class="errorMessage" id="Feedback_name_em_" style="display:none"></div>
 			        </div>
 			        <div class="row">
-			        	<input class="input" name="email" placeholder="e-mail" type="email">
+			        	<input class="input" name="Feedback[email]" id="Feedback_email" placeholder="e-mail" type="email">
+			        	<div class="errorMessage" id="Feedback_email_em_" style="display:none"></div>
 			        </div>
 			        <div class="row">
-			        	<input class="input rfield" name="phone" placeholder="телефон" type="tel">
+			        	<input class="input rfield" name="Feedback[telephone]" id="Feedback_telephone" placeholder="телефон" type="tel">
+			        	<div class="errorMessage" id="Feedback_telephone_em_" style="display:none"></div>
 			        </div>
 			        <!--  -->
 			       <label class="form-label">

@@ -68,7 +68,7 @@ $(function() {
 			       plane.removeClass('is-active'); 
 			      btnSubmit.removeClass('is-hidden'); 
 			      	   btnSubmit.removeAttr('disabled');
-			  	      	document.getElementById('form').submit();
+			  	      	document.getElementById('feedback-form').submit();
 			   		},1300);
 
 		})
@@ -91,6 +91,123 @@ toggleMenu();
 		if($(window).width() > 768) {
 			animatedBg();
 		}
+
+  var locale = 'ru';
+  function getLocale() {
+    if(location.pathname.match(/\b(en|ru)\b/)) {
+      locale = location.pathname.match(/\b(en|ru)\b/)[1];
+    }
+    if(locale == undefined || locale == null || locale == '') {
+      locale = 'ru';
+    }
+  }
+  getLocale();
+
+  //validate form
+  function validate(idForm) {
+    
+    var $form = $('#' + idForm);
+    $form.find('.error').remove();
+    var valid = true;
+    
+    //validate name
+    var $formName = $form.find('[name="Feedback\[name\]"]');
+    if ($formName.val() === null || $formName.val() == "" || $formName.val() === undefined) {
+      if (locale == 'en') {
+        var errorSpanName = createErrorSpan('Please, enter your name');
+      } else {
+        var errorSpanName = createErrorSpan('Пожалуйста, введите имя');
+      }
+      $formName.after(errorSpanName);
+      valid = false;
+    }
+
+    //validate email
+    var emailRegEx = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+    var $formEmail = $form.find('[name="Feedback\[email\]"]');
+    if ($formEmail.val() === null || $formEmail.val() == "" || $formEmail.val() === undefined) {
+      if (locale == 'en') {
+        var errorSpanEmail = createErrorSpan('Please, enter your Email');
+      } else {
+        var errorSpanEmail = createErrorSpan('Пожалуйста, введите Email');
+      }
+      $formEmail.after(errorSpanEmail);
+      valid = false;
+    } else if ($formEmail.val().search(emailRegEx) == -1) {
+      var errorSpanEmail = createErrorSpan('Неправильный Email адрес');
+      $formEmail.after(errorSpanEmail);
+      valid = false;
+    }
+    
+    //validate tel
+    var telRegEx = /^\+?\d+(\(\d+\))?[\d\-\s]+\d+$/;
+    var $formTel = $form.find('[name="Feedback\[telephone\]"]');
+    if ($formTel.val() === null || $formTel.val() == "" || $formTel.val() === undefined) {
+      if (locale == 'en') {
+        var errorSpanTel = createErrorSpan('Please, enter your phone');
+      } else {
+        var errorSpanTel = createErrorSpan('Пожалуйста, введите номер');
+      }
+      $formTel.after(errorSpanTel);
+      valid = false;
+    } else if ($formTel.val().search(telRegEx) == -1) {
+      if (locale == 'en') {
+        var errorSpanTel = createErrorSpan('Incorrect number');
+      } else {
+        var errorSpanTel = createErrorSpan('Неправильный номер');
+      }
+      $formTel.after(errorSpanTel);
+      valid = false;
+    }
+
+    // if something isn't valid
+    if(!valid) return false;
+
+    //if all valid
+    else return true;
+  }
+
+  //create error validation massage span
+  function createErrorSpan(errorMas) {
+    var span = document.createElement('span');
+    span.className = "error";
+    span.innerHTML = errorMas;
+    return span;
+  }
+  // Animation button-send
+// var plane = $('#flyPlane');
+// var btnSubmit   = $('#form-submit')
+// $('.form-label').on("click",function(){
+// 	if(!$('.input').hasClass('empty_field')){
+// 	   if(!plane.hasClass('is-active')){
+// 	   		 btnSubmit.attr('disabled', 'disabled');
+// 		    plane.addClass('is-active');
+// 		    btnSubmit.addClass('is-hidden');
+// 	      setTimeout(function(){
+// 	       plane.removeClass('is-active'); 
+// 	      btnSubmit.removeClass('is-hidden'); 
+// 	      	   btnSubmit.removeAttr('disabled');
+// 	  	      	document.getElementById('feedback-form').submit();
+// 	   		},1300);
+// 	 	 }
+//  	}
+// })
+
+  //on submit form
+  // $('form').on('submit', function(event){
+  //     var $form = $(this).parents('form');
+  //     var valid = validate($form.attr('id'))
+  //     if (valid) {
+  //       $form.submit();
+  //     }
+  //     else {
+  //       event.preventDefault();
+  //       $('.error').fadeIn();
+  //       return false;
+  //     }
+  // });
+
+
 
 // open-popup
 
@@ -456,3 +573,5 @@ function animatedBg() {
 		});
 	});
 }
+
+

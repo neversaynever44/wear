@@ -243,8 +243,14 @@ textarea,
 .input::-webkit-input-placeholder
 	color: #ffffff
 
-#animated
+.animated
 	-webkit-transition: transform 2s cubic-bezier(0,0,0,1)
+
+
+.contact-is-visible 
+	form
+		padding-bottom: 70px
+
 
 // ICONS
 .icon-gear,
@@ -293,7 +299,7 @@ textarea,
 .icon-bg3,
 .icon-bg5,
 .icon-bg6
-	font-size: 33px
+	font-size: 28px
 	color: #f5bb45
 	position: absolute
 	z-index: 11
@@ -342,6 +348,7 @@ textarea,
 		display: block
 		padding: 10px
 		position: relative
+		background: none
 		+tr(transform .3s ease)
 		+r(768)
 			padding: 3px
