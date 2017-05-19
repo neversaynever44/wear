@@ -1,88 +1,3 @@
-
-// $(function() {
-
-//   $('form').each(function(){
-//     // Объявляем переменные (форма и кнопка отправки)
-//   var form = $(this),
-//         btn = form.find('#form-submit');
-
-//     // Добавляем каждому проверяемому полю, указание что поле пустое
-//   form.find('.rfield').addClass('empty_field');
-
-//     // Функция проверки полей формы
-//     function checkInput(){
-//       form.find('.rfield').each(function(){
-//         if($(this).val() != ''){
-//           // Если поле не пустое удаляем класс-указание
-//     $(this).removeClass('empty_field');
-//         } else {
-//           // Если поле пустое добавляем класс-указание
-//     $(this).addClass('empty_field');
-//         }
-//       });
-//     }
-
-//     // Функция подсветки незаполненных полей
-//     function lightEmpty(){
-//       form.find('.empty_field').css({'background-color':'red'});
-//       // Через полсекунды удаляем подсветку
-//       setTimeout(function(){
-//         form.find('.empty_field').removeAttr('style');
-//       },1500);
-//     }
-
-//     // Проверка в режиме реального времени
-//     setInterval(function(){
-//       // Запускаем функцию проверки полей на заполненность
-//     checkInput();
-//       // Считаем к-во незаполненных полей
-//       var sizeEmpty = form.find('.empty_field').size();
-//       // Вешаем условие-тригер на кнопку отправки формы
-//       if(sizeEmpty > 0){
-//         if(btn.hasClass('disabled')){
-//           return false
-//         } else {
-//           btn.addClass('disabled')
-//         }
-//       } else {
-//         btn.removeClass('disabled')
-//       }
-//     },500);
-
-//     // Событие клика по кнопке отправить
-//     btn.click(function(){
-//       if($(this).hasClass('disabled')){
-//         // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
-//     lightEmpty();
-//         return false
-//       } else {
-//         // Все хорошо, все заполнено, отправляем форму
-//         // form.submit();
-//         var plane =      $('#flyPlane');
-// 		var btnSubmit   = $('#form-submit')
-// 		$('.form-label').on("click",function(){
-// 			   		 btnSubmit.prop("disabled", true);
-// 				    plane.addClass('is-active');
-// 				    btnSubmit.addClass('is-hidden');
-// 			      setTimeout(function(){
-// 			       plane.removeClass('is-active'); 
-// 			      btnSubmit.removeClass('is-hidden'); 
-// 			      	   btnSubmit.removeAttr('disabled');
-// 			  	      	document.getElementById('feedback-form').submit();
-// 			   		},1300);
-
-// 		})
-
-//       }
-//     });
-//   });
-// });
-
-
-
-
-
-
 $(document).ready(function(){
     
 //init menu trigger
@@ -164,7 +79,7 @@ toggleMenu();
     if(!valid) return false;
 
     //if all valid
-    else return true;
+    return true;
   }
 
   //create error validation massage span
@@ -174,17 +89,32 @@ toggleMenu();
     span.innerHTML = errorMas;
     return span;
   }
-    $('#form-submit').on('submit', function(event){
-      var $form = $(this).parents('form');
-      var valid = validate($form.attr('id'))
-      if (valid) {
-        $form.submit();
-      }
-      else {
-        event.preventDefault();
-        $('.error').fadeIn();
-        return false;
-      }
+	$('#form-submit').on('click', function(event){
+	  var $form = $(this).parents('form');
+	  var valid = validate($form.attr('id'))
+
+	  console.log(valid, $form);
+	  if (valid) {
+	     var plane =      $('#flyPlane');
+		var btnSubmit   = $('#form-submit')
+		$('.form-label').on("click",function(){
+			   		 btnSubmit.prop("disabled", true);
+				    plane.addClass('is-active');
+				    btnSubmit.addClass('is-hidden');
+			      setTimeout(function(){
+			       plane.removeClass('is-active'); 
+			      btnSubmit.removeClass('is-hidden'); 
+			      	   btnSubmit.removeAttr('disabled');
+			  	      	document.getElementById('feedback-form').submit();
+			   		},1300);
+
+		})
+	  }
+	  else {
+	    event.preventDefault();
+	    $('.error').fadeIn();
+	    return false;
+	  }
   });
   // Animation button-send
 // var plane = $('#flyPlane');
