@@ -380,7 +380,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .slick-dots li.slick-active button { background-color: #7b42c7; }
 
-.icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6, .icon-7, .icon-8, .icon-9, .icon-10, .icon-11, .icon-12 { font-size: 40px; }
+.icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6, .icon-7, .icon-8, .icon-9, .icon-10, .icon-11, .icon-12 { font-size: 55px; }
 
 .main { height: 100vh; background-color: white; padding-left: 5.209%; padding-right: 5.209%; font-size: 0; position: relative; padding-top: 80px; }
 .main__content { width: 100%; padding-top: 51.163%; position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
@@ -785,6 +785,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .social__link{ padding: 3px; }
  .slider__item{ padding: 30px 0; }
  .slick-dots li{ width: 30%; }
+ .icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6, .icon-7, .icon-8, .icon-9, .icon-10, .icon-11, .icon-12{ font-size: 40px; }
  .about-price .subtitle{ font-size: 18px; }
  .icon-triangle, .icon-triangle2{ opacity: 0.2; }
  .job__content h2{ font-size: 18px; text-align: center; }

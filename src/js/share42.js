@@ -111,21 +111,21 @@ $(document).ready(function() {
     },
 
     // ВКонтакте
-    vk: function(_options) {
-        var options = $.extend({
-                url:    location.href,
-                title:  document.title,
-                image:  '',
-                text:   '',
-            }, _options);
+    // vk: function(_options) {
+    //     var options = $.extend({
+    //             url:    location.href,
+    //             title:  document.title,
+    //             image:  '',
+    //             text:   '',
+    //         }, _options);
 
-        return 'http://vkontakte.ru/share.php?'
-            + 'url='          + encodeURIComponent(options.url)
-            + '&title='       + encodeURIComponent(options.title)
-            + '&description=' + encodeURIComponent(options.text)
-            + '&image='       + encodeURIComponent(options.image)
-            + '&noparse=true';
-    },
+    //     return 'http://vkontakte.ru/share.php?'
+    //         + 'url='          + encodeURIComponent(options.url)
+    //         + '&title='       + encodeURIComponent(options.title)
+    //         + '&description=' + encodeURIComponent(options.text)
+    //         + '&image='       + encodeURIComponent(options.image)
+    //         + '&noparse=true';
+    // },
 
     // Одноклассники
     ok: function(_options) {
