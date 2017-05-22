@@ -520,7 +520,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .blog__list-date { color: #8c40cc; font-size: 17px; font-weight: 500; margin: 20px 0; }
 
-.blog__list-title { font-size: 20px; font-weight: 500; text-transform: uppercase; margin-bottom: 26px; }
+.blog__list-title { font-size: 20px; font-weight: 500; text-transform: uppercase; margin-bottom: 26px; color: black; }
 
 .blog__list-text { font-size: 20px; font-weight: 300; }
 
@@ -692,8 +692,6 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 
 .btn-mail { display: inline-block; border-radius: 50%; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); background-color: #eeae21; cursor: pointer; z-index: 11; padding: 8px; -webkit-transition: opacity 0.2s ease; transition: opacity 0.2s ease; }
 .btn-mail:active, .btn-mail:focus, .btn-mail:hover { opacity: 0.88; }
-
-.about-contact { text-decoration: underline; }
 
 .brief-send { color: #ffffff; font-size: 15px; font-weight: 300; display: block; outline: 0; padding: 14px; max-width: 184px; width: 100%; background-color: #8c40cc; }
 .brief-send:active { position: relative; top: 2px; }
