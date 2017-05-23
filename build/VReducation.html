@@ -13,13 +13,13 @@
 </head>
 <body>
 <!-- BEGIN  out-->
-<div class="out">
+<div class="out animated-bg">
 
-	    <i class="icon icon-bg1" style="top: 30.12618%;left: 6.82292%;"></i>
-		<i class="icon icon-bg2" style="top: 17.82334%;right: 8.28125%;"></i>
-		<i class="icon icon-bg3" style="top: 31.54574%;right: 9.01042%;"></i>
-		<i class="icon icon-bg5" style="top: 17.58675%;right: 21.5625%;"></i>
-		<i class="icon icon-bg6" style="top: 18.76972%;left: 12.60417%;"></i>
+	    <i class="animated icon icon-bg1" style="top: 30.12618%;left: 6.82292%;"></i>
+		<i class="animated icon icon-bg2" style="top: 17.82334%;right: 8.28125%;"></i>
+		<i class="animated icon icon-bg3" style="top: 31.54574%;right: 9.01042%;"></i>
+		<i class="animated icon icon-bg5" style="top: 17.58675%;right: 21.5625%;"></i>
+		<i class="animated icon icon-bg6" style="top: 18.76972%;left: 12.60417%;"></i>
 
 
 	<!-- BEGIN header -->
@@ -240,11 +240,15 @@
 	<section class="about">
 		<div class="inner">
 			<h1 class="h1">VR для обучения</h1>
-			<div class="about__pic">
+			<div class="about__icon">
 				<i class="icon icon-Cardboard"></i>
-				<i class="icon icon-education"></i>
+				<!-- <i class="icon icon-education"></i> -->
 			</div>
-			<div class="about__text">
+			<div class="about__content">
+				<div class="about__pic">
+					<img src="img/vr/VR_education.jpg" alt="">
+				</div>
+				<div class="about__text">
 				<p>
 					Виртуальная реальность в образовании
 				</p>
@@ -257,6 +261,7 @@
 				<p>
 					В перспективе системы новых технологий можно использовать для школьников на уроке истории в качестве тура по Древнему Египту, а взрослых с их же помощью можно обучить работе на космической станции. 
 				</p>
+			</div>
 			</div>
 		</div>
 	</section>
@@ -318,7 +323,7 @@
 							</a>
 						</div>
 						<h3>Контактная форма</h3>
-						<form method="get">
+						<form id="feedback-form" method="get">
 							<input type="text" name="name" placeholder="имя" class="input-tablet">
 							<input type="email" name="email" placeholder="e-mail" class="input-tablet">
 							<input type="tel" name="phone" placeholder="телефон" class="input-tablet">
@@ -332,6 +337,19 @@
 		</div>
 	<!-- 	<i class="icon icon-bg1"></i>
 		<i class="icon icon-bg3"></i> -->
+	
+		<div class="popup__done js-popup">
+			<div class="popup__window">
+				<div class="popup__close js-close-popup">
+					<a>
+						<i class="icon-close"></i>
+					</a>
+				</div>
+				<h3>
+					Письмо успешно отправлено
+				</h3>
+			</div>
+		</div>
 	</section>
 	<!-- END contact -->
 

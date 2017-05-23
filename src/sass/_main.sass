@@ -743,25 +743,57 @@
 
 
 // development
+.promo 
+	max-width: 880px
+	+r(900)
+		max-width: 100%
 .promo
 	padding: 70px 0
 	color: #000000
 	font-size: 25px
 	font-weight: 300
 	text-align: justify
+	position: relative
 	+r(900)
 		padding: 35px 0
 		font-size: 18px
 	b
 		font-weight: 400
 	+r(480)
-		font-size: 14px
+		font-size: 16px
 		padding: 25px 0
+	.icon-header-triagle1,
+	.icon-header-triagle2,
+	.icon-header-triagle3
+		color: #e4d9f2
+		position: absolute
+		display: block
+		z-index: -1
+		font-size: 100px
+		opacity: 0.66
+		+r(768)
+			opacity: 1
+			font-size: 50px
+			top: 20px
+	.icon-header-triagle1
+		font-size: 160px
+		left: 5%
+		top: 40px
+	.icon-header-triagle2
+		left: 46%
+		top: 62px
+		+rotate(180)
+	.icon-header-triagle3
+		right: 50px
+		+rotate(-15)
+		+r(768)
+			right: 0
+			top: 40px
+			right: 20%
 .promo-title
 	text-align: center
-	font-weight: bold
-	text-transform: uppercase
-	font-size: 34px
+	font-weight: 400
+	font-size: 43px
 	line-height: 1.2
 	+r(768)
 		font-size: 18px
@@ -830,29 +862,59 @@
 	padding-top: 119px
 	padding-bottom: 40px
 	position: relative
-	&__pic
+	&__icon
 		text-align: center
 		margin: 50px 0
+		+r(768)
+			margin: 25px 0
 		.icon-smartphone
 			color: #a13ed1
 			font-size: 90px
+			+r(480)
+				font-size: 50px
 		.icon-hololens
 			// color: #686868
-			color: #494141
+			color: #8c40cc
 			font-size: 50px
+			+r(480)
+				font-size: 30px
 		.icon-glasses
 			color: #a13ed1
 			font-size: 60px
 		.icon-Cardboard
 			color: black
 			margin-right: 15px
+			font-size: 80px
+			+r(768)
+				font-size: 50px
+	&__content
+		+clr
+		display: table
+	&__pic,
 	&__text
+		display: table-cell
+		vertical-align: top
+		width: 50%
+		+r(900)
+			display: block
+			width: 100%
+			padding-left: 0
+	&__pic
+		+r(900)
+			max-width: 600px
+			margin: 0 auto 20px
+		+r(480)
+			max-width: 300px
+	&__text
+		padding-left: 4%
 		color: #000000
-		font-size: 20px
+		font-size: 18px
 		font-weight: 300
-		line-height: 1
+		line-height: 1.1
+		+r(480)
+			font-size: 14px
 		p
-			margin-bottom: 25px
+			margin-bottom: 10px
 		b
 			font-weight: 400
 .icon-ar
@@ -867,10 +929,16 @@
 .icon-property
 	font-size: 90px
 	color: #a13ed1
+	+r(480)
+		font-size: 60px
 .icon-game
 	font-size: 70px
 	color: #a13ed1
 
+.icon-ar,
+.icon-game
+	+r(480)
+		font-size: 50px
 
 
 .error

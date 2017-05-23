@@ -1,7 +1,8 @@
 // popup
 .popup,
 .popup__map,
-.popup__video
+.popup__video,
+.popup__done
 	position: fixed
 	top: 0
 	left: 0
@@ -44,7 +45,8 @@
 			+r(480)
 				margin: 15px 0
 .popup,
-.popup__video
+.popup__video,
+.popup__done
 	opacity: 0
 	visibility: hidden
 	&.is-active
@@ -78,6 +80,15 @@
 		max-width: 1200px
 	.icon-close
 		color: #8c40cc
+.popup__done
+	.popup__window	
+		max-width: 1200px
+		height: 300px
+		background-color: white
+		h3
+			font-size: 40px
+			text-align: center
+			margin-top: 122px
 .btn-send
 	background-color: #eeae21
 	color: white
