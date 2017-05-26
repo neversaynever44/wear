@@ -37,12 +37,33 @@
 		<div class="inner">
 			<h1 class="h1">вакансии</h1>
 
-<!-- 			<div class="job__intro">
+			<div class="job__intro">
 				<p>
 					К сожалению, в данный момент у нас нет открытых вакансий, однако вы можете попасть в наш кадровый резерв
 				</p>
-			</div> -->
-		<ul class="job__list">
+				<form action="!" method="POST" enctype="multipart/form-data" name="myForm">
+					<div class="brief-send" onclick="getFile()">ВЫБРАТЬ РЕЗЮМЕ</div>
+					<!-- this is your file input tag, so i hide it!-->
+					<!-- i used the onchange event to fire the form submission-->
+					<div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile" type="file" value="upload" onchange="sub(this)"/></div>
+					<!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+					<!-- <input type="submit" value='submit' > -->
+				</form>
+			</div>
+
+			<script type="text/javascript">
+				function getFile(){
+					document.getElementById("upfile").click();
+				}
+				function sub(obj){
+					var file = obj.value;
+					var fileName = file.split("\\");
+					document.querySelectorAll("brief-send").innerHTML = fileName[fileName.length-1];
+					document.myForm.submit();
+					event.preventDefault();
+				}
+			</script>
+<!-- 		<ul class="job__list">
 				<li class="job__list-item">
 					<div class="job__list-content">
 						<div class="job__list-title">UX/UI дизайнер</div>
@@ -181,8 +202,8 @@
 					<h2>Заинтересовались должностью?</h2>
 					<a class="brief-send" href="#">ОТПРАВИТЬ РЕЗЮМЕ</a>
 				</ul>
-			</ul>
-		
+			</ul> -->
+			
 		</div>
 	</section>
 	<!-- END section job -->
