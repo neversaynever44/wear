@@ -132,20 +132,6 @@
 			font-size: 18px
 		+r(480)
 			font-size: 14px
-	.icon-bg2
-		top: (243px*100%)/370px
-		right: (159px*100%)/1920px
-	.icon-bg5
-		top: (240px*100%)/370px
-		right: (414px*100%)/1920px
-	.icon-bg6
-		top: (255px*100%)/370px
-		left: (242px*100%)/1920px
-	.icon-bg2,
-	.icon-bg5,
-	.icon-bg6
-		+r(900)
-			display: none
 			
 .icon-triangle,
 .icon-triangle2
@@ -183,7 +169,7 @@
 
 // job
 .job
-	// height: 100vh
+	height: 100vh
 	.h1
 		margin-bottom: 75px
 		display: table-header-group
@@ -216,6 +202,10 @@
 			padding: 0
 		+r(480)
 			font-size: 14px
+		p
+			margin-bottom: 40px
+		.brief-send
+			margin: auto
 .job__list-content
 	+clr
 	+r(480)
@@ -541,12 +531,26 @@
 		max-height: 288px
 	+r(480)
 		max-height: 150px
+	&:after
+		content: ''
+		display: block
+		z-index: 11
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		opacity: 0.66 
+		background-color: #8c40cc
 .blog-in__title
 	+vcenter
 	text-align: center
 	text-transform: uppercase
 	width: 100%
 	line-height: 1
+	z-index: 111
 	h1
 		font-weight: 700
 		font-size: 33px
@@ -940,16 +944,12 @@
 	+r(480)
 		font-size: 50px
 
+.contact
+	.error
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+		top: 100%
+		margin-top: 3px
 
-.error
-	position: absolute
-	left: 0
-	right: 0
-	margin: auto
-	top: 100%
-	margin-top: 3px
-
-
-// .icon-bg3
-// 	top: (512px*100%)/2544px
-// 	left: (164px*100%)/1920px

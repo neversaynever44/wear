@@ -115,30 +115,31 @@ $(document).ready(function(){
     span.innerHTML = errorMas;
     return span;
   }
-	$('#form-submit').on('click', function(event){
-	  var $form = $(this).parents('form');
-	  var valid = validate($form.attr('id'))
-	  if (valid) {
-	    var plane =      $('#flyPlane');
-		var btnSubmit   = $('#form-submit');
-		$('.form-label').on("click",function(){
-	   		 btnSubmit.prop("disabled", true);
-		     plane.addClass('is-active');
-			 btnSubmit.addClass('is-hidden');
-			setTimeout(function(){
+  $('#form-submit').on('click', function(event){
+  	var $form = $(this).parents('form');
+  	var valid = validate($form.attr('id'))
+  	if (valid) {
+  		var plane =      $('#flyPlane');
+  		var btnSubmit   = $('#form-submit');
+  		$('.form-label').on("click",function(){
+  			btnSubmit.prop("disabled", true);
+  			plane.addClass('is-active');
+  			btnSubmit.addClass('is-hidden');
+  			setTimeout(function(){
+	  			$('.is-done').addClass('is-active');
+  				btnSubmit.removeAttr('disabled');
+  				document.getElementById('feedback-form').submit();
+  			},1200);
+  		})
 				plane.removeClass('is-active'); 
 				btnSubmit.removeClass('is-hidden'); 
-				btnSubmit.removeAttr('disabled');
-				document.getElementById('feedback-form').submit();
-			},1300);
-		})
-	  }
-	  else {
-	    event.preventDefault();
-	    $('.error').fadeIn();
-	    return false;
-	  }
-	});
+  	}
+  	else {
+  		event.preventDefault();
+  		$('.error').fadeIn();
+  		return false;
+  	}
+  });
 
 $('.btn-send').on('click',function() {
 	$(this).prop('disabled', true);
@@ -193,19 +194,19 @@ $(document).scroll(function() {
     }
 });
 
- $(window).resize(function() {
- 	var windowSize = $(document).width();
-	 if (windowSize <= 480) {
-		  $(".blog__list-item:not(:lt(3))").fadeOut(300);
-			 $('.blog-show').on('click', function(e){
-			  	e.preventDefault();
-	  			  $(".blog__list-item:not(:lt(3))").fadeIn(300);
-	  			  $(this).hide();
-			  })
-	} else {
-		 $(".blog__list-item:not(:lt(3))").fadeIn(300);
-	}
-});
+//  $(window).resize(function() {
+//  	var windowSize = $(document).width();
+// 	 if (windowSize <= 480) {
+// 		  $(".blog__list-item:not(:lt(3))").fadeOut(300);
+// 			 $('.blog-show').on('click', function(e){
+// 			  	e.preventDefault();
+// 	  			  $(".blog__list-item:not(:lt(3))").fadeIn(300);
+// 	  			  $(this).hide();
+// 			  })
+// 	} else {
+// 		 $(".blog__list-item:not(:lt(3))").fadeIn(300);
+// 	}
+// });
 
 
 // slider

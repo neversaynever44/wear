@@ -299,30 +299,36 @@
 			<div class="contact-is-visible">
 				<form id="feedback-form" method="get">
 					<div class="row">
-			        	<input class="input rfield" name="Feedback[name]" id="Feedback_name"  placeholder="ваше имя" type="text">
-			        	<div class="errorMessage" id="Feedback_name_em_" style="display:none"></div>
-			        </div>
-			        <div class="row">
-			        	<input class="input" name="Feedback[email]" id="Feedback_email" placeholder="e-mail" type="email">
-	<!-- 		        	<div class="errorMessage" id="Feedback_email_em_" style="display:none"></div> -->
-			        </div>
-			        <div class="row">
-			        	<input class="input rfield" name="Feedback[telephone]" id="Feedback_telephone" placeholder="телефон" type="tel">
-			        	<div class="errorMessage" id="Feedback_telephone_em_" style="display:none"></div>
-			        </div>
-			        <!--  -->
-			       <label class="form-label">
-		              <i class="icon-send" id="flyPlane">
-		               </i>
-		          	<button type="submit" id="form-submit" value="Отправить">Отправить</button>
-		       	  </label>
-		  	  </form>
+						<input class="input rfield" name="Feedback[name]" id="Feedback_name"  placeholder="ваше имя" type="text">
+						<div class="errorMessage" id="Feedback_name_em_" style="display:none"></div>
+					</div>
+					<div class="row">
+						<input class="input" name="Feedback[email]" id="Feedback_email" placeholder="e-mail" type="email">
+	        	<div class="errorMessage" id="Feedback_email_em_" style="display:none"></div>
+					</div>
+					<div class="row">
+						<input class="input rfield" name="Feedback[telephone]" id="Feedback_telephone" placeholder="телефон" type="tel">
+						<div class="errorMessage" id="Feedback_telephone_em_" style="display:none"></div>
+					</div>
+					<!--  -->
+					<label class="form-label">
+						<i class="icon-send" id="flyPlane">
+						</i>
+						<button type="submit" id="form-submit" value="Отправить">Отправить</button>
+					</label>
+					<div class="is-done">
+						<i class="icon icon-check"></i>
+						<p>
+							Сообщение успешно отправлено
+						</p>
+					</div>
+				</form>
 			</div>
 	
-		    <div class="contact-is-hidden">
-			    <button type="button" class="btn-mail js-open-popup" data-link="offers"><i class="icon icon-mailsend"></i>
-			    </button>
-		    	<div class="popup js-popup" data-popup="offers">
+			<div class="contact-is-hidden">
+				<button type="button" class="btn-mail js-open-popup" data-link="offers"><i class="icon icon-mailsend"></i>
+				</button>
+				<div class="popup js-popup" data-popup="offers">
 					<div class="popup__window">
 						<div class="popup__close js-close-popup">
 							<a>
@@ -340,7 +346,7 @@
 						</form>
 					</div>
 				</div>
-		    </div>
+			</div>
 		</div>
 	<!-- 	<i class="icon icon-bg1"></i>
 		<i class="icon icon-bg3"></i> -->
