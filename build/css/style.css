@@ -810,6 +810,18 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .slider__item{ padding: 30px 0; }
  .slick-dots li{ width: 30%; }
  .icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6, .icon-7, .icon-8, .icon-9, .icon-10, .icon-11, .icon-12{ font-size: 40px; }
+ .main{ padding-bottom: 100px; }
+ .main__content{ padding-top: 145%; top: 40%; }
+ .triangle__scale:hover{ -webkit-transform: translateZ(30px); transform: translateZ(30px); }
+ .ar{ left: 22.23333%; width: 51.73333%; bottom: 37%; }
+ .ar .triangle__title{ left: 10.98%; bottom: auto; top: 46%; }
+ .ar .triangle-text{ bottom: -55%; }
+ .mr{ top: auto; bottom: 8.94915%; right: 18%; width: 49.06667%; }
+ .mr .triangle__title{ right: 25.26%; top: 42.6%; }
+ .mr_bg{ fill: #e2d5eb; }
+ .vr{ top: 23.98305%; left: 30.73333%; width: 49.06667%; }
+ .vr .triangle__title{ left: auto; right: -2.1333%; width: 72.82609%; top: 44.81%; }
+ .vr_bg{ fill: #d3e0e3; }
  .about-price .subtitle{ font-size: 18px; }
  .icon-triangle, .icon-triangle2{ opacity: 0.2; }
  .job__content h2{ font-size: 18px; text-align: center; }
@@ -889,6 +901,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .slick-arrow .icon-arrowLeft{ left: 15%; }
  .slick-arrow .icon-arrowRight{ right: 15%; }
  .icon-1, .icon-2, .icon-3, .icon-4, .icon-5, .icon-6, .icon-7, .icon-8, .icon-9, .icon-10, .icon-11, .icon-12{ font-size: 33px; }
+ .triangle-text{ font-size: 14px; }
  .about-price{ padding: 30px 0; }
  .about-price p{ font-size: 14px; }
  .about-price .subtitle{ font-size: 14px; }

@@ -8,13 +8,27 @@
 	font-size: 0
 	position: relative
 	padding-top: 80px
+	+r(768)
+		padding-bottom: 100px
 	&__content
 		width: 100%
 		padding-top: 51.163%
 		position: relative
 		top: 50%
 		transform: translateY(-50%)
-
+		+r(768)
+			padding-top: 145%
+			top: 40%
+		// +r(768)
+		// 	padding-top: 0
+		// 	top: 0
+		// 	transform: none
+		// 	position: static
+// .main,
+// .main__content
+// 	+r(768)
+// 		height: 100%
+// 		min-height: 1000px
 
 .triangle__scale 
 	position: absolute
@@ -33,6 +47,10 @@
 		transform: translateZ(110px)
 		-webkit-transition-delay: 0s
 		transition-delay: 0s
+	+r(768)
+		&:hover
+			-webkit-transform: translateZ(30px)
+			transform: translateZ(30px)
 
 .triangle-text 
 	display: block
@@ -44,6 +62,8 @@
 	position: absolute
 	+r(900)
 		font-size: 18px
+	+r(480)
+		font-size: 14px
 .triangle__title 
 	transition: transform 2s cubic-bezier(0, 0, 0, 1)
 	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
@@ -70,43 +90,77 @@
 	left: 31.98%
 	bottom: 45%
 	z-index: 1
+	+r(768)
+		left: 22.23333%
+		width: 51.73333%
+		bottom: 37%
 .ar .triangle__title 
 	width: 75.32%
 	padding-top: 38.96%
 	left: -10.02%
 	bottom: 22.75%
+	+r(768)
+		left: 10.98%
+		bottom: auto
+		top: 46%
 .ar .triangle-text 
 	color: #fff
 	bottom: 5.58%
+	+r(768)
+		bottom: -55%
 // mr
 .mr
 	width: 26.74%
 	padding-top: 23.2%
 	top: 32.95%
 	right: 15.17%
+	+r(768)
+		top: auto
+		bottom: 8.94915%
+		right: 18%
+		width: 49.06667%
 .mr .triangle__title 
 	width: 85.65%
 	padding-top: 38.04%
 	right: -26.74%
 	top: 20.6%
+	+r(768)
+		right: 25.26%
+		top: 42.6%
+
 .mr .triangle-text 
 	color: #1e1e1e
 	top: 4.28%
+.mr_bg
+	+r(768)
+		fill: #e2d5eb
 // vr
 .vr
 	width: 26.74%
 	padding-top: 23.2%
 	top: 55%
 	left: 17.38%
+	+r(768)
+		top: 23.98305%
+		left: 30.73333% 
+		width: (368px*100%)/750px
+		// left: 26.26667%;
 .vr .triangle__title 
 	width: 72.83%
 	padding-top: 38.04%
 	left: -16.74%
-	top: 24.81%   
+	top: 24.81%
+	+r(768)
+		left: auto
+		right: -2.1333%
+		width: (268px*100%)/368px
+		top: 44.81%
 .vr .triangle-text 
 	color: #1e1e1e
 	top: 4.79%
-
+.vr_bg 
+	+r(768)
+		fill: #d3e0e3
 
 // about-price
 .about-price
