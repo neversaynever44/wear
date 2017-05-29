@@ -945,6 +945,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
  .blog-show{ display: block; }
  .btn-next{ font-size: 16px; padding: 7px; }
  .popup__window h3, .popup__map__window h3, .popup__video__window h3{ margin: 15px 0; }
+ .popup .popup__window{ padding: 20px; }
  .btn-send{ font-size: 18px; padding: 10px; }
  .popup__video .popup__close{ font-size: 10px; } }
 
