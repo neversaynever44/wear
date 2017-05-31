@@ -287,9 +287,9 @@
 		<div class="inner">
 			<h3 class="h3">Напишите нам и мы свяжемся с Вами</h3>
 			<div class="contact-is-visible">
-				<form id="feedback-form" method="get">
+				<form id="feedback-form" method="get" enctype="multipart/form-data">
 					<div class="row">
-						<input class="input rfield" name="Feedback[name]" id="Feedback_name"  placeholder="ваше имя" type="text">
+						<input class="input" name="Feedback[name]" id="Feedback_name"  placeholder="ваше имя" type="text">
 						<div class="errorMessage" id="Feedback_name_em_" style="display:none"></div>
 					</div>
 					<div class="row">
@@ -297,7 +297,7 @@
 	        	<div class="errorMessage" id="Feedback_email_em_" style="display:none"></div>
 					</div>
 					<div class="row">
-						<input class="input rfield" name="Feedback[telephone]" id="Feedback_telephone" placeholder="телефон" type="tel">
+						<input class="input" name="Feedback[telephone]" id="Feedback_telephone" placeholder="телефон" type="tel">
 						<div class="errorMessage" id="Feedback_telephone_em_" style="display:none"></div>
 					</div>
 					<!--  -->
@@ -326,11 +326,23 @@
 							</a>
 						</div>
 						<h3>Контактная форма</h3>
-						<form id="feedback-form" method="get">
-							<input type="text" name="name" placeholder="имя" class="input-tablet">
-							<input type="email" name="email" placeholder="e-mail" class="input-tablet">
-							<input type="tel" name="phone" placeholder="телефон" class="input-tablet">
-							<textarea name="textarea" placeholder="текст сообщения"></textarea>
+						<form id="modal-form" method="get" enctype="multipart/form-data"> 			
+							<div class="row">
+								<input type="text" name="Feedback[name]" id="Feedback_name" placeholder="имя" class="input-tablet">
+								<div class="errorMessage" id="Feedback_name_em_" style="display:none"></div>
+							</div>
+							<div class="row">
+								<input type="email" name="Feedback[email]" id="Feedback_email" placeholder="e-mail" class="input-tablet">
+								<div class="errorMessage" id="Feedback_email_em_" style="display:none"></div>
+							</div>
+							<div class="row">
+								<input type="tel" name="Feedback[telephone]" id="Feedback_telephone" placeholder="телефон" class="input-tablet">
+								<div class="errorMessage" id="Feedback_telephone_em_" style="display:none"></div>
+							</div>
+							<div class="row">
+								<textarea name="Feedback[message]" id="Feedback_message" placeholder="текст сообщения"></textarea>
+								<div class="errorMessage" id="Feedback_message_em_" style="display:none"></div>
+							</div>
 							<button class="btn-send" type="submit">Отправить заявку</button>
 							<i class="icon-send" id="flyPlane"></i>
 						</form>

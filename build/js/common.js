@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
 	//init menu trigger
 	toggleMenu();
 
@@ -11,10 +11,10 @@ $(document).ready(function(){
 	var locale = 'ru';
 	function getLocale() {
 		if(location.pathname.match(/\b(en|ru)\b/)) {
-		  locale = location.pathname.match(/\b(en|ru)\b/)[1];
+			locale = location.pathname.match(/\b(en|ru)\b/)[1];
 		}
 		if(locale == undefined || locale == null || locale == '') {
-		  locale = 'ru';
+			locale = 'ru';
 		}
 	}
 	// init getLocale
@@ -22,59 +22,59 @@ $(document).ready(function(){
 
   //validate form
   function validate(idForm) {
-    
-    var $form = $('#' + idForm);
-    $form.find('.error').remove();
-    var valid = true;
-    
+
+  	var $form = $('#' + idForm);
+  	$form.find('.error').remove();
+  	var valid = true;
+
     //validate name
     var $formName = $form.find('[name="Feedback\[name\]"]');
     if ($formName.val() === null || $formName.val() == "" || $formName.val() === undefined) {
-      if (locale == 'en') {
-        var errorSpanName = createErrorSpan('Please, enter your name');
-      } else {
-        var errorSpanName = createErrorSpan('Пожалуйста, введите имя');
-      }
-      $formName.after(errorSpanName);
-      valid = false;
+    	if (locale == 'en') {
+    		var errorSpanName = createErrorSpan('Please, enter your name');
+    	} else {
+    		var errorSpanName = createErrorSpan('Пожалуйста, введите имя');
+    	}
+    	$formName.after(errorSpanName);
+    	valid = false;
     }
 
     //validate email
     var emailRegEx = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
     var $formEmail = $form.find('[name="Feedback\[email\]"]');
     if ($formEmail.val() === null || $formEmail.val() == "" || $formEmail.val() === undefined) {
-      if (locale == 'en') {
-        var errorSpanEmail = createErrorSpan('Please, enter your Email');
-      } else {
-        var errorSpanEmail = createErrorSpan('Пожалуйста, введите Email');
-      }
-      $formEmail.after(errorSpanEmail);
-      valid = false;
+    	if (locale == 'en') {
+    		var errorSpanEmail = createErrorSpan('Please, enter your Email');
+    	} else {
+    		var errorSpanEmail = createErrorSpan('Пожалуйста, введите Email');
+    	}
+    	$formEmail.after(errorSpanEmail);
+    	valid = false;
     } else if ($formEmail.val().search(emailRegEx) == -1) {
-      var errorSpanEmail = createErrorSpan('Неправильный Email адрес');
-      $formEmail.after(errorSpanEmail);
-      valid = false;
+    	var errorSpanEmail = createErrorSpan('Неправильный Email адрес');
+    	$formEmail.after(errorSpanEmail);
+    	valid = false;
     }
     
     //validate tel
     var telRegEx = /^\+?\d+(\(\d+\))?[\d\-\s]+\d+$/;
     var $formTel = $form.find('[name="Feedback\[telephone\]"]');
     if ($formTel.val() === null || $formTel.val() == "" || $formTel.val() === undefined) {
-      if (locale == 'en') {
-        var errorSpanTel = createErrorSpan('Please, enter your phone');
-      } else {
-        var errorSpanTel = createErrorSpan('Пожалуйста, введите номер');
-      }
-      $formTel.after(errorSpanTel);
-      valid = false;
+    	if (locale == 'en') {
+    		var errorSpanTel = createErrorSpan('Please, enter your phone');
+    	} else {
+    		var errorSpanTel = createErrorSpan('Пожалуйста, введите номер');
+    	}
+    	$formTel.after(errorSpanTel);
+    	valid = false;
     } else if ($formTel.val().search(telRegEx) == -1) {
-      if (locale == 'en') {
-        var errorSpanTel = createErrorSpan('Incorrect number');
-      } else {
-        var errorSpanTel = createErrorSpan('Неправильный номер');
-      }
-      $formTel.after(errorSpanTel);
-      valid = false;
+    	if (locale == 'en') {
+    		var errorSpanTel = createErrorSpan('Incorrect number');
+    	} else {
+    		var errorSpanTel = createErrorSpan('Неправильный номер');
+    	}
+    	$formTel.after(errorSpanTel);
+    	valid = false;
     }
 
     // if something isn't valid
@@ -86,10 +86,10 @@ $(document).ready(function(){
 
   //create error validation massage span
   function createErrorSpan(errorMas) {
-    var span = document.createElement('span');
-    span.className = "error";
-    span.innerHTML = errorMas;
-    return span;
+  	var span = document.createElement('span');
+  	span.className = "error";
+  	span.innerHTML = errorMas;
+  	return span;
   }
   $('#form-submit').on('click', function(event){
   	var $form = $(this).parents('form');
@@ -102,13 +102,13 @@ $(document).ready(function(){
   			plane.addClass('is-active');
   			btnSubmit.addClass('is-hidden');
   			setTimeout(function(){
-	  			$('.is-done').addClass('is-active');
+  				$('.is-done').addClass('is-active');
   				btnSubmit.removeAttr('disabled');
   				document.getElementById('feedback-form').submit();
   			},1200);
   		})
-				plane.removeClass('is-active'); 
-				btnSubmit.removeClass('is-hidden'); 
+  		plane.removeClass('is-active'); 
+  		btnSubmit.removeClass('is-hidden'); 
   	}
   	else {
   		event.preventDefault();
@@ -117,33 +117,44 @@ $(document).ready(function(){
   	}
   });
 
-$('.btn-send').on('click',function() {
-	$(this).prop('disabled', true);
-	$(this).addClass('is-scale');
-	$('.icon-send').addClass('is-active');
-      setTimeout(function(){
-   		$('.icon-send').removeClass('is-active'); 
-  	   	$('.btn-send').removeAttr('disabled');
-  	    $('.btn-send').removeClass('is-scale');
-	      	document.getElementById('form').submit();
-		},1300);
-})
+  $('.btn-send').on('click', function(event){
+  	var $form = $(this).parents('form');
+  	var valid = validate($form.attr('id'))
+  	if (valid) {
+  		$(this).prop('disabled', true);
+  		$(this).addClass('is-scale');
+  		$('.icon-send').addClass('is-active');
+  		setTimeout(function(){
+  			$('.icon-send').removeClass('is-active'); 
+  			$('.btn-send').removeAttr('disabled');
+  			$('.btn-send').removeClass('is-scale');
+  			document.getElementById('modal-form').submit();
+  		},1200);
+  	}
+  	else {
+  		event.preventDefault();
+  		$('.error').fadeIn();
+  		return false;
+  	}
+  });
+
+
 
 
 // open-popup
 
 $('.js-open-popup').on('click', function (e) {
 	if(event.preventDefault){
-	   	event.preventDefault();
+		event.preventDefault();
 	}else{
-	    event.returnValue = false; 
+		event.returnValue = false; 
 	};
 	var link = $(this).data('link');
 	var popup = $('.js-popup[data-popup="' + link + '"]');
 	popup.add('.js-overlay').addClass('is-active');
 });
-	$('.js-close-popup').click(function (e) {
-		$(this).parents('.js-popup').add('.js-overlay').removeClass('is-active');
+$('.js-close-popup').click(function (e) {
+	$(this).parents('.js-popup').add('.js-overlay').removeClass('is-active');
 });
 
 
@@ -152,22 +163,22 @@ $('.js-open-popup').on('click', function (e) {
 // anchor
 $('.arrow-up').on('click', function() {
 	if(event.preventDefault){
-	   	event.preventDefault();
+		event.preventDefault();
 	} else {
-	    event.returnValue = false; 
+		event.returnValue = false; 
 	};
 	var arrowUp = $('.arrow-up'),
-	    id  = $(this).attr('href'),
-		top = $(id).offset().top;
+	id  = $(this).attr('href'),
+	top = $(id).offset().top;
 	$('body,html').animate({scrollTop: top}, 400);
 });
 // show arrow 
 $(document).scroll(function() {
-    if($(this).scrollTop() > 200) { 
-        $('.arrow-up').addClass('is-show');
-    } else {
-    	$('.arrow-up').removeClass('is-show')
-    }
+	if($(this).scrollTop() > 200) { 
+		$('.arrow-up').addClass('is-show');
+	} else {
+		$('.arrow-up').removeClass('is-show')
+	}
 });
 
 //  $(window).resize(function() {
@@ -186,109 +197,109 @@ $(document).scroll(function() {
 
 
 // slider
-	var newSlider = $('.js-slider');
+var newSlider = $('.js-slider');
 
-	initSlider(newSlider, {
+initSlider(newSlider, {
 	infinite: false,
-	 speed: 1000,
-	 dots: true,
-	 autoplay: false,
-   	 adaptiveHeight: true,
-	 arrows: true,
- 	 prevArrow: '.js-prev',
-	 nextArrow: '.js-next'
+	speed: 1000,
+	dots: true,
+	autoplay: false,
+	adaptiveHeight: true,
+	arrows: true,
+	prevArrow: '.js-prev',
+	nextArrow: '.js-next'
 });
 
-	function initSlider(slider, options) {
-		slider.on('init', function() {
+function initSlider(slider, options) {
+	slider.on('init', function() {
 		setTimeout(function() {
 			slider.addClass('is-ready');
 		}, 100);
-	 });
-	 slider.not('.slick-initialized').slick(options);
-	}
+	});
+	slider.not('.slick-initialized').slick(options);
+}
 
 
 // tabs
-	$('.learn-more').on('click', function(e){
-		e.preventDefault();
-		var item = $(this).closest('.job__list-item'),
-			contentItem = $('.job__content'),
-			itemPosition = item.index(),
-			clickBtn        = $('.learn-more');
-		contentItem.eq(itemPosition)
-			.add(item)
-			.toggleClass('is-active')
-			.siblings()
-	});
+$('.learn-more').on('click', function(e){
+	e.preventDefault();
+	var item = $(this).closest('.job__list-item'),
+	contentItem = $('.job__content'),
+	itemPosition = item.index(),
+	clickBtn        = $('.learn-more');
+	contentItem.eq(itemPosition)
+	.add(item)
+	.toggleClass('is-active')
+	.siblings()
+});
 
 
 // clickDocument
- $(document).click(function(e) {
-    var allPopupClose = !$(e.target).closest('.js-open-popup').length && 
-                        !$(e.target).closest('.popup__window').length && 
-                        !$(e.target).closest('.menu').length &&
-                        !$(e.target).closest('.menu-btn').length;
-    if (allPopupClose) {
-    	$('.js-popup, .menu-btn, .js-overlay').removeClass('is-active');
-        $('.menu').removeClass('is-open');
-        $('body').removeAttr("style");
+$(document).click(function(e) {
+	var allPopupClose = !$(e.target).closest('.js-open-popup').length && 
+	!$(e.target).closest('.popup__window').length && 
+	!$(e.target).closest('.menu').length &&
+	!$(e.target).closest('.menu-btn').length;
+	if (allPopupClose) {
+		$('.js-popup, .menu-btn, .js-overlay').removeClass('is-active');
+		$('.menu').removeClass('is-open');
+		$('body').removeAttr("style");
 
-     }
+	}
 
 });
 
 // support browser
-	var supportedPrefix,
-	supports3d = false,
-	prefixes = [ "Webkit", "Moz", "ms", "O" ],
-	div = document.createElement("div");
-    if ( div.style.perspective !== undefined ) {
-        /*Browser supports CSS transform 3d without prefix*/
-        supportedPrefix = "";
-        supports3d = true;
-    }else {
-        for ( var i = 0; i < prefixes.length; ++i ) {
-            if((prefixes[i] + "Perspective") in div.style) {
-                supports3d = true;
-                supportedPrefix = prefixes[i];
-                break;
-            }
-        }
-    }
-    console.log("supports3d: " + supports3d + "; browser prefix: " + supportedPrefix);
+var supportedPrefix,
+supports3d = false,
+prefixes = [ "Webkit", "Moz", "ms", "O" ],
+div = document.createElement("div");
+if ( div.style.perspective !== undefined ) {
+	/*Browser supports CSS transform 3d without prefix*/
+	supportedPrefix = "";
+	supports3d = true;
+}else {
+	for ( var i = 0; i < prefixes.length; ++i ) {
+		if((prefixes[i] + "Perspective") in div.style) {
+			supports3d = true;
+			supportedPrefix = prefixes[i];
+			break;
+		}
+	}
+}
+console.log("supports3d: " + supports3d + "; browser prefix: " + supportedPrefix);
 
 
 // accordion menu
-  var acc = document.querySelectorAll(".js-show");
-  var i,
-      _prevClick;
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener('click', function() {
-      if(_prevClick && _prevClick !== this) {
-        _prevClick.classList.remove("is-active");
-        _prevClick.nextElementSibling.style.maxHeight = '';
-      }
-      this.classList.toggle("is-active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = '';
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-      _prevClick = this;
+var acc = document.querySelectorAll(".js-show");
+var i,
+_prevClick;
+for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener('click', function() {
+		if(_prevClick && _prevClick !== this) {
+			_prevClick.classList.remove("is-active");
+			_prevClick.nextElementSibling.style.maxHeight = '';
+		}
+		this.classList.toggle("is-active");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = '';
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+		_prevClick = this;
 
-    });
-  }
+	});
+}
 });
 
 //menu trigger function
 function toggleMenu() {
 	var $menu = $(".menu"),
-			$menuOverflow = $(".js-overlay"),
-			$trigger = $(".menu-btn"),
-			$body = $("body"),
-			$scrollWidth = getScrollWidth();
+	$menuOverflow = $(".js-overlay"),
+	$trigger = $(".menu-btn"),
+	$body = $("body"),
+	$scrollWidth = getScrollWidth();
 
 	$trigger.on("click", function() {
 		if($menu.hasClass("is-open")) {
@@ -341,23 +352,23 @@ function animatedBg() {
 
 	$container.each(function() {
 		var containerOffsetLeft = $(this).offset().left,
-			containerOffsetTop = $(this).offset().top,
-			containerWidth = $(this).innerWidth(),
-			containerHeight = $(this).innerHeight(),
-			$animatedItems = $(this).find("> .animated"),
+		containerOffsetTop = $(this).offset().top,
+		containerWidth = $(this).innerWidth(),
+		containerHeight = $(this).innerHeight(),
+		$animatedItems = $(this).find("> .animated"),
 			// 2 = x2 speed of mouse
 			speedRate = 1.4;
 
-		$(this).on("mousemove", function(e) {
-			var x = (e.pageX - containerOffsetLeft - containerWidth / 2) * 2,
-					y = (e.pageY - containerOffsetTop - containerHeight / 2) * 2;
+			$(this).on("mousemove", function(e) {
+				var x = (e.pageX - containerOffsetLeft - containerWidth / 2) * 2,
+				y = (e.pageY - containerOffsetTop - containerHeight / 2) * 2;
 
-			$animatedItems.each(function(index) {
-				var a = $(this).innerWidth() * x / containerWidth * speedRate,
+				$animatedItems.each(function(index) {
+					var a = $(this).innerWidth() * x / containerWidth * speedRate,
 					b = $(this).innerHeight() * y / containerHeight * speedRate;
-				
-				if(index % 2 == 0) {
-					$(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
+
+					if(index % 2 == 0) {
+						$(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
 					// $(this).css("transform", "translate(" + a + "px, " + b + "px)");
 				} else {
 					$(this).css("transform", "matrix(1, 0, 0, 1, " + -a + ", " + -b + ")");
@@ -365,8 +376,8 @@ function animatedBg() {
 				}
 			});
 
+			});
 		});
-	});
 }
 
 

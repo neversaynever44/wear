@@ -339,8 +339,7 @@
 		padding: 20px 0
 	+clr
 	.inner
-		display: table
-		+r(768)
+		+r(900)
 			display: -webkit-box
 			display: -webkit-flex
 			display: -ms-flexbox
@@ -358,51 +357,70 @@
 .portfolio_item
 	.portfolio__content-desc
 		border-color: white
-	.portfolio__content
-		padding: 0 3% 0 0
 	.links__link
 		background-color: #8c40cc
 	.links__link
 		i
 			color: white
+	.btn-next
+		background-color: #ffffff
+	.icon-arrow-r,
+	.btn-next
+		color: #8c40cc
 
 .portfolio__content,
 .portfolio__pic
-	display: table-cell
-	vertical-align: top
-	+r(768)
+	+r(900)
+		float: none
 		display: block
 		width: 100%
+.portfolio 
+	&:nth-child(odd)
+		.portfolio__pic
+			float: left
+.portfolio 
+	&:nth-child(odd)
+		.portfolio__content
+			float: right
 .portfolio__pic
 	width: 46%
-	+r(768)
-		max-width: 180px
+	float: right
+	+r(900)
+		max-width: 400px
 		text-align: center
 		margin: auto
 		order: 1
 	+r(480)
-		max-width: 100px
+		max-width: 250px
 .portfolio__content
 	width: 50%
-	padding-left: 3%
-	+r(768)
+	padding: 0 2% 0 2%
+	float: left
+	+r(900)
 		order: 2
 		padding-left: 0
+		padding: 	0
 .portfolio__content-desc
-	font-size: 24px
+	font-size: 20px
 	font-weight: 300
-	line-height: 1.2
+	line-height: 1.1
 	padding: 60px 0
 	border-top: 2px solid black
 	border-bottom: 2px solid black
 	margin-bottom: 60px
-	+r(768)
+	+r(900)
 		font-size: 18px
 		padding: 30px 0
 	+r(480)
 		font-size: 14px
 .portfolio__content-button
 	margin-bottom: 60px
+.portfolio__content-desc,
+.portfolio__content-button
+	+r(900)
+		margin-bottom: 30px
+	+r(480)
+		margin-bottom: 18px
 
 .portfolio__in
 	.portfolio__content-desc
@@ -411,9 +429,51 @@
 		padding: 0 0 30px 0
 		p
 			&:not(:last-child)
-				margin-bottom: 30px
+				margin-bottom: 8px
 				+r(480)
-					margin-bottom: 10px
+					margin-bottom: 5px
+.portfolio__list
+	font-size: 0
+	margin: 0 0 0 -2%
+	+r(900)
+		margin: 0
+.portfolio__list-item
+	display: inline-block
+	vertical-align: top
+	width: 	31.33%
+	margin-left: 2%
+	+r(900)
+		width: 	100%
+		margin-left: 0
+		max-width: 	300px
+		margin: 0 auto 50px
+		display: block	
+.portfolio__list-title
+	h2
+		font-size: 19px
+		margin: 20px 0
+		text-align: center
+		font-weight: 500
+		line-height: 1.2
+.portfolio__list-pic
+	position: relative
+	max-width: 300px
+	max-height: 200px
+	display: block
+	margin: auto
+	&:before
+		content: ''
+		display: block
+		padding-top: 200px
+	img
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+.portfolio__list-content
+	font-size: 16px
+
 
 .popup__list
 	margin: 100px 0 0 -4%
@@ -426,7 +486,7 @@
 	width: 29.33%
 	max-width: 400px
 	margin-left: 4%
-	background: url(../img/portfolio_in/popup.jpg) center no-repeat
+	background: url(/img/portfolio_in/popup.jpg) center no-repeat
 	background-size: cover
 	position: relative
 	+r(768)
@@ -451,7 +511,7 @@
 // links
 .links
 	font-size: 0
-	+r(768)
+	+r(900)
 		text-align: center
 	&__item
 		display: inline-block
@@ -468,7 +528,7 @@
 .icon-appleDown
 	color: #8c40cc
 	font-size: 70px
-	+r(768)
+	+r(900)
 		font-size: 50px
 	+r(480)
 		font-size: 38px
@@ -496,6 +556,17 @@
 		max-width: 200px
 		margin: 0 auto 20px
 // section blog
+.wrapper
+	.blog__list
+		+r(768)
+			margin: 0
+	.blog__list-item
+		+r(768)
+			width: 100%
+			margin-left: 0
+			max-width: 300px
+			margin: 0 auto 50px
+			display: block
 .blog
 	&__list
 		font-size: 0
@@ -621,12 +692,12 @@
 		+r(768)
 			font-size: 22px
 		+r(480)
-			font-size: 18px
+			font-size: 16px
 
 
 // section VR-reality
 .VR-reality
-	background: url(../img/vrreality/VRreality-bg.png) center no-repeat
+	background: url(/img/vrreality/VRreality-bg.png) center no-repeat
 	background-size: cover
 	position: relative
 	background-position: 50% 0
@@ -715,7 +786,7 @@
 
 // Section AU-reality
 .AU-Reality
-	background: url(../img/aureality/AUreality-bg.jpg)center no-repeat
+	background: url(/img/aureality/AUreality-bg.jpg)center no-repeat
 	+cover
 	position: relative
 	color: white
@@ -841,13 +912,16 @@
 		left: 46%
 		top: 62px
 		+rotate(180)
+		+r(768)
+			left: 36%
 	.icon-header-triagle3
 		right: 50px
 		+rotate(-15)
 		+r(768)
-			right: 0
 			top: 40px
 			right: 20%
+		+r(600)
+			right: 5%
 .promo-title
 	text-align: center
 	font-weight: 400
@@ -910,7 +984,7 @@
 
 // SECTION MXreality
 .MX-reality
-	background: url(../img/mxreality/MXreality-bg.jpg)
+	background: url(/img/mxreality/MXreality-bg.jpg)
 	+cover
 	color: white
 	position: relative
@@ -948,6 +1022,7 @@
 	&__content
 		+clr
 		display: table
+		padding: 30px 0
 	&__pic,
 	&__text
 		display: table-cell
@@ -1006,4 +1081,7 @@
 		margin: auto
 		top: 100%
 		margin-top: 3px
-
+		font-size: 14px
+.contact-is-hidden
+	.error
+		color: black
