@@ -386,12 +386,14 @@
 	width: 46%
 	float: right
 	+r(900)
-		max-width: 400px
 		text-align: center
 		margin: auto
 		order: 1
-	+r(480)
-		max-width: 250px
+	img
+		+r(900)
+			max-width: 400px
+		+r(480)
+			max-width: 250px
 .portfolio__content
 	width: 50%
 	padding: 0 2% 0 2%
@@ -423,6 +425,9 @@
 		margin-bottom: 18px
 
 .portfolio__in
+	.h2
+		color: #8c40cc
+.portfolio__in
 	.portfolio__content-desc
 		border: 0
 		margin: 0
@@ -434,19 +439,26 @@
 					margin-bottom: 5px
 .portfolio__list
 	font-size: 0
-	margin: 0 0 0 -2%
-	+r(900)
-		margin: 0
+	max-width: 1400px
+	margin: auto
+	width: 100%
+	+r(1100)
+		width: 90%
+	// margin: 0 0 0 -2%
+	// +r(900)
+	// 	margin: 0
 .portfolio__list-item
 	display: inline-block
 	vertical-align: top
 	width: 	31.33%
-	margin-left: 2%
+	+gray
+	&:hover
+		+notgray
 	+r(900)
 		width: 	100%
-		margin-left: 0
-		max-width: 	300px
-		margin: 0 auto 50px
+		// margin-left: 0
+		// max-width: 	300px
+		// margin: 0 auto 50px
 		display: block	
 .portfolio__list-title
 	h2
@@ -456,15 +468,20 @@
 		font-weight: 500
 		line-height: 1.2
 .portfolio__list-pic
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
 	position: relative
 	max-width: 300px
-	max-height: 200px
+	max-height: 250px
 	display: block
 	margin: auto
+	+r(480)
+		max-width: 200px
 	&:before
 		content: ''
 		display: block
-		padding-top: 200px
+		padding-top: 250px
+		+r(480)
+			padding-top: 200px
 	img
 		position: absolute
 		top: 0
@@ -473,6 +490,8 @@
 		height: 100%
 .portfolio__list-content
 	font-size: 16px
+	max-width: 800px
+	margin: auto
 
 
 .popup__list
@@ -522,12 +541,35 @@
 		display: block
 		background-color: white
 		+tr(transform .2s ease)
+		cursor: pointer
 		&:hover
 			+scale(0.9)
+.links_in
+	margin: 40px 0
+	text-align: center
+	+r(480)
+		margin: 25px 0
+	.links__item
+		width: 100%
+		max-width: 70px
+		&:not(:first-child)
+			margin-left: 7%
+		+r(480)
+			max-width: 50px
+	.links__link
+		padding: 15px
+		background-color: #f2f2f2
+		color: #9c9c9c
+		border-radius: 6px
+		i
+			color: #9c9c9c
+			font-size: 40px
+			+r(480)
+				font-size: 25px
 .icon-googleDown,
 .icon-appleDown
 	color: #8c40cc
-	font-size: 70px
+	font-size: 60px
 	+r(900)
 		font-size: 50px
 	+r(480)
@@ -535,38 +577,59 @@
 
 // product
 .product
-	padding: 70px 0 88px 0
+	max-width: 1400px
+	margin: auto
+	width: 100%
+	position: relative
+	font-size: 0
+	+r(1100)
+		width: 90%
+	&__item
+		display: inline-block
+		vertical-align: middle
+		width: 31.33%
+.js-slider2
+	margin-bottom: 150px
 	+r(480)
-		padding: 35px 0
-	&__list
-		font-size: 0
-		margin: 0 0 0 -2%
-		+r(480)
-			margin: 0
-.product__list-item
-	display: inline-block
-	vertical-align: top
-	width: 31.33%
-	margin-left: 2%
-	+r(480)
-		width: 100%
-		margin-left: 0
-.product__list-pic
-	+r(480)
-		max-width: 200px
-		margin: 0 auto 20px
+		margin-bottom: 50px
+
+// 	+r(480)
+// 		padding: 35px 0
+// 	&__list
+// 		font-size: 0
+// 		margin: 0 0 0 -2%
+// 		+r(480)
+// 			margin: 0
+// .product__list-item
+// 	display: inline-block
+// 	vertical-align: top
+// 	width: 31.33%
+// 	margin-left: 2%
+// 	+r(480)
+// 		width: 100%
+// 		margin-left: 0
+// .product__list-pic
+// 	+r(480)
+// 		max-width: 200px
+// 		margin: 0 auto 20px
 // section blog
 .wrapper
 	.blog__list
-		+r(768)
-			margin: 0
+		margin: auto
+		max-width: 1400px
+		width: 100%
+		+r(1050)
+			width: 	90%
 	.blog__list-item
-		+r(768)
-			width: 100%
-			margin-left: 0
-			max-width: 300px
-			margin: 0 auto 50px
-			display: block
+		margin-left: 0
+		margin: 0 
+		display: block
+		+r(480)
+			max-width: 100%
+	.blog__list-title
+		margin: auto
+		max-width: 300px
+
 .blog
 	&__list
 		font-size: 0
@@ -622,11 +685,11 @@
 	color: #8c40cc
 	font-size: 17px
 	font-weight: 500
-	margin: 20px 0
+	margin: 18px 0
 	+r(768)
 		margin: 10px 0
 .blog__list-title
-	font-size: 20px
+	font-size: 18px
 	font-weight: 500
 	text-transform: uppercase
 	margin-bottom: 26px
@@ -957,8 +1020,8 @@
 		display: table-cell
 	&__pic
 		vertical-align: top
+		max-width: 350px
 		+r(900)
-			max-width: 350px
 			margin: 0 auto 25px
 			order: 1
 		+r(480)

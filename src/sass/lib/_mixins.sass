@@ -141,6 +141,13 @@
 	// Chrome 19+ & Safari 6+
 	filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)
 	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"
+=notgray
+	filter: none
+	// Firefox 10+
+	// IE6-9
+	-webkit-filter: none
+	// Chrome 19+ & Safari 6+
+	-ms-filter: none
 
 =gray-half
 	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0.5'/></filter></svg>#grayscale")

@@ -1,4 +1,4 @@
-// # SHORT HOWTO
+s// # SHORT HOWTO
 // ## Sprites
 //     .whatever
 // 			+s(codedby) 
@@ -122,8 +122,9 @@ p
 	margin-bottom: 50px
 	+r(768)
 		font-size: 22px
+		margin-bottom: 25px
 	+r(480)
-		margin-bottom: 22px
+		margin-bottom: 20px
 		font-size: 18px
 .h2
 	font: 500 28px/1 'Roboto', sans-serif, Arial
@@ -192,7 +193,7 @@ p
 	opacity: 1
 	visibility: visible
 	cursor: pointer
-	transition: opacity 0.15s ease, visibility 0.15s ease
+	transition: opacity 0.35s ease, visibility 0.35s ease
 	&.is-hidden
 		opacity: 0
 		visibility: hidden
@@ -246,14 +247,14 @@ textarea,
 	form
 		padding-bottom: 40px
 
-.is-done
+.contact-message
 	position: absolute
 	left: 0
 	right: 0
 	margin: auto
 	opacity: 0
 	visibility: visible
-	transition: opacity .15s, visibility .15s
+	transition: opacity .45s, visibility .45s
 	z-index: -1
 	&.is-active
 		z-index: 1
@@ -411,6 +412,7 @@ textarea,
 		font-size: 40px
 // fly-plane
 #flyPlane
+	+tr(opacity 0.25s ease)
 	&.is-active
 		opacity: 1
 		animation: flyPlane 0.8s linear both, animePlane 0.5s linear 0.8s forwards
@@ -558,10 +560,13 @@ textarea,
 .slider-wrp
 	position: relative
 	&__inner
+		position: absolute
 		max-width: 1920px
 		margin: -30px auto 0
 		top: 0
 		bottom: 0
+		left: 0
+		right: 0
 .plus
 	font-size: 0
 	margin: 0 0 0 -2%
@@ -592,7 +597,8 @@ textarea,
 			font-size: 14px
 			max-width: 180px
 
-.slick-arrow
+.js-prev,
+.js-next
 	position: absolute
 	top: 0
 	bottom: 0
@@ -606,9 +612,7 @@ textarea,
 		width: 45px
 	i
 		position: absolute
-		top: 50%
 		+tr(opacity .2s ease)
-		font-size: 50px
 		+r(1000)
 			font-size: 45px
 		+r(480)
@@ -634,9 +638,14 @@ textarea,
 	right: 0
 .arrow-prev
 	left: 0
-
-.js-prev.slick-disabled,
-.js-next.slick-disabled
+.slick-slide
+	outline: 0
+.arrow-prev,
+.arrow-next
+	&:hover
+		opacity: 0.88
+.slick-arrow.slick-disabled,
+.slick-arrow.slick-disabled
 	opacity: 0
 	visibility: hidden
 
@@ -679,3 +688,129 @@ textarea,
 		font-size: 40px
 	+r(480)
 		font-size: 33px
+
+
+
+.slider-wrp__in
+	position: absolute
+	max-width: 1545px
+	margin: -30px auto 0
+	top: 50%
+	left: 0
+	right: 0
+
+.arrows
+	position: absolute
+	background: none
+	+tr(opacity .25s ease)
+	&:hover
+		opacity: 0.44
+.js-next4
+	right: 45px
+.js-prev4
+	left: 45px
+.js-next1,
+.js-prev1
+	max-width: 200px
+	width: 100%
+	background-color: white
+	height: 100%
+	top: 0
+	background: url(/img/shadow.png)center no-repeat
+	background-size: 100% 100%
+.js-next1
+	right: 0
+.js-prev1
+	left: 0
+.icon-jsarrow
+	color: #9c9c9c
+	font-size: 125px
+	+r(480)
+		font-size: 75px
+.js-prev2,
+.js-prev3
+	+r(768)
+		left: 15px
+.js-next2,
+.js-next3
+	+r(768)
+		right: 15px
+
+.arrow-rotate
+	+rotate(180)
+.product__pic
+	max-width: 300px
+	margin: 20px auto
+	position: relative
+	max-height: 400px
+	+r(480)
+		max-height: 280px
+	img
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+	+r(480)
+		max-width: 200px
+	&:before
+		content: ''
+		display: block
+		padding-top: 	400px
+		+r(480)
+			padding-top: 280px
+.product__video iframe,
+.product__pic
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
+.product__video
+	iframe
+		max-width: 800px
+		width: 100%
+		max-height: 400px
+
+.marker__wrp
+	width: 100%
+	max-width: 360px
+	height: 360px
+	position: relative
+	margin: 20px auto
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
+	+r(768)
+		height: 268px
+		max-width: 250px
+		margin: 10px auto
+	+r(480)
+		height: 200px
+		max-width: 162px
+	img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		max-height: 100%
+		margin: auto
+		padding: 14.9572%
+// tools
+.tools
+	position: absolute
+	bottom: 10px
+	right: 10px
+	width: 100%
+	max-width: 140px
+	&__item
+		display: inline-block
+		vertical-align: middle
+		&:not(:first-child)
+			margin-left: 14%
+	&__link
+		display: block
+.icon-download,
+.icon-eye,
+.icon-printer
+	color: #9c9c9c
+	font-size: 30px
+	+r(480)
+		font-size: 20px
