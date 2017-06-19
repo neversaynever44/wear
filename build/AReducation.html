@@ -388,10 +388,12 @@
 					</a>
 				</li>
 				<li class="footer__contact-item">
-						<a class="footer__contact-link js-open-popup" data-link="map" onclick="displayMap()">
+					<span onclick="displayMap()">
+						<a class="footer__contact-link js-open-popup" data-link="map">
 							<i class="icon icon-geo"></i>
 							Киев, ул. Рижская 8а
 						</a>
+						</span>
 				</li>
 			</ul>
 			<ul class="footer__social">
@@ -417,34 +419,36 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFJl-oqf0NECka4ZBhXlOVfeUnLvAa-Yw" async></script>
 	    
 	<script>
-	function displayMap() {
-		document.getElementById('object-map').style.display="block";
-		initialize();
-	}
-	 function initialize() {
+		// document.querySelector('.js-open-popup').addListEventer('click', displayMap, true);
+		function displayMap() {
+			document.getElementById('object-map').style.display="block";
+			initialize();
+			return false;
+		}
+		function initialize() {
 	          // create the map
 	
-	        var myOptions = {
-	            zoom: 14,
-	    	    scrollwheel: false,
-	    	    disableDefaultUI: false,
-	    	    draggable: true,
-	            center: new google.maps.LatLng(50.4724601,30.4408557,21),
-	            styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+	          var myOptions = {
+	          	zoom: 14,
+	          	scrollwheel: false,
+	          	disableDefaultUI: false,
+	          	draggable: true,
+	          	center: new google.maps.LatLng(50.4724601,30.4408557,21),
+	          	styles:    [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
 	          }
-				map = new google.maps.Map(document.getElementById("object-map"), myOptions);
-				var image = "img/marker.svg";
-				var myLatLng = new google.maps.LatLng(50.4724601,30.4408557,21);
-				var mapMarker = new
-				google.maps.Marker({
-					position: myLatLng,
-					map: map,
-					title: '',
-					icon: image
-				});
+	          map = new google.maps.Map(document.getElementById("object-map"), myOptions);
+	          var image = "img/marker.svg";
+	          var myLatLng = new google.maps.LatLng(50.4724601,30.4408557,21);
+	          var mapMarker = new
+	          google.maps.Marker({
+	          	position: myLatLng,
+	          	map: map,
+	          	title: '',
+	          	icon: image
+	          });
 	
-	         }
-	</script>
+	        }
+	      </script>
 	
 	
 	
