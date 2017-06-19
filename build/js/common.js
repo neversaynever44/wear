@@ -5,9 +5,9 @@ $(document).ready(function(){
 
 	// init animated-bg
 	if($(document).width() > 768) {
-		animatedBg();
+		// animatedBg();
 	}
-
+var animbg = new AnimatedMouseMove('.animated-bg', '.triangle', '.animated', 1.5);
 	var locale = 'ru';
 	function getLocale() {
 		if(location.pathname.match(/\b(en|ru)\b/)) {
@@ -145,7 +145,6 @@ var th = $('#feedback-form');
   			$('.btn-send').removeAttr('disabled');
   			$('.btn-send').removeClass('is-scale');
     	}, 1000);
-    	setTimeout(defaultState, 3000);
     });
     $form.trigger("reset");
 
@@ -477,38 +476,150 @@ function getScrollWidth() {
 	return scrollWidth;
 };
 
-// animatedBG
-function animatedBg() {
-	var $container = $('.animated-bg');
+function AnimatedMouseMove(container, triangles, bgIcons, speed) {
 
-	$container.each(function() {
-		var containerOffsetLeft = $(this).offset().left,
-		containerOffsetTop = $(this).offset().top,
-		containerWidth = $(this).innerWidth(),
-		containerHeight = $(this).innerHeight(),
-		$animatedItems = $(this).find("> .animated"),
-			// 2 = x2 speed of mouse
-			speedRate = 1.4;
+	var _this = this;
 
-			$(this).on("mousemove", function(e) {
-				var x = (e.pageX - containerOffsetLeft - containerWidth / 2) * 2,
-				y = (e.pageY - containerOffsetTop - containerHeight / 2) * 2;
+	this.container = $(container);
 
-				$animatedItems.each(function(index) {
-					var a = $(this).innerWidth() * x / containerWidth * speedRate,
-					b = $(this).innerHeight() * y / containerHeight * speedRate;
+	var trianglesInit = false;
+	if($(triangles)[0]) {
+		this.triangles = $(triangles);
+		this.trianglesTitles = this.triangles.find('.triangle__title');
+		this.trianglesTitlesBg = this.triangles.find('.triangle__title-bg');
+		trianglesInit = true;
+	}
 
-					if(index % 2 == 0) {
-						$(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
-					// $(this).css("transform", "translate(" + a + "px, " + b + "px)");
-				} else {
-					$(this).css("transform", "matrix(1, 0, 0, 1, " + -a + ", " + -b + ")");
-					// $(this).css("transform", "translate(" + -a + "px, " + -b + "px)");
-				}
-			});
+	this.bgIcons = $(bgIcons);
 
-			});
-		});
+	this.speedRate = speed || 1.5;
+
+	this.setContainerParams();
+
+	this.deviation = {
+		x0: 0.07,
+		y0: 0,
+		x1: (-0.10),
+		y1: 0,
+		x2: 0.15,
+		y2: 0.10
+	}
+
+	$(window).resize(function(){
+		_this.setContainerParams();
+	});
+
+	this.container.on('mousemove', function(evt) {
+		var pageXY = _this.getMouseCoordinates(evt);
+		if(trianglesInit) {
+			_this.animateX(_this.triangles, pageXY.x);
+			_this.animateX(_this.trianglesTitles, pageXY.x);
+			_this.positionX(_this.trianglesTitlesBg, pageXY.x)
+		}
+		_this.animateXY(_this.bgIcons, pageXY.x, pageXY.y);
+	})
 }
+
+AnimatedMouseMove.prototype.setContainerParams = function() {
+	this.containerOffsetLeft = this.container.offset().left || 0;
+	this.containerOffsetTop = this.container.offset().top || 0;
+	this.containerWidth = this.container.innerWidth() || 0;
+	this.containerHeight = this.container.innerHeight() || 0;
+
+	this.correctCenterWidth = this.containerOffsetLeft + this.containerWidth / 2;
+	this.correctCenterHeight = this.containerOffsetTop + this.containerHeight / 2;
+}
+
+AnimatedMouseMove.prototype.animateX = function(elements, x) {
+	var _this = this,
+			elementsLength = elements.length,
+			i, a, b;
+
+	for (i = 0; i < elementsLength; i++) {
+		a = elements[i].clientWidth * _this.deviation['x' + i] * x / _this.containerWidth;
+		b = elements[i].clientWidth * _this.deviation['y' + i] * x / _this.containerWidth;
+		elements[i].style.transform = "translate(" + a + "px, " + b +"px)";
+	}
+}
+
+AnimatedMouseMove.prototype.animateXY = function(elements, x, y) {
+	var _this = this,
+			elementsLength = elements.length,
+			i, a, b;
+
+	for (i = 0; i < elementsLength; i++) {
+		a = elements[i].clientWidth * x / _this.containerWidth * _this.speedRate;
+		b = elements[i].clientHeight * y / _this.containerHeight * _this.speedRate;
+		if(i % 2 == 0) {
+			elements[i].style.transform = "translate(" + a + "px, " + b +"px)";
+		} else {
+			elements[i].style.transform = "translate(" + -a + "px, " + -b +"px)";
+		}
+	}
+}
+
+AnimatedMouseMove.prototype.positionX = function(elements, x) {
+	var _this = this,
+			elementsLength = elements.length,
+			i, a, b;
+
+	for (i = 0; i < elementsLength; i++) {
+		a = elements[i].attributes.width.value * _this.deviation['x' + i] * x / _this.containerWidth ;
+		b = elements[i].attributes.height.value * _this.deviation['y' + i] * x / _this.containerWidth ;
+		elements[i].setAttribute('x', a);
+		elements[i].setAttribute('y', b);
+	}
+}
+
+AnimatedMouseMove.prototype.getMouseCoordinates = function(evt) {
+	return {
+		x: (evt.pageX - this.correctCenterWidth) * 2,
+		y: (evt.pageY - this.correctCenterHeight) * 2
+	}
+}
+
+AnimatedMouseMove.prototype.abs = function(num) {
+	if(num >= 0)
+		return num;
+	else
+		return -num;
+}
+
+
+
+
+// animatedBG
+// function animatedBg() {
+// 	var $container = $('.animated-bg');
+
+// 	$container.each(function() {
+// 		var containerOffsetLeft = $(this).offset().left,
+// 		containerOffsetTop = $(this).offset().top,
+// 		containerWidth = $(this).innerWidth(),
+// 		containerHeight = $(this).innerHeight(),
+// 		$animatedItems = $(this).find("> .animated"),
+// 			// 2 = x2 speed of mouse
+// 			speedRate = 1.4;
+
+// 			$(this).on("mousemove", function(e) {
+// 				var x = (e.pageX - containerOffsetLeft - containerWidth / 2) * 2,
+// 				y = (e.pageY - containerOffsetTop - containerHeight / 2) * 2;
+
+// 				$animatedItems.each(function(index) {
+// 					var a = $(this).innerWidth() * x / containerWidth * speedRate,
+// 					b = $(this).innerHeight() * y / containerHeight * speedRate;
+
+// 					if(index % 2 == 0) {
+// 						$(this).css("transform", "matrix(1, 0, 0, 1, " + a + ", " + b + ")");
+// 					// $(this).css("transform", "translate(" + a + "px, " + b + "px)");
+// 				} else {
+// 					$(this).css("transform", "matrix(1, 0, 0, 1, " + -a + ", " + -b + ")");
+// 					// $(this).css("transform", "translate(" + -a + "px, " + -b + "px)");
+// 				}
+// 			});
+
+// 			});
+// 		});
+// }
 
 

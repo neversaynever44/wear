@@ -43,8 +43,8 @@
 	will-change: transform
 	cursor: pointer
 	&:hover
-		-webkit-transform: translateZ(110px)
-		transform: translateZ(110px)
+		-webkit-transform: translateZ(90px)
+		transform: translateZ(90px)
 		-webkit-transition-delay: 0s
 		transition-delay: 0s
 	+r(768)
@@ -65,10 +65,10 @@
 	+r(480)
 		font-size: 14px
 .triangle__title 
-	transition: transform 2s cubic-bezier(0, 0, 0, 1)
-	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	// transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	// -webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
 	position: absolute
-	will-change: transform
+	// will-change: transform
 .triangle__title>svg 
 	position: absolute
 	top: 0
@@ -78,18 +78,19 @@
 .vr, 
 .mr 
 	position: absolute
-	-webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
-	transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	// -webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1)
+	// transition: transform 2s cubic-bezier(0, 0, 0, 1)
 	display: inline-block
-	will-change: transform
+	// will-change: transform
 	perspective: 1000px
+	&:hover
+		z-index: 11
 // ar
 .ar
 	width: 31.34%
 	padding-top: 27.09%
 	left: 31.98%
 	bottom: 45%
-	z-index: 1
 	+r(768)
 		left: 22.23333%
 		width: 51.73333%
@@ -396,7 +397,7 @@
 			max-width: 250px
 .portfolio__content
 	width: 50%
-	padding: 0 2% 0 2%
+	padding: 0 1.5% 0 1.5%
 	float: left
 	+r(900)
 		order: 2
@@ -415,6 +416,10 @@
 		padding: 30px 0
 	+r(480)
 		font-size: 14px
+	ul
+		list-style-type: disc
+	span
+		font-weight: 300!important
 .portfolio__content-button
 	margin-bottom: 60px
 .portfolio__content-desc,
@@ -451,9 +456,6 @@
 	display: inline-block
 	vertical-align: top
 	width: 	31.33%
-	+gray
-	&:hover
-		+notgray
 	+r(900)
 		width: 	100%
 		// margin-left: 0
@@ -488,6 +490,21 @@
 		left: 0
 		width: 100%
 		height: 100%
+		-webkit-filter: grayscale(100%)
+		-moz-filter: grayscale(100%)
+		-ms-filter: grayscale(100%)
+		-o-filter: grayscale(100%)
+		transition: filter 400ms ease
+		-webkit-transition: -webkit-filter 400ms ease
+		-o-transition: filter 400ms ease
+		-moz-transition: filter 400ms ease
+		-ms-transition: filter 400ms ease
+		&:hover
+			-webkit-filter: grayscale(0%)
+			filter: grayscale(0%)   
+			-moz-filter: grayscale(0%)
+			-ms-filter: grayscale(0%)
+			-o-filter: grayscale(0%)
 .portfolio__list-content
 	font-size: 16px
 	max-width: 800px
@@ -1005,6 +1022,7 @@
 	.inner
 		display: table
 		max-width: 1750px
+		width: 90%
 		+r(900)
 			display: -webkit-box
 			display: -webkit-flex
