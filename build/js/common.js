@@ -307,12 +307,10 @@ $('.links__link').each(function() {
 
 // open-popup
 
-$('.js-open-popup').on('click', function (e) {
-	if(event.preventDefault){
-		event.preventDefault();
-	}else{
-		event.returnValue = false; 
-	};
+$('.js-open-popup').on('click', function (event) {
+
+	event.preventDefault();
+
 	var link = $(this).data('link');
 	var popup = $('.js-popup[data-popup="' + link + '"]');
 	popup.add('.js-overlay').addClass('is-active');
@@ -325,12 +323,8 @@ $('.js-close-popup').click(function (e) {
 
 
 // anchor
-$('.arrow-up').on('click', function() {
-	if(event.preventDefault){
-		event.preventDefault();
-	} else {
-		event.returnValue = false; 
-	};
+$('.arrow-up').on('click', function(event) {
+	event.preventDefault();
 	var arrowUp = $('.arrow-up'),
 	id  = $(this).attr('href'),
 	top = $(id).offset().top;

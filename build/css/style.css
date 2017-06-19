@@ -680,7 +680,7 @@ textarea { resize: none; width: 100%; min-height: 175px; background-color: #e0e0
 .promo .icon-header-triagle2 { left: 46%; top: 62px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 .promo .icon-header-triagle3 { right: 50px; -webkit-transform: rotate(-15deg); -ms-transform: rotate(-15deg); transform: rotate(-15deg); }
 
-.promo-title { text-align: center; font-weight: 400; font-size: 43px; line-height: 1.2; }
+.promo-title { text-align: center; font-weight: 400; font-size: 42px; line-height: 1.2; }
 
 .promo-desc { margin-top: 20px; }
 
