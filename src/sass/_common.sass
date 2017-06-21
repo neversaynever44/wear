@@ -230,6 +230,8 @@ textarea
 	font-size: 25px
 	font-weight: 300
 	+skoda
+	outline: none
+	border: none
 
 textarea,
 .input-tablet
@@ -477,6 +479,8 @@ textarea,
 .slider
 	position: relative
 	margin-bottom: 260px
+	+r(480)
+		margin-bottom: 96px
 	// +r(768)
 	// 	margin-right: -50px
 	+clr
@@ -496,6 +500,8 @@ textarea,
 		padding: 80px 0
 		+r(768)
 			padding: 30px 0
+		+r(480)
+			min-height: 750px
 		// +r(768)
 		// 	min-height: 1340px !important
 		p
@@ -543,7 +549,7 @@ textarea,
 	h1
 		margin-bottom: 250px
 		+r(480)
-			margin-bottom: 100px
+			margin-bottom: 160px
 // .slick-list
 // 	+r(768)
 // 		&:not(:last-child)
@@ -570,21 +576,15 @@ textarea,
 		right: 0
 .plus
 	font-size: 0
-	margin: 0 0 0 -2%
 	text-align: center
-	+r(480)
-		margin: 0
 	&__item
 		display: inline-block
 		vertical-align: top
-		width: 31.33%
-		margin-left: 2%
+		width: 32%
+		padding: 0 2%
 		margin-bottom: 40px
 		+r(900)
 			width: 48%
-		+r(480)
-			width: 100%
-			margin-left: 0
 	&__img
 		margin-bottom: 25px
 	&__text

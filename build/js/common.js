@@ -296,10 +296,10 @@ function initSlider(slider, options) {
 }
 $('.links__link').each(function() {
 	if ($(this).attr('href') == '') {
-		 $(this).parent().remove(); 
+		$(this).parent().remove(); 
 	}else {
-    $(this).parent().show(); 
-}
+		$(this).parent().show(); 
+	}
 });
 
 
