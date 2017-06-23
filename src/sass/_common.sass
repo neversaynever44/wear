@@ -1,4 +1,4 @@
-s// # SHORT HOWTO
+// # SHORT HOWTO
 // ## Sprites
 //     .whatever
 // 			+s(codedby) 
@@ -49,8 +49,8 @@ img
 a
 	+tr(all .3s ease)
 	text-decoration: none
-p
-	word-break: break-all
+// p
+// 	word-break: break-all
 %inner
 	width: 100%
 	max-width: 1400px
@@ -565,6 +565,8 @@ textarea,
 		visibility: visible
 .slider-wrp
 	position: relative
+	+pr
+		display: none
 	&__inner
 		position: absolute
 		max-width: 1920px
@@ -700,6 +702,8 @@ textarea,
 	top: 50%
 	left: 0
 	right: 0
+	+pr
+		display: none
 
 .arrows
 	position: absolute
@@ -712,13 +716,16 @@ textarea,
 	left: 45px
 .js-next1,
 .js-prev1
-	max-width: 200px
+	max-width: 175px
 	width: 100%
 	background-color: white
 	height: 100%
 	top: 0
 	background: url(/img/shadow.png)center no-repeat
 	background-size: 100% 100%
+	z-index: 1111
+	+pr
+		display: none
 .js-next1
 	right: 0
 .js-prev1
@@ -766,23 +773,21 @@ textarea,
 .product__video iframe,
 .product__pic
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
+	margin: 10px auto
 .product__video
 	iframe
-		max-width: 800px
-		width: 100%
-		max-height: 400px
+		max-width: 100%
+		max-height: 100%
+		width: 750px
+		height: 350px
 
 .marker__wrp
 	width: 100%
-	max-width: 360px
-	height: 360px
+	height: 268px
+	max-width: 270px
+	margin: 10px auto
 	position: relative
-	margin: 20px auto
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
-	+r(768)
-		height: 268px
-		max-width: 250px
-		margin: 10px auto
 	+r(480)
 		height: 200px
 		max-width: 162px
@@ -802,6 +807,8 @@ textarea,
 	right: 10px
 	width: 100%
 	max-width: 140px
+	+pr
+		display: none
 	&__item
 		display: inline-block
 		vertical-align: middle
