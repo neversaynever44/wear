@@ -1,7 +1,6 @@
 // popup
 .popup,
-.popup__map,
-.popup__video
+.popup__map
 	position: fixed
 	top: 0
 	left: 0
@@ -10,6 +9,8 @@
 	z-index: 1111
 	+vertical
 	transition: opacity .25s ease, visibility .25s ease
+	+r(480)
+		z-index: 111111
 	&__close
 		cursor: pointer
 		position: absolute
@@ -45,14 +46,13 @@
 				font-size: 20px
 			+r(480)
 				margin: 15px 0
-.popup,
-.popup__video
+
+.popup
 	opacity: 0
 	visibility: hidden
 	&.is-active
 		opacity: 1
 		visibility: visible
-.popup
 	&__map
 		display: none
 		&.is-active
@@ -114,19 +114,7 @@
 	&.is-scale
 		animation: scalePlane 0.3s linear both
 
-.popup__video
-	.popup__close
-		+r(960)
-			top: 0
-			right: 0
-			border-radius: 0
-		+r(480)
-			font-size: 10px
-.popup__video
-	.popup__window
-		max-width: 900px
-		margin: auto
-		background: #403e40
+
 .popup__content
 	width: 100%
 	overflow: hidden

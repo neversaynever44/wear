@@ -393,9 +393,9 @@
 	img
 		max-height: 100%
 		+r(900)
-			max-width: 400px
-		+r(480)
 			max-width: 250px
+		+r(480)
+			max-width: 200px
 .portfolio__content
 	width: 50%
 	padding: 0 1.5% 0 1.5%
@@ -474,7 +474,7 @@
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4)
 	position: relative
 	max-width: 300px
-	max-height: 250px
+	max-height: 275px
 	display: block
 	margin: 10px auto
 	+r(480)
@@ -482,9 +482,9 @@
 	&:before
 		content: ''
 		display: block
-		padding-top: 250px
-		+r(480)
-			padding-top: 200px
+		padding-top: 100%
+		// +r(480)
+		// 	padding-top: 200px
 	img
 		position: absolute
 		top: 0
@@ -512,37 +512,7 @@
 	margin: auto
 
 
-.popup__list
-	margin: 100px 0 0 -4%
-	font-size: 0
-	text-align: center
-.popup__list-item
-	display: inline-block
-	vertical-align: top
-	height: 200px
-	width: 29.33%
-	max-width: 400px
-	margin-left: 4%
-	background: url(/img/portfolio_in/popup.jpg) center no-repeat
-	background-size: cover
-	position: relative
-	+r(768)
-		width: 47%
-		text-align: center
-		&:not(:last-child)
-			margin-bottom: 25px
-	+r(480)
-		width: 80%
-		margin-left: 0
-.popup__list-link
-	+vertical
-	display: block
-	height: 100%
-	width: 100%
-	background: none
-	i
-		color: #eeae21
-		font-size: 70px
+
 
 
 // links
