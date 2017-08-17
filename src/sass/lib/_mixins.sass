@@ -10,8 +10,8 @@
 		@content
 
 // height, less than X
-=rh($height)
-	@media only screen and (max-height: $height + "px")
+=rh($height1, $height2)
+	@media only screen and (min-height: $height1 + "px") and (max-height: $height2 + "px")
 		@content
 
 =clr

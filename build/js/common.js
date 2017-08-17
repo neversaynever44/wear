@@ -4,10 +4,11 @@ $(document).ready(function(){
 	toggleMenu();
 
 	// init animated-bg
-	if($(document).width() > 768) {
-		// animatedBg();
+	if ($(window).width() > 767) {
+		var animbg = new AnimatedMouseMove('.animated-bg', '.triangle', '.animated', 1.5);
 	}
-var animbg = new AnimatedMouseMove('.animated-bg', '.triangle', '.animated', 1.5);
+
+
 	var locale = 'ru';
 	function getLocale() {
 		if(location.pathname.match(/\b(en|ru)\b/)) {
@@ -165,6 +166,7 @@ initSlider(newSlider, {
 	infinite: false,
 	speed: 1000,
 	dots: true,
+	    // dotsClass: "my-dots",
 	autoplay: false,
 	adaptiveHeight: true,
 	arrows: true,
@@ -469,7 +471,6 @@ function getScrollWidth() {
 
 	return scrollWidth;
 };
-
 function AnimatedMouseMove(container, triangles, bgIcons, speed) {
 
 	var _this = this;
@@ -519,6 +520,7 @@ AnimatedMouseMove.prototype.setContainerParams = function() {
 	this.containerOffsetTop = this.container.offset().top || 0;
 	this.containerWidth = this.container.innerWidth() || 0;
 	this.containerHeight = this.container.innerHeight() || 0;
+	
 
 	this.correctCenterWidth = this.containerOffsetLeft + this.containerWidth / 2;
 	this.correctCenterHeight = this.containerOffsetTop + this.containerHeight / 2;
